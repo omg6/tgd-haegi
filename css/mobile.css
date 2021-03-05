@@ -14,10 +14,11 @@ header>#header-area>a>h1
 }
 
 /* 접속자 수 */
+/* 접속자 수 글씨 색 */
 /*
 #board-info #viewers-area
 {
-    color: #; /* 접속자 수 글씨 색 */
+    color: #;
 }*/
 
 /* 숫자 앞에 들어갈 문구 */

@@ -1,4 +1,5 @@
 /* 해기님 트게더 (빠게더) 모바일 CSS */
+/* 적용 방법 : @import url("https://omg6.github.io/tgd-haegi/css/mobile.css"); */
 
 
 /* 트게더 로고 삽입 */
@@ -10,4 +11,24 @@ header>#header-area>a>h1
     background-size: auto 32px;
 
     width: 100px;
+}
+
+/* 접속자 수 */
+#board-info #viewers-area
+{
+    color: #; /* 접속자 수 글씨 색 */
+}
+
+/* 숫자 앞에 들어갈 문구 */
+#board-info #viewers-area #viewers:before
+{
+    content: "해 바라기 ";
+    cursor: text;
+}
+
+/* 숫자 뒤에 들어갈 문구 */
+#board-info #viewers-area #viewers:after
+{
+    content: "명";
+    cursor: text;
 }

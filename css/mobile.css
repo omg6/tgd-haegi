@@ -1,10 +1,10 @@
-/* ÇØ±â´Ô Æ®°Ô´õ (ºü°Ô´õ) ¸ğ¹ÙÀÏ CSS */
+/* í•´ê¸°ë‹˜ íŠ¸ê²Œë” (ë¹ ê²Œë”) ëª¨ë°”ì¼ CSS */
 
 
-/* Æ®°Ô´õ ·Î°í »ğÀÔ */
+/* íŠ¸ê²Œë” ë¡œê³  ì‚½ì… */
 header>#header-area>a>h1
 {
-	/* ÇØ¹Ù¶ó±â Á¦°Å ·Î°í */
+	/* í•´ë°”ë¼ê¸° ì œê±° ë¡œê³  */
     background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat;
 
     background-size: auto 32px;

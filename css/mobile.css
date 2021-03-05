@@ -1,0 +1,13 @@
+/* 해기님 트게더 (빠게더) 모바일 CSS */
+
+
+/* 트게더 로고 삽입 */
+header>#header-area>a>h1
+{
+	/* 해바라기 제거 로고 */
+    background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat;
+
+    background-size: auto 32px;
+
+    width: 100px;
+}

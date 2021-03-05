@@ -1,2 +1,2 @@
-# tgd-haegi
+# TGD Haegi CSS
 TGD Haegi CSS

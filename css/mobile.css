@@ -14,10 +14,11 @@ header>#header-area>a>h1
 }
 
 /* 접속자 수 */
+/*
 #board-info #viewers-area
 {
     color: #; /* 접속자 수 글씨 색 */
-}
+}*/
 
 /* 숫자 앞에 들어갈 문구 */
 #board-info #viewers-area #viewers:before
@@ -29,6 +30,6 @@ header>#header-area>a>h1
 /* 숫자 뒤에 들어갈 문구 */
 #board-info #viewers-area #viewers:after
 {
-    content: "명";
+    content: " 명";
     cursor: text;
 }

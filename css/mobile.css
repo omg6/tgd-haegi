@@ -208,7 +208,7 @@ header > #header-search-bar #header-search-input
 #article-list>.article-list-row
 {
     background-color: #FFFCE8; /* 배경 색 */
-	border-width: 1px;
+	border-width: 2px;
 	border-color: #FFE94F;
 	margin-bottom: 5px;
 	border-style: solid;

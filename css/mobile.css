@@ -1,36 +1,178 @@
-/* 해기님 트게더 (빠게더) 모바일 CSS */
+/* 해기님 트게더 (해게더) 모바일 CSS */
 /* 적용 방법 : @import url("https://omg6.github.io/tgd-haegi/css/mobile.css"); */
+/* 최종 수정 : 2021-03-06 */
 
+/* 트게터 웹폰트 설정 (티머니 둥근바람) */
+/* 출처 : https://noonnu.cc/font_page/459 */
+@font-face
+{
+    font-family: 'TmoneyRoundWindRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	font-family: 'TmoneyRoundWindRegular';
+}
+
+/* 트게더 로고 배너 */
+header
+{
+    background: #F7F5E8; /* 로고 배너 배경 색 */
+    border-bottom: 4px solid #BCA92C; /* 로고 배너 하단 구분선 색 */
+}
+
+/* 상단 배너 광고 뱃지 */
+#header-top-notice strong.notice-badge
+{
+    background: #2CE1D9; /* 광고 뱃지 배경 색 */
+}
+
+/* 프로필 이미지 크기 확장 전 여백 공간 설정 */
+#board-info>h1
+{
+	margin-left: 70px;
+	margin-top: 3px;
+	height: 70px;
+}
+
+/* 프로필 이미지 크기 확장 */
+#board-info>h1>#board-info-profile-img
+{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 190px;
+	left: 8px;
+	border-radius: 100px;
+	z-index: 1;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(255, 128, 0);
+}
+
+/* 라이브 문구 전 이미지 삽입 */
+#board-info h1 > a.badge.badge-live::before
+{
+	content: url(https://static-cdn.jtvnw.net/emoticons/v2/301732832/default/light/1.0);
+	width: 90px;
+}
+
+/* 라이브 속성 설정 및 숨기기 */
+#board-info h1 > a.badge.badge-live
+{
+	background: rgb(255, 0, 255);
+	font-size: 0px;
+}
+
+/* 라이브 문구 이후 텍스트 삽입 */
+#board-info h1 > a.badge.badge-live::after
+{
+	font-size: 15px;
+	content: " 방송중";
+}
 
 /* 트게더 로고 삽입 */
 header>#header-area>a>h1
 {
 	/* 해바라기 제거 로고 */
-    background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat;
-
-    background-size: auto 32px;
-
-    width: 100px;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat;
+	background-size: auto 32px;
+	width: 90px;
 }
 
-/* 접속자 수 */
-/* 접속자 수 글씨 색 */
-/*
+/* 검색 버튼 (검색창 없이) */
+header>#header-area>#header-search-link
+{
+	display: inline-block;
+    color: #dbde00;
+    font-size: 24;
+	padding: 0 16px 8px;
+}
+
+/* 검색 버튼 (검색 버튼 클릭 후) */
+header>#header-search-bar #header-search-btn
+{
+	display: inline-block;
+    color: #dbde00;
+    font-size: 24;
+	padding: 0 16px 8px;
+}
+
+/* 검색 창 (검색 버튼 클릭 후) */
+header > #header-search-bar #header-search-input
+{
+	position: relative;
+    border: 3px solid #dbde00;
+    background: #fff;
+    font-size: 1.1em;
+    padding: 0.3em 0.5em;
+    border-radius: 15px;
+}
+
+/* 접속자 수 색깔 */
 #board-info #viewers-area
 {
-    color: #;
-}*/
+	color: #000000;
+}
+
+/* 인원 아이콘 */
+#board-info #viewers-area .fa-user:before
+{
+	content: url(https://static-cdn.jtvnw.net/badges/v1/85d941ef-c064-4db4-a1aa-f6667cbf8295/1);
+}
 
 /* 숫자 앞에 들어갈 문구 */
 #board-info #viewers-area #viewers:before
 {
-    content: "해 바라기 ";
-    cursor: text;
+	content: "해 바라기 ";
+	cursor: text;
 }
 
 /* 숫자 뒤에 들어갈 문구 */
 #board-info #viewers-area #viewers:after
 {
-    content: " 명";
-    cursor: text;
+	content: " 명";
+	cursor: text;
+}
+
+/* 메인 배너 글 공지 */
+#article-list>.article-list-row.notice
+{
+    background-color: #FEC6B9; /* 공지 배경 색 */
+	border-width: 3px;
+	border-color: rgb(255, 128, 192);
+	margin-bottom: 5px;
+	border-style: solid;
+}
+
+/* 버튼류 통합설정 */
+.btn.square {
+    border-radius: 120px;
+    border: 1.5px solid #e5e5e5;
+    font-size: 12px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #00bb3a;
+    border-color: #2e6da4;
+}
+
+/* 위로가기 버튼 가리기 (기존) */
+#movetotop img
+{
+	display:none
+}
+
+/* 위로가기 버튼 수정 */
+#movetotop
+{
+	display: inline-block;
+	opacity: 1;
+	background: url(https://static-cdn.jtvnw.net/emoticons/v2/302330916/default/light/2.0);
+	width: 50px;
+	height: 50px;
+	background-size: contain;
 }

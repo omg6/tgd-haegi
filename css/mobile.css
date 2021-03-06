@@ -1,8 +1,11 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
-/* 적용 방법 : @import url("https://omg6.github.io/tgd-haegi/css/mobile.css"); */
 /* 최종 수정 : 2021-03-06 */
 
-/* 트게터 웹폰트 설정 (티머니 둥근바람) */
+/* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 칸에 입력
+@import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
+*/
+
+/* 웹폰트 불러오기 (티머니 둥근바람) */
 /* 출처 : https://noonnu.cc/font_page/459 */
 @font-face
 {
@@ -12,6 +15,7 @@
     font-style: normal;
 }
 
+/* 폰트 내부에 적용 */
 body
 {
 	font-family: 'TmoneyRoundWindRegular';
@@ -38,6 +42,13 @@ header
 	height: 70px;
 }
 
+/* 프로필 이미지 옆 폰트 글씨 크기 조절 (키움 - 임시제거) */
+/*
+#board-info > h1
+{
+	font-size: 20px;
+}*/
+
 /* 프로필 이미지 크기 확장 */
 #board-info h1 > #board-info-profile-img
 {
@@ -50,13 +61,12 @@ header
 	border-color: rgb(255, 128, 0);
 }
 
-/* 라이브 문구 전 이미지 삽입 */
+/* 라이브 문구 전 이미지 삽입 (미사용) */
+/* 
 #board-info h1 > a.badge.badge-live::before
 {
-	background: url(https://static-cdn.jtvnw.net/emoticons/v2/301732832/default/light/1.0);
-	background-size: 100px;
-	width: 90px;
-}
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817723964205694976/2_edited.png);
+}*/
 
 /* 라이브 속성 설정 및 숨기기 */
 #board-info h1 > a.badge.badge-live
@@ -68,14 +78,21 @@ header
 /* 라이브 문구 이후 텍스트 삽입 */
 #board-info h1 > a.badge.badge-live::after
 {
-	font-size: 15px;
-	content: " 방송중";
+	font-size: 14px;
+	content: "⊙ 방송중";
+}
+
+/* 좌측 메뉴 버튼 색상 변경 */
+header>#header-area>#header-bar-link
+{
+	display: inline-block;
+    color: #dbde00;
 }
 
 /* 트게더 로고 삽입 */
 header>#header-area>a>h1
 {
-	/* 해바라기 제거 로고 */
+	/* 해바라기 그림 제거된 로고 */
 	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat;
 	background-size: auto 32px;
 	width: 90px;
@@ -110,30 +127,47 @@ header > #header-search-bar #header-search-input
     border-radius: 15px;
 }
 
-/* 접속자 수 색깔 */
-/*#board-info #viewers-area
+/* 게시판 점수 가리기 */
+#board-info #score-area
 {
-	color: #000000;
-}*/
+	display: none;
+}
+
+/* 접속자 수 색깔 */
+#board-info #viewers-area
+{
+	color: #898685;
+	font-size: 12px;
+}
 
 /* 인원 아이콘 */
 #board-info #viewers-area .fa-user:before
 {
-	content: url(https://static-cdn.jtvnw.net/badges/v1/85d941ef-c064-4db4-a1aa-f6667cbf8295/1);
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817727394525216778/3_resize.png);
 }
 
-/* 숫자 앞에 들어갈 문구 */
+/* 인원 숫자 앞에 들어갈 문구 */
 #board-info #viewers-area #viewers:before
 {
 	content: "해 바라기 ";
 	cursor: text;
 }
 
-/* 숫자 뒤에 들어갈 문구 */
+/* 인원 숫자 뒤에 들어갈 문구 */
 #board-info #viewers-area #viewers:after
 {
 	content: " 명";
 	cursor: text;
+}
+
+/* 게시판 종류 (상단) 설정 */
+#article-list #article-list-category
+{
+	border-color: #ffd400;
+	border-style: double;
+	border-width: 8px;
+	margin-top: 3px;
+	margin-bottom: 5px;
 }
 
 /* 공지 글 (상단) 설정 */
@@ -156,6 +190,20 @@ header > #header-search-bar #header-search-input
 	border-style: solid;
 }
 
+/* 공지 글 문단의 "공지" 문구 아이콘으로 변경 */
+/* 아이콘 원본 출처 : https://iconmonstr.com/audio-5-png/ */
+#article-list>.article-list-row.notice>.item>.list-header>strong
+{
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817739587018424330/iconmonstr-audio-5-24.png);
+}
+
+/* 인기 글 문단의 "인기" 문구 아이콘으로 변경 */
+/* 아이콘 원본 출처 : https://iconmonstr.com/thumb-10-png/ */
+#article-list>.article-list-row>.item>.list-header>b
+{
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817740086320955402/iconmonstr-thumb-10-24.png);
+}
+
 /* 일반 글 설정 */
 #article-list>.article-list-row
 {
@@ -167,12 +215,16 @@ header > #header-search-bar #header-search-input
 }
 
 /* 버튼류 통합설정 */
-.btn.square {
+/* 출처 : 해게더 PC CSS */
+.btn.square
+{
     border-radius: 120px;
     border: 1.5px solid #e5e5e5;
     font-size: 12px;
 }
-.btn-primary {
+
+.btn-primary
+{
     color: #fff;
     background-color: #00bb3a;
     border-color: #2e6da4;

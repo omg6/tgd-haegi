@@ -31,6 +31,13 @@ header
 }
 
 /* 프로필 이미지 크기 확장 전 여백 공간 설정 */
+#board-info
+{
+	border-color: #BCA92C;
+	border-width: 2px;
+}
+
+/* 프로필 이미지 크기 확장 전 여백 공간 설정 */
 #board-info>h1
 {
 	margin-left: 70px;
@@ -39,13 +46,14 @@ header
 }
 
 /* 프로필 이미지 크기 확장 */
+/* 중요! : 상단의 광고창 있을때와 없을때 사이즈 차이 완전 남.. 확인 필요.. */
 #board-info>h1>#board-info-profile-img
 {
 	width: 60px;
 	height: 60px;
 	position: absolute;
-	top: 190px;
-	left: 8px;
+	top: 90px;
+	left: 5px;
 	border-radius: 100px;
 	z-index: 1;
 	border-style: solid;
@@ -113,10 +121,10 @@ header > #header-search-bar #header-search-input
 }
 
 /* 접속자 수 색깔 */
-#board-info #viewers-area
+/*#board-info #viewers-area
 {
 	color: #000000;
-}
+}*/
 
 /* 인원 아이콘 */
 #board-info #viewers-area .fa-user:before
@@ -138,12 +146,32 @@ header > #header-search-bar #header-search-input
 	cursor: text;
 }
 
-/* 메인 배너 글 공지 */
+/* 공지 글 (상단) 설정 */
 #article-list>.article-list-row.notice
 {
-    background-color: #FEC6B9; /* 공지 배경 색 */
+    background-color: #FEC6B9; /* 배경 색 */
 	border-width: 3px;
 	border-color: rgb(255, 128, 192);
+	margin-bottom: 5px;
+	border-style: solid;
+}
+
+/* 인기 글 (상단) 설정 */
+#article-list>.article-list-row.hot
+{
+    background-color: #FFF298; /* 배경 색 */
+	border-width: 3px;
+	border-color: #DEC300;
+	margin-bottom: 5px;
+	border-style: solid;
+}
+
+/* 일반 글 설정 */
+#article-list>.article-list-row
+{
+    background-color: #FFFCE8; /* 배경 색 */
+	border-width: 1px;
+	border-color: #FFE94F;
 	margin-bottom: 5px;
 	border-style: solid;
 }

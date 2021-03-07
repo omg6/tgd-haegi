@@ -1,5 +1,5 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
-/* 최종 수정 : 2021-03-06 */
+/* 최종 수정 : 2021-03-07 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -55,8 +55,8 @@ header>#header-area>#header-search-link
 	padding: 0 16px 8px;
 }
 
-/* 검색 버튼 색상 변경 (검색창 활성화 후) */
-header>#header-search-bar #header-search-btn
+/* 검색창 닫기 버튼 설정 변경 (검색창 활성화 후) */
+header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
     color: #dbde00;
@@ -71,8 +71,17 @@ header > #header-search-bar #header-search-input
     border: 3px solid #dbde00;
     background: #fff;
     font-size: 1.1em;
-    padding: 0.3em 0.5em;
+    padding: 0.2em 0.5em;
     border-radius: 15px;
+}
+
+/* 검색 버튼 색상 변경 (검색창 활성화 후) */
+header>#header-search-bar #header-search-btn
+{
+	display: inline-block;
+    color: #dbde00;
+    font-size: 24;
+	padding: 0 16px 8px;
 }
 
 /* 트게너 배너 바로 아래에 게시되는 트게더 자체 광고 문구 */
@@ -105,7 +114,7 @@ header > #header-search-bar #header-search-input
 	z-index: 1;
 	border-style: solid;
 	border-width: 2px;
-	border-color: rgb(255, 128, 0);
+	border-color: #5AA1F5;
 }
 
 /* 라이브 문구 전 이미지 삽입 (미사용) */
@@ -118,7 +127,7 @@ header > #header-search-bar #header-search-input
 /* 라이브 배경 설정 및 기존 문구 숨기기 */
 #board-info h1 > a.badge.badge-live
 {
-	background: rgb(255, 0, 255);
+	background: #FF00FF;
 	font-size: 0px;
 }
 
@@ -177,7 +186,7 @@ header > #header-search-bar #header-search-input
 {
     background-color: #FEC6B9; /* 배경 색 */
 	border-width: 3px;
-	border-color: rgb(255, 128, 192);
+	border-color: #FF80C0;
 	margin-bottom: 5px;
 	border-style: solid;
 }
@@ -214,6 +223,30 @@ header > #header-search-bar #header-search-input
 	border-color: #FFE94F;
 	margin-bottom: 5px;
 	border-style: solid;
+}
+
+/* 별 회전 관련 키프레임 설정 */
+@keyframes spin
+{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* 일정 추천 이상 받으면 표기되는 별 아이콘 PC처럼 돌아가게 (글 전체) */
+span.a-badge i.fa.fa-star
+{
+	animation: spin 2s infinite;
+	color: #FF0097;
+}
+
+/* 트게더 주인이 준 하트 설정 변경 */
+small.favo i.fa.fa-heart
+{
+	color: #FF6400;
+	/* 하트 다른 아이콘으로 대체 (미사용)
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png);
+	*/
 }
 
 /* 버튼류 통합설정 */

@@ -1,5 +1,5 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
-/* 최종 수정 : 2021-03-07 */
+/* 최종 수정 : 2021-03-09 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -51,7 +51,7 @@ header>#header-area>#header-search-link
 {
 	display: inline-block;
     color: #dbde00;
-    font-size: 24;
+    font-size: 24px;
 	padding: 0 16px 8px;
 }
 
@@ -60,7 +60,7 @@ header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
     color: #dbde00;
-    font-size: 24;
+    font-size: 24px;
 	padding: 0 16px 8px;
 }
 
@@ -80,7 +80,7 @@ header>#header-search-bar #header-search-btn
 {
 	display: inline-block;
     color: #dbde00;
-    font-size: 24;
+    font-size: 24px;
 	padding: 0 16px 8px;
 }
 

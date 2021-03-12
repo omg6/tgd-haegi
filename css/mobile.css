@@ -1,9 +1,13 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
-/* 최종 수정 : 2021-03-09 */
+/* 제작 : 듀얼스크린 (Twitch 닉네임) */
+/* 최종 수정 : 2021-03-13 */
 
-/* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 칸에 입력
+/* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
 */
+
+/* 실 적용 전 W3 CSS 검사 필요
+주소 : https://jigsaw.w3.org/css-validator/#validate_by_input */
 
 
 /* 웹폰트 불러오기 (티머니 둥근바람) */
@@ -34,7 +38,7 @@ header
 header>#header-area>a>h1
 {
 	/* 해바라기 그림 제거된 로고 */
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat; /* img > hgd_logo_mobile_without_sunflower */
 	background-size: auto 32px;
 	width: 90px;
 }
@@ -43,7 +47,28 @@ header>#header-area>a>h1
 header>#header-area>#header-bar-link
 {
 	display: inline-block;
-    color: #dbde00;
+	color: #dbde00;
+}
+
+/* 좌측 메뉴 버튼 색상 변경 (좌측 네비게이션 영역 활성화 후) */
+nav#nav>#nav-upper>#header-close-bar-link
+{
+	display: inline-block;
+	color: #dbde00;
+}
+
+/* 트게더 전체 메뉴 영역 색상 변경 (좌측 네비게이션 영역 활성화 후) */
+nav#nav>.nav-header
+{
+	background: #FFB09D;
+}
+
+/* 배경 색상 변경 및 로고 추가 (좌측 네비게이션 영역 활성화 후) */
+nav#nav
+{
+	background: url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png), #FFF8C8;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 /* 검색 버튼 색상 변경 */
@@ -102,7 +127,7 @@ header>#header-search-bar #header-search-btn
 /*
 #board-info > h1
 {
-	font-size: 20px;
+	font-size: 18px; default = 16px
 }*/
 
 /* 프로필 이미지 크기 확장 */
@@ -154,7 +179,10 @@ header>#header-search-bar #header-search-btn
 /* 트게더 접속인원 아이콘 변경*/
 #board-info #viewers-area .fa-user:before
 {
+	content: url(https://static-cdn.jtvnw.net/badges/v1/cb273ad9-4317-414c-bc32-69ce8e6d6ee7/1); /* 12M sub icon - 18x18 */
+	/* 15x15 - resize - 1 sub
 	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817727394525216778/3_resize.png);
+	*/
 }
 
 /* 트게더 접속인원 숫자 앞에 들어갈 문구 */
@@ -205,14 +233,14 @@ header>#header-search-bar #header-search-btn
 /* 아이콘 원본 출처 : https://iconmonstr.com/audio-5-png/ */
 #article-list>.article-list-row.notice>.item>.list-header>strong
 {
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817739587018424330/iconmonstr-audio-5-24.png);
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817739587018424330/iconmonstr-audio-5-24.png); /* img > hgd_notice_icon.png */
 }
 
 /* 인기 글 문단의 "인기" 문구 아이콘으로 변경 */
 /* 아이콘 원본 출처 : https://iconmonstr.com/thumb-10-png/ */
 #article-list>.article-list-row>.item>.list-header>b
 {
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817740086320955402/iconmonstr-thumb-10-24.png);
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817740086320955402/iconmonstr-thumb-10-24.png); /* img > hgd_hot_icon.png */
 }
 
 /* 일반 글 설정 */
@@ -245,8 +273,45 @@ small.favo i.fa.fa-heart
 {
 	color: #FF6400;
 	/* 하트 다른 아이콘으로 대체 (미사용)
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png);
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png); img > hgd_heart_icon.png 
 	*/
+}
+
+/* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
+small.favo i.fa.fa-heart
+{
+	animation : heartbeat 2s infinite;
+}
+
+/* 키프레임 설정 (하트 크기 커졌다 작아졌다) */
+/* 출처 : https://tgd.kr/c/css/19699825 글의 댓글 (Million_Air) */
+@keyframes heartbeat
+{
+	
+	0% { transform : scale(1); }
+	30% { transform : scale(1.25); }
+	42% { transform : scale(0.9); }
+	60% { transform : scale(1.15); }
+	85% { transform : scale(0.95); }
+	100% { transform : scale(1); }
+}
+
+/* 글 쓰기 버튼 설정 */
+#article-list-menu>.btn.write
+{
+	background: #FFABFC;
+}
+
+/* 하단 검색창 설정 */
+#boardSearchForm .form-control
+{
+    border-radius: 50px;
+}
+
+/* 푸터 (하단) 설정 */
+footer
+{
+	background: #FFF8C8;
 }
 
 /* 버튼류 통합설정 */
@@ -276,8 +341,16 @@ small.favo i.fa.fa-heart
 {
 	display: inline-block;
 	opacity: 1;
-	background: url(https://static-cdn.jtvnw.net/emoticons/v2/302330916/default/light/2.0);
+	background: url(https://static-cdn.jtvnw.net/emoticons/v2/302330916/default/light/2.0); /* img > hgd_ggyu_icon.png */
 	width: 50px;
 	height: 50px;
 	background-size: contain;
+}
+
+/* 트게더 글 내부 설정 */
+/* 추천 버튼 설정 */
+.btn-outline-success
+{
+	color: #0070FF;
+	border-color: #0070FF;
 }

@@ -6,8 +6,7 @@
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
 */
 
-/* 실 적용 전 W3 CSS 검사 필요
-주소 : https://jigsaw.w3.org/css-validator/#validate_by_input */
+/* !! 적용 전 W3 CSS 검사 필요 !! */
 
 
 /* 웹폰트 불러오기 (티머니 둥근바람) */
@@ -313,6 +312,12 @@ small.favo i.fa.fa-heart
 	background: #FFFCE8;
 }
 
+/* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
+#article-list>.article-list-row>.item>a.list-title:visited
+{
+	color: #AAAAAA !important;
+}
+
 /* 선택된 페이지 색상 변경 */
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
  .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
@@ -402,7 +407,7 @@ footer
 	border-color: #0070FF;
 }
 
-/* 댓글 창 전체 스타일 변경 */
+/* 댓글 창 외부 스타일 변경 */
 #article-reply-area #reply-real-area .reply, #article-reply-area #reply-best-area .reply
 {
 	background-color: #FFF; /* 배경 색 */
@@ -413,7 +418,7 @@ footer
 	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
 }
 
-/* 댓글 창 스타일 변경 (기본) */
+/* 댓글 창 내부 스타일 변경 */
 #article-reply-area #reply-real-area .reply>.reply-header, #article-reply-area #reply-best-area .reply>.reply-header, 
 #article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
 {
@@ -428,15 +433,15 @@ footer
 	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
 }
 
+/* 글 작성자 부분 상단 여백 증가 */
+#article-info>h2>#article-info-writer
+{
+	margin-top: 6px;
+}
+
 /* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */
 #article-content-wrapper>.header
 {
 	background: #C0FFF9;
 	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
-}
-
-/* 글 작성자 부분 상단 여백 증가 */
-#article-info>h2>#article-info-writer
-{
-	margin-top: 6px;
 }

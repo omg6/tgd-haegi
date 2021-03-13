@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
-/* 제작 : 듀얼스크린 (Twitch 닉네임) */
-/* 최종 수정 : 2021-03-13 */
+/* 제작 : 듀얼스크린 (TwitchTV 닉네임, email : ohmygirl7@naver.com) */
+/* 최종 수정 일자 : 2021-03-13 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -38,7 +38,7 @@ header
 header>#header-area>a>h1
 {
 	/* 해바라기 그림 제거된 로고 */
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat; /* img > hgd_logo_mobile_without_sunflower */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat; /* img_mobile > tgd_logo_without_sunflower.png */
 	background-size: auto 32px;
 	width: 90px;
 }
@@ -123,7 +123,7 @@ header>#header-search-bar #header-search-btn
 	height: 70px;
 }
 
-/* 프로필 이미지 옆 폰트 글씨 크기 조절 (키움 - 임시제거) */
+/* 프로필 이미지 옆 폰트 글씨 크기 조절 (미사용) */
 /*
 #board-info > h1
 {
@@ -149,14 +149,14 @@ header>#header-search-bar #header-search-btn
 	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817723964205694976/2_edited.png);
 }*/
 
-/* 라이브 배경 설정 및 기존 문구 숨기기 */
+/* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 */
 #board-info h1 > a.badge.badge-live
 {
 	background: #FF00FF;
 	font-size: 0px;
 }
 
-/* 라이브 문구 이후 텍스트 삽입 */
+/* 방송 진행 중 활성화되는 라이브 문구 이후 텍스트 삽입 */
 #board-info h1 > a.badge.badge-live::after
 {
 	font-size: 14px;
@@ -212,7 +212,7 @@ header>#header-search-bar #header-search-btn
 /* 공지 글 (상단) 설정 */
 #article-list>.article-list-row.notice
 {
-    background-color: #FEC6B9; /* 배경 색 */
+	background-color: #FEC6B9; /* 배경 색 */
 	border-width: 3px;
 	border-color: #FF80C0;
 	margin-bottom: 5px;
@@ -222,7 +222,7 @@ header>#header-search-bar #header-search-btn
 /* 인기 글 (상단) 설정 */
 #article-list>.article-list-row.hot
 {
-    background-color: #FFF298; /* 배경 색 */
+	background-color: #FFF298; /* 배경 색 */
 	border-width: 3px;
 	border-color: #DEC300;
 	margin-bottom: 5px;
@@ -233,14 +233,14 @@ header>#header-search-bar #header-search-btn
 /* 아이콘 원본 출처 : https://iconmonstr.com/audio-5-png/ */
 #article-list>.article-list-row.notice>.item>.list-header>strong
 {
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817739587018424330/iconmonstr-audio-5-24.png); /* img > hgd_notice_icon.png */
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817739587018424330/iconmonstr-audio-5-24.png); /* img > icon_notice.png */
 }
 
 /* 인기 글 문단의 "인기" 문구 아이콘으로 변경 */
 /* 아이콘 원본 출처 : https://iconmonstr.com/thumb-10-png/ */
 #article-list>.article-list-row>.item>.list-header>b
 {
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817740086320955402/iconmonstr-thumb-10-24.png); /* img > hgd_hot_icon.png */
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817740086320955402/iconmonstr-thumb-10-24.png); /* img > icon_hot.png */
 }
 
 /* 일반 글 설정 */
@@ -256,8 +256,8 @@ header>#header-search-bar #header-search-btn
 /* 별 회전 관련 키프레임 설정 */
 @keyframes spin
 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
 
@@ -273,21 +273,14 @@ small.favo i.fa.fa-heart
 {
 	color: #FF6400;
 	/* 하트 다른 아이콘으로 대체 (미사용)
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png); img > hgd_heart_icon.png 
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png); img > icon_haegi_heart.png 
 	*/
-}
-
-/* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
-small.favo i.fa.fa-heart
-{
-	animation : heartbeat 2s infinite;
 }
 
 /* 키프레임 설정 (하트 크기 커졌다 작아졌다) */
 /* 출처 : https://tgd.kr/c/css/19699825 글의 댓글 (Million_Air) */
 @keyframes heartbeat
 {
-	
 	0% { transform : scale(1); }
 	30% { transform : scale(1.25); }
 	42% { transform : scale(0.9); }
@@ -296,16 +289,57 @@ small.favo i.fa.fa-heart
 	100% { transform : scale(1); }
 }
 
+/* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
+small.favo i.fa.fa-heart
+{
+	animation : heartbeat 2s infinite;
+}
+
+/* 추천 수 배경 설정 (추천 없을 경우 하얀 배경으로 나오는 부분) */
+#article-list>.article-list-row>.item>.list-header.v0>span
+{
+	background: #FFFCE8;
+}
+
+/* 선택된 페이지 색상 변경 */
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
+ .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+{
+	background-color: #00C9FF;
+	border-color: #00C9FF;
+}
+
+/* 인기 글 보기 버튼 설정 */
+#article-list-menu>.btn.best
+{
+	color: #FFF;
+	background: #6DADFF;
+	border-color: #7C7C7C;
+}
+
 /* 글 쓰기 버튼 설정 */
 #article-list-menu>.btn.write
 {
 	background: #FFABFC;
+	border-color: #7C7C7C;
+}
+
+/* 하단 제목+내용 버튼 및 검색 버튼 부분 설정 (배경) */
+span.input-group-btn
+{
+	background: #FFF8C8;
 }
 
 /* 하단 검색창 설정 */
 #boardSearchForm .form-control
 {
-    border-radius: 50px;
+	border-radius: 50px;
+}
+
+/* 하단 배경 설정 (인기글, 글쓰기 부분) */
+#article-list-menu, .pagination-area
+{
+	background: #FFF8C8;
 }
 
 /* 푸터 (하단) 설정 */
@@ -322,7 +356,6 @@ footer
     border: 1.5px solid #e5e5e5;
     font-size: 12px;
 }
-
 .btn-primary
 {
     color: #fff;
@@ -341,16 +374,57 @@ footer
 {
 	display: inline-block;
 	opacity: 1;
-	background: url(https://static-cdn.jtvnw.net/emoticons/v2/302330916/default/light/2.0); /* img > hgd_ggyu_icon.png */
+	background: url(https://static-cdn.jtvnw.net/emoticons/v2/302330916/default/light/2.0); /* img > icon_ggyu.png */
 	width: 50px;
 	height: 50px;
 	background-size: contain;
 }
 
+
 /* 트게더 글 내부 설정 */
+
 /* 추천 버튼 설정 */
 .btn-outline-success
 {
 	color: #0070FF;
 	border-color: #0070FF;
+}
+
+/* 댓글 창 전체 스타일 변경 */
+#article-reply-area #reply-real-area .reply, #article-reply-area #reply-best-area .reply
+{
+	background-color: #FFF; /* 배경 색 */
+	border-width: 2px;
+	border-color: #F983FF;
+	margin-bottom: 10px;
+	border-style: solid;
+	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
+}
+
+/* 댓글 창 스타일 변경 (기본) */
+#article-reply-area #reply-real-area .reply>.reply-header, #article-reply-area #reply-best-area .reply>.reply-header, 
+#article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
+{
+	background-color: #FFF;
+	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+}
+
+/* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
+#article-info
+{
+	border-top: #FFF 5px solid; /* color - width - style 순서 */
+	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
+}
+
+/* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */
+#article-content-wrapper>.header
+{
+	background: #C0FFF9;
+	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
+}
+
+/* 글 작성자 부분 상단 여백 증가 */
+#article-info>h2>#article-info-writer
+{
+	margin-top: 6px;
 }

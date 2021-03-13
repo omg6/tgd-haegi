@@ -30,7 +30,7 @@ body
 /* 트게더 로고 배너 부분 */
 header
 {
-    background: #F7F5E8; /* 로고 배너 배경 색 */
+    background: #F7F5E8 !important; /* 로고 배너 배경 색 */
     border-bottom: 4px solid #BCA92C; /* 로고 배너 하단 구분선 색 */
 }
 
@@ -197,6 +197,18 @@ header>#header-search-bar #header-search-btn
 {
 	content: " 명";
 	cursor: text;
+}
+
+/* 상단 우측 즐겨찾기에 추가 버튼 색상 변경 (별 버튼) */
+#board-info>a.board-right-menu
+{
+	color: #00C9FF;
+}
+
+/* 상단 우측 드롭다운 버튼 색상 변경 (역삼각형 버튼) */
+.fa-caret-down:before
+{
+	color: #00C9FF;
 }
 
 /* 게시판 종류 (상단) 설정 */

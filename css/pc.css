@@ -645,9 +645,9 @@ header #right-search-form>#right-search-btn
 /* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */
 #article-content-wrapper>.header
 {
-	border-top: #00B6FF 3px solid;
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
+	border-top: #00B6FF 4px solid;
+	border-left: #00B6FF 4px solid;
+	border-right: #00B6FF 4px solid;
 	background: #C0FFF9;
 	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
 }
@@ -655,8 +655,8 @@ header #right-search-form>#right-search-btn
 /* 게시글 외부 경계선 설정 (+추천 부분) */
 #article-content-wrapper #article-content, #article-content-wrapper>.vote-area
 {
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
+	border-left: #00B6FF 4px solid;
+	border-right: #00B6FF 4px solid;
 }
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
@@ -673,9 +673,9 @@ header #right-search-form>#right-search-btn
 #article-content-wrapper>.footer
 {
 	background: #C0FFF9;
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
-	border-bottom: #00B6FF 3px solid;
+	border-left: #00B6FF 4px solid;
+	border-right: #00B6FF 4px solid;
+	border-bottom: #00B6FF 4px solid;
 }
 
 /* 신고 버튼 색상 변경 (목록 버튼 옆 위치) */
@@ -695,7 +695,7 @@ header #right-search-form>#right-search-btn
 #article-reply-area #reply-best-area .reply
 {
 	background-color: #FFF; /* 배경 색 */
-	border-width: 0.21em;
+	border-width: 0.26em;
 	border-color: #FF3E98;
 	margin-bottom: 10px;
 	border-style: solid;
@@ -708,14 +708,15 @@ header #right-search-form>#right-search-btn
 #article-reply-area #reply-best-area .reply > .reply-header
 {
 	background: #D3FFFB;
-	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+	border-bottom-color: #FF3E98; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+	border-bottom-width: 0.21em;
 }
 
 /* 댓글 창 외부 스타일 변경 (베스트 댓글 제외) */
 #article-reply-area #reply-real-area .reply
 {
 	background-color: #FFF; /* 배경 색 */
-	border-width: 2px;
+	border-width: 3px;
 	border-color: #F983FF;
 	margin-bottom: 10px;
 	border-style: solid;
@@ -729,6 +730,7 @@ header #right-search-form>#right-search-btn
 {
 	background-color: #FDDBFF;
 	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+	border-bottom-width: 2px;
 }
 
 /* 댓글 창 내부 스타일 변경 (베스트 댓글 제외) */

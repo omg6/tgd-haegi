@@ -14,10 +14,10 @@
 /* 출처 : https://noonnu.cc/font_page/459 */
 @font-face
 {
-    font-family: 'TmoneyRoundWindRegular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'TmoneyRoundWindRegular';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* 폰트 내부에 설정 */
@@ -175,7 +175,7 @@ header #header-bar > .row
 /* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
 small.favo i.fa.fa-heart
 {
-	animation : heartbeat 1s infinite;
+	animation : heartbeat 2s infinite;
 }
 
 /* 키프레임 설정 (하트 크기 커졌다 작아졌다) */
@@ -258,7 +258,8 @@ header #right-search-form > #right-search-btn:hover, header #right-search-form >
 
 span.a-badge i.fa.fa-star
 {
-	animation : binglebingle 4s infinite;
+	animation : binglebingle 2s infinite;
+	color: #FF0097;
 }
 
 
@@ -382,7 +383,7 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 /* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
 #article-list>.article-list-row>.item>.list-title>a:visited
 {
-	color: #bfbfbf !important;
+	color: #AAAAAA !important;
 }
 
 
@@ -418,7 +419,7 @@ img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 /* 공지글 설정 */
 #article-list > .article-list-row.notice
 {
-    background-color: #FEC6B9; /* 배경 색 */
+	background-color: #FEC6B9; /* 배경 색 */
 	border-width: 3px;
 	border-color: #FF80C0;
 	border-style: solid;
@@ -643,13 +644,23 @@ header #right-search-form>#right-search-btn
 	border-right: #00B6FF 3px solid;
 }
 
+/* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
+/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/flowers_1169089 (투명도 조절은 자체적으로 수행) */
+#article-content-wrapper #article-content
+{
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 15em;
+}
+
 /* 글 하단 부분 색상 조절 (목록, 신고, 스크랩, 수정, 삭제 위치한 버튼 라인) */
 #article-content-wrapper>.footer
 {
+	background: #C0FFF9;
 	border-left: #00B6FF 3px solid;
 	border-right: #00B6FF 3px solid;
 	border-bottom: #00B6FF 3px solid;
-	background: #C0FFF9;
 }
 
 /* 신고 버튼 색상 변경 (목록 버튼 옆 위치) */

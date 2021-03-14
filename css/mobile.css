@@ -13,10 +13,10 @@
 /* 출처 : https://noonnu.cc/font_page/459 */
 @font-face
 {
-    font-family: 'TmoneyRoundWindRegular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'TmoneyRoundWindRegular';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 /* 폰트 내부에 적용 */
@@ -29,8 +29,8 @@ body
 /* 트게더 로고 배너 부분 */
 header
 {
-    background: #F7F5E8 !important; /* 로고 배너 배경 색 */
-    border-bottom: 4px solid #BCA92C; /* 로고 배너 하단 구분선 색 */
+	background: #F7F5E8 !important; /* 로고 배너 배경 색 */
+	border-bottom: 4px solid #BCA92C; /* 로고 배너 하단 구분선 색 */
 }
 
 /* 해게더 로고 삽입 */
@@ -74,8 +74,8 @@ nav#nav
 header>#header-area>#header-search-link
 {
 	display: inline-block;
-    color: #dbde00;
-    font-size: 24px;
+	color: #dbde00;
+	font-size: 24px;
 	padding: 0 16px 8px;
 }
 
@@ -83,8 +83,8 @@ header>#header-area>#header-search-link
 header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
-    color: #dbde00;
-    font-size: 24px;
+	color: #dbde00;
+	font-size: 24px;
 	padding: 0 16px 8px;
 }
 
@@ -92,26 +92,26 @@ header>#header-search-bar #header-close-search-btn
 header > #header-search-bar #header-search-input
 {
 	position: relative;
-    border: 3px solid #dbde00;
-    background: #fff;
-    font-size: 1.1em;
-    padding: 0.2em 0.5em;
-    border-radius: 15px;
+	border: 3px solid #dbde00;
+	background: #fff;
+	font-size: 1.1em;
+	padding: 0.2em 0.5em;
+	border-radius: 15px;
 }
 
 /* 검색 버튼 색상 변경 (검색창 활성화 후) */
 header>#header-search-bar #header-search-btn
 {
 	display: inline-block;
-    color: #dbde00;
-    font-size: 24px;
+	color: #dbde00;
+	font-size: 24px;
 	padding: 0 16px 8px;
 }
 
 /* 트게너 배너 바로 아래에 게시되는 트게더 자체 광고 문구 */
 #header-top-notice strong.notice-badge
 {
-    background: #2CE1D9; /* "광고" 문구의 배경 색 설정 */
+	background: #2CE1D9; /* "광고" 문구의 배경 색 설정 */
 }
 
 /* 프로필 이미지 크기 확장 전 여백 공간 설정 */
@@ -257,7 +257,7 @@ header>#header-search-bar #header-search-btn
 /* 일반 글 설정 */
 #article-list>.article-list-row
 {
-    background-color: #FFFCE8; /* 배경 색 */
+	background-color: #FFFCE8; /* 배경 색 */
 	border-width: 2px;
 	border-color: #FFE94F;
 	margin-bottom: 5px;
@@ -375,15 +375,15 @@ footer
 /* 출처 : 해게더 PC CSS */
 .btn.square
 {
-    border-radius: 120px;
-    border: 1.5px solid #e5e5e5;
-    font-size: 12px;
+	border-radius: 120px;
+	border: 1.5px solid #e5e5e5;
+	font-size: 12px;
 }
 .btn-primary
 {
-    color: #fff;
-    background-color: #00bb3a;
-    border-color: #2e6da4;
+	color: #fff;
+	background-color: #00bb3a;
+	border-color: #2e6da4;
 }
 
 /* 위로가기 버튼 가리기 (기존) */
@@ -459,8 +459,8 @@ footer
 	margin-right: 5px;
 }
 
-/* 글 외부 경계선 설정 (게시글 부분) */
-#article-content-wrapper #article-content
+/* 글 외부 경계선 설정 (게시글 + 추천 부분) */
+#article-content-wrapper #article-content, #article-content-wrapper>.vote-area
 {
 	border-left: #00B6FF 2px solid;
 	border-right: #00B6FF 2px solid;
@@ -468,13 +468,14 @@ footer
 	margin-right: 5px;
 }
 
-/* 글 외부 경계선 설정 (추천 부분) */
-#article-content-wrapper>.vote-area
+/* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
+/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/flowers_1169089 (투명도 조절은 자체적으로 수행) */
+#article-content-wrapper #article-content
 {
-	border-left: #00B6FF 2px solid;
-	border-right: #00B6FF 2px solid;
-	margin-left: 5px;
-	margin-right: 5px;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 15em;
 }
 
 /* 글 외부 경계선 및 배경 설정 (목록, 신고 버튼 부분) */

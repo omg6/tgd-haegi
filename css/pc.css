@@ -1,1 +1,707 @@
-/* WIP */
+/* 해기님 트게더 (해게더) PC CSS */
+/* 1차 제작 : 미상 (~ 2021-03-13 적용) */
+/* 2차 제작 : 듀얼스크린 (TwitchTV 닉네임, email : ohmygirl7@naver.com) */
+/* 최종 수정 일자 : 2021-03-14 */
+
+/* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
+@import url("https://omg6.github.io/tgd-haegi/css/pc.css");
+*/
+
+/* !! 적용 전 W3 CSS 검사 필요 !! */
+
+
+/* 웹폰트 불러오기 (티머니 둥근바람) */
+/* 출처 : https://noonnu.cc/font_page/459 */
+@font-face
+{
+    font-family: 'TmoneyRoundWindRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 폰트 내부에 설정 */
+body
+{
+	font-family: 'TmoneyRoundWindRegular';
+}
+
+
+/* 마우스 커서 설정 - 기본 */
+/* 출처 : https://tgd.kr/s/bellhidira/32073772 */
+/* 마우스 아이콘 출처 : https://www.flaticon.com/free-icon/sunflower_1466040 */
+html, body, .fr-popup.emoticons, .fr-top, select.form-control, input[type=checkbox], input[type=radio], .opt
+{
+	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820126663471398922/sunflower.png) 0 0, auto !important; /* img > cursor_sunflower */
+}
+
+/* 마우스 커서 설정 - 변경 */
+/* 마우스 아이콘 출처 : https://www.flaticon.com/free-icon/sunflower_1035922 */
+#right-search-form>#right-search-btn, #board-info #board-info-bottom #addFavoriteBtn,
+#article-list #article-option-area>#article-option-area-toggle-btn, #article-list>.article-list-row>.item>.list-title>.list-writer>span,
+.reply > .reply-header > .reply-writer.logged, .reply-menu, .btn, .fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn,
+.fr-view img, .pull-left, a
+{
+	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820127336925495316/sunflower_2.png) 0 0, auto !important; /* img > cursor_sunflower_2 */
+}
+
+span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr-basic.fr-element, input[type='text']
+{
+	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820127336925495316/sunflower_2.png) 0 0, auto !important;
+}
+/* 마우스 커서 설정 끝 */
+
+/* 배경에 해바라기 내리는 효과 */
+/* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
+/* 효과에 사용된 아이콘 출처 (해바라기) : https://www.flaticon.com/free-icon/sunflower_3454257 (32x32) icon_sunflower.png */
+/* 효과에 사용된 아이콘 출처 (꽃) : https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
+html
+{
+	background: url(https://i.ibb.co/pjtrrRq/data-image.jpg);
+	height: auto !important;
+}
+
+body
+{
+	background: transparent;
+	animation: sunflower_falls 20s linear infinite;	
+	background-image:url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
+}
+
+/* 해바라기 내려가는 키프레임 */
+@keyframes sunflower_falls
+{
+	0% { background-position: 0px 0px; }
+	100% { background-position: 500px 1000px; }
+}
+
+
+/* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 */
+#board-info h1 > a.badge.badge-live
+{
+	background: #FF00FF;
+	font-size: 0px;
+}
+
+/* 방송 진행 중 활성화되는 라이브 문구 이후 텍스트 삽입 */
+#board-info h1 > a.badge.badge-live::after
+{
+	font-size: 13px;
+	content: "⊙ 방송중";
+}
+
+
+header .row > div:nth-child(1) > a img
+{
+	opacity : 0;
+}
+
+
+#board-info #viewers-area #viewers:before
+{
+	content : "해 바라기 ";
+	cursor : text;
+	font-weight : bold;
+}
+
+
+#board-info #viewers-area #viewers:after
+{
+	content : " 명";
+	cursor : text;
+	font-weight : bold;
+}
+
+
+header .row > div:nth-child(1) > a
+{
+	display : block;
+	width : 170px;
+	height : 67px;
+	background : url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png) no-repeat; /* img > hgd_logo_pc.png */
+}
+
+
+#main .menu-wrapper > .header
+{
+	background : #fdde00;
+	color : #fff;
+	padding : 0.45em 1.4em 0.45em 1em;
+	font-weight : bold;
+}
+
+
+header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
+{
+	border-radius : 15px;
+}
+
+
+#main .menu-wrapper > .header
+{
+	border-radius : 15px 15px 0 0;
+}
+
+
+#main .menu-wrapper a:nth-last-child(1)
+{
+	border-radius : 0 0 15px 15px;
+}
+
+
+header #header-bar > .row
+{
+	padding-top : 0.3em;
+	padding-bottom : 0.3em;
+	background : #fff;
+	border: 10px double #fdde00;
+}
+
+/* 카테고리 부분 설정 (게시판 이름들 표기되는 공간) */
+#article-list #article-list-category
+{
+	background : #ff9898;
+	border : 2px solid #ec0000;
+	margin-bottom: 7px;
+}
+
+
+/* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
+small.favo i.fa.fa-heart
+{
+	animation : heartbeat 1s infinite;
+}
+
+/* 키프레임 설정 (하트 크기 커졌다 작아졌다) */
+/* 출처 : https://tgd.kr/c/css/19699825 글의 댓글 (Million_Air) */
+@keyframes heartbeat
+{
+	0% { transform : scale(1); }
+	30% { transform : scale(1.25); }
+	42% { transform : scale(0.9); }
+	60% { transform : scale(1.15); }
+	85% { transform : scale(0.95); }
+	100% { transform : scale(1); }
+}
+
+
+#article-list > .article-list-row > .item > .list-title > small.favo
+{
+	font-size : 11px;
+	line-height : 13px;
+	position : relative;
+	text-align : center;
+	padding : 0 2px;
+	color : #ff0000;
+	word-break : break-word;
+	border-radius : 0px;
+	top : 3px;
+	float : left;
+}
+
+
+#article-list > .article-list-row > .item > .list-header > span
+{
+	background-color : #03e200;
+	color : #fff;
+	font-weight : bold;
+	padding : 1px 5px;
+	font-size : 12px;
+	border-radius : 10px;
+}
+
+
+header #right-search-form > input[type="text"]
+{
+	transition : 0.2s;
+}
+
+
+header #right-search-form > input[type="text"]:hover, header #right-search-form > input[type="text"]:focus
+{
+	transform : scale(1.05);
+	transition : 0.2s;
+}
+
+
+header #right-search-form > #right-search-btn
+{
+	transition : 0.2s;
+}
+
+
+header #right-search-form > #right-search-btn:hover, header #right-search-form > #right-search-btn:focus
+{
+	transform : scale(1.25);
+	transition : 0.2s;
+}
+
+
+#main .menu-wrapper .spacer
+{
+	height : 0.15em;
+}
+
+
+@keyframes binglebingle
+{
+	from { transform : rotate(0deg); }
+	to { transform : rotate(360deg); }
+}
+
+
+span.a-badge i.fa.fa-star
+{
+	animation : binglebingle 4s infinite;
+}
+
+
+#board-info #viewers-area
+{
+	color : #a99797;
+}
+
+
+#main .menu-wrapper
+{
+	border : #fbe674 solid 1px;
+	border-top : none !important ;
+}
+
+
+
+#main .menu-wrapper
+{
+	border : #f9e470 solid 1px;
+	border-top : none !important ;
+}
+
+
+#article-list > .article-list-row.notice
+{
+	background-color : #ededed;
+}
+
+
+#board-info #board-info-profile-img
+{
+	width : 90px;
+	border : #000000 solid 2px;
+	border-radius : 0px;
+	position : absolute;
+	top : -10px;
+	z-index : 1;
+}
+
+
+#board-info h1
+{
+	margin-left : 101px;
+}
+
+
+#board-info #board-info-bottom
+{
+	margin-left : 101px;
+}
+
+
+#main .menu-wrapper .spacer
+{
+	display: none;
+}
+
+
+#board-info #board-info-profile-img:hover
+{
+	transform: scale(1.10); /* 크기가 커짐 */
+	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
+}
+
+
+#article-list>.article-list-row:hover
+{
+	transform: scale(1.02); /* 크기가 커짐 */
+	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
+	background-color: #ffead4;
+}
+
+
+#article-list #article-list-category > a
+{
+	margin-top: 0px;
+	background: #ffffff;
+	transition-duration: .7s;
+}
+
+
+#article-list #article-list-category
+{
+	border-radius:8px;
+}
+
+
+header #header-bar
+{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+
+header #header-bar > .row
+{
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+	border: 2px solid #304556;
+	background: #fff;
+}
+
+
+#main .menu-wrapper
+{
+	border: #304556 solid 1px;
+	border-top: none !important;
+}
+
+
+header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
+{
+	border-radius: 15px;
+	border: 2px solid #FF0D00
+}
+
+
+/* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
+#article-list>.article-list-row>.item>.list-title>a:visited
+{
+	color: #bfbfbf !important;
+}
+
+
+#article-list > .article-list-row > .item > .list-header > span
+{
+	background-color: #FF0D00;
+	color: #fff;
+	font-weight: bold;
+	padding: 1px 5px;
+	font-size: 12px;
+	border-radius: 10px;
+}
+
+
+#article-list > .article-list-row.notice
+{
+	background-color: #FEC6B9;
+}
+
+
+header
+{
+	padding:0 0 .4em
+}
+
+/* 매니저 아이콘 가리기 (칼) */
+img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
+{
+	display: none; 
+}
+
+
+/* 공지글 설정 */
+#article-list > .article-list-row.notice
+{
+    background-color: #FEC6B9; /* 배경 색 */
+	border-width: 3px;
+	border-color: #FF80C0;
+	border-style: solid;
+	margin-top: 5px;
+}
+
+/* 인기글 설정 */
+#article-list>.article-list-row.hot
+{
+	border: 3px solid #dec300;
+	background-color: #fff298;
+	margin-top: 4px;
+}
+
+/* 공지 글 문단의 "공지" 문구 아이콘으로 변경 */
+/* 아이콘 원본 출처 : https://iconmonstr.com/audio-5-png/ */
+#article-list>.article-list-row.notice>.item>.list-header>strong
+{
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817739587018424330/iconmonstr-audio-5-24.png); /* img > icon_notice.png */
+}
+
+/* 인기 글 문단의 "인기" 문구 아이콘으로 변경 */
+/* 아이콘 원본 출처 : https://iconmonstr.com/thumb-10-png/ */
+#article-list>.article-list-row>.item>.list-header>b
+{
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817740086320955402/iconmonstr-thumb-10-24.png); /* img > icon_hot.png */
+}
+
+/* 일반글 설정 */
+#article-list>.article-list-row
+{
+	border: 1px solid #91A2B0;
+	/* default settings
+	border-left: 1px dotted  #45637b;
+	border-right: 1px solid  #45637b;*/
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+/* 하단 검색창 설정 */
+#boardSearchForm .form-control
+{
+	border-radius: 50px;
+}
+
+/* 버튼류 전역 설정 */
+.btn.square
+{
+	border-radius: 120px;
+	border: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+.btn-primary
+{
+	color: #fff;
+	background-color: #00bb3a;
+	border-color: #2e6da4;
+}
+
+#article-list #article-list-category
+{
+	background: #fff0;
+	border: 10px double #ffd400;
+}
+
+header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
+{
+	border-radius: 19px;
+	border: 9px double #fdde00;
+}
+
+#main .menu-wrapper > .header
+{
+	background: #fdde00;
+	color: #fff;
+	padding: 0.45em 1.4em 0.45em 1em;
+	font-weight: bold;
+}
+
+#article-list > .article-list-row > .item > .list-header > span
+{
+	background-color : #03e200;
+	color : #fff;
+	font-weight : bold;
+	padding : 1px 5px;
+	font-size : 12px;
+	border-radius : 10px;
+}
+
+header #right-search-form>input[type=text]
+{
+	position: relative;
+	border: 3px solid #dbde00;
+	background: #fff;
+	font-size: 1.1em;
+	padding: 0.3em 0.5em;
+	border-radius: 100px;
+}
+
+header #right-search-form>#right-search-btn
+{
+	color: #dbde00;
+	background: transparent;
+	border: none;
+	font-size: 1.4em;
+}
+
+#board-info #board-info-profile-img
+{
+	width: 95px;
+	border-radius: 100px;
+	position: absolute;
+	top: -9px;
+	z-index: 1;
+	border: #bfd200 solid 2px;
+}
+
+.fr-command.fr-emoticon[data-param1=PorscheWIN] > img
+{
+	width: 30px !important; 
+	height: 30px !important; 
+	padding-left: 30px;
+	padding-bottom : 30px;
+	background-image: url(https://i.ibb.co/XYtPxY6/ezgif-7-1f059ae8b76e.gif); /* img > unknown_img_pc.gif */
+	background-size: 100%;
+} 
+
+
+.fr-emoticon.fr-deletable > img[alt=PorscheWIN]
+{
+	width: 100px !important;
+	height: 100px !important;
+	padding-left: 100px;
+	padding-bottom : 100px;
+	background-image: url(https://i.ibb.co/XYtPxY6/ezgif-7-1f059ae8b76e.gif); /* img > unknown_img_pc.gif */
+	background-size: 100%;
+}
+
+/* 위로가기 버튼 가리기 (기존) */
+#movetotop img
+{
+	display:none
+}
+
+/* 위로가기 버튼 수정 */
+#movetotop
+{
+	display: inline-block;
+	opacity: 1;
+	background: url(https://static-cdn.jtvnw.net/emoticons/v2/302330916/default/light/3.0);
+	width: 70px;
+	height: 70px;
+	background-size: contain;
+}
+
+/* 선택된 페이지 색상 변경 */
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
+ .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+{
+	background-color: #00C9FF;
+	border-color: #00C9FF;
+}
+
+
+/* 트게더 글 내부 설정 */
+
+/* 추천 버튼 설정 */
+.btn-outline-success
+{
+	color: #0070FF;
+	border-color: #0070FF;
+	padding: 11px;
+}
+
+/* 추천 버튼 설정 (마우스 올릴 때) */
+.btn-outline-success:hover
+{
+	background-color: #0070FF;
+}
+
+/* 비추천 버튼 설정 */
+.btn-outline-primary
+{
+	color: #FF4795;
+	border-color: #FF4795;
+	padding: 11px;
+}
+
+/* 비추천 버튼 설정 (마우스 올릴 때) */
+.btn-outline-primary:hover
+{
+	background-color: #FF4795;
+}
+
+/* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
+#article-info
+{
+	border-top: #FFF 5px solid; /* color - width - style 순서 */
+	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
+}
+
+/* 글 작성자 부분 상단 여백 증가 */
+#article-info #article-info-writer
+{
+	margin-top: 4px;
+}
+
+/* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */
+#article-content-wrapper>.header
+{
+	border-top: #00B6FF 3px solid;
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+	background: #C0FFF9;
+	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
+}
+
+/* 게시글 외부 경계선 설정 (+추천 부분) */
+#article-content-wrapper #article-content, #article-content-wrapper>.vote-area
+{
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+}
+
+/* 글 하단 부분 색상 조절 (목록, 신고, 스크랩, 수정, 삭제 위치한 버튼 라인) */
+#article-content-wrapper>.footer
+{
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+	border-bottom: #00B6FF 3px solid;
+	background: #C0FFF9;
+}
+
+/* 신고 버튼 색상 변경 (목록 버튼 옆 위치) */
+.btn-outline-danger
+{
+	background-color: #FA8072;
+	color: #FFF;
+}
+
+/* 댓글 n 개 표기 부분 (+ 우측 역삼각형 버튼) 색상 변경 */
+#article-reply-area>.header h5, a#lastc
+{
+	color: #FF6800;
+}
+
+/* 베스트 댓글 외부 스타일 변경 */
+#article-reply-area #reply-best-area .reply
+{
+	background-color: #FFF; /* 배경 색 */
+	border-width: 0.21em;
+	border-color: #FF3E98;
+	margin-bottom: 10px;
+	border-style: solid;
+	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
+	margin-left: 5px; /* 댓글 좌측 마진 (게시글 부분 안으로 들어가게 하기 위해) */
+	margin-right: 5px; /* 댓글 우측 마진 (게시글 부분 안으로 들어가게 하기 위해) */
+}
+
+/* 베스트 댓글 작성자 부분 배경 설정 */
+#article-reply-area #reply-best-area .reply > .reply-header
+{
+	background: #D3FFFB;
+	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+}
+
+/* 댓글 창 외부 스타일 변경 (베스트 댓글 제외) */
+#article-reply-area #reply-real-area .reply
+{
+	background-color: #FFF; /* 배경 색 */
+	border-width: 2px;
+	border-color: #F983FF;
+	margin-bottom: 10px;
+	border-style: solid;
+	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
+	margin-left: 5px; /* 댓글 좌측 마진 (게시글 부분 안으로 들어가게 하기 위해) */
+	margin-right: 5px; /* 댓글 우측 마진 (게시글 부분 안으로 들어가게 하기 위해) */
+}
+
+/* 댓글 창 내부 스타일 변경 (베스트 댓글 제외) */
+#article-reply-area #reply-real-area .reply>.reply-header, 
+#article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
+{
+	background-color: #FFF;
+	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+}
+
+/* 대댓글 좌측 마진 설정 */
+#article-reply-area #reply-real-area .reply.d-1, #article-reply-area #reply-best-area .reply.d-1
+{
+	margin-left: 2.5em;
+}

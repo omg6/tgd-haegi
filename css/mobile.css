@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
 /* 제작 : 듀얼스크린 (TwitchTV 닉네임, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-13 */
+/* 최종 수정 일자 : 2021-03-14 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -264,6 +264,12 @@ header>#header-search-bar #header-search-btn
 	border-style: solid;
 }
 
+/* 추천 수 배경 설정 (제목 옆) */
+#article-list>.article-list-row>.item>.list-header>span
+{
+	background-color: #03e200;
+}
+
 /* 별 회전 관련 키프레임 설정 */
 @keyframes spin
 {
@@ -365,7 +371,7 @@ footer
 	background: #FFF8C8;
 }
 
-/* 버튼류 통합설정 */
+/* 버튼류 전역 설정 */
 /* 출처 : 해게더 PC CSS */
 .btn.square
 {
@@ -405,6 +411,94 @@ footer
 {
 	color: #0070FF;
 	border-color: #0070FF;
+	padding: 11px;
+}
+
+/* 추천 버튼 설정 (마우스 올릴 때) */
+.btn-outline-success:hover
+{
+	background-color: #0070FF;
+}
+
+/* 비추천 버튼 설정 */
+.btn-outline-primary
+{
+	color: #FF4795;
+	border-color: #FF4795;
+	padding: 11px;
+}
+
+/* 비추천 버튼 설정 (마우스 올릴 때) */
+.btn-outline-primary:hover
+{
+	background-color: #FF4795;
+}
+
+/* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
+#article-info
+{
+	border-top: #FFF 5px solid; /* color - width - style 순서 */
+	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
+}
+
+/* 글 작성자 부분 상단 여백 증가 */
+#article-info>h2>#article-info-writer
+{
+	margin-top: 6px;
+}
+
+/* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절, 글 외부 경계선 설정 */
+#article-content-wrapper>.header
+{
+	background: #D1FFFB;
+	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
+	border-top: #00B6FF 3px solid;
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* 글 외부 경계선 설정 (게시글 부분) */
+#article-content-wrapper #article-content
+{
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* 글 외부 경계선 설정 (추천 부분) */
+#article-content-wrapper>.vote-area
+{
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* 글 외부 경계선 및 배경 설정 (목록, 신고 버튼 부분) */
+#article-content-wrapper>.footer
+{
+	background: #D1FFFB;
+	border-left: #00B6FF 3px solid;
+	border-right: #00B6FF 3px solid;
+	border-bottom: #00B6FF 3px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* 신고 버튼 색상 변경 (목록 버튼 옆 위치) */
+.btn-outline-danger
+{
+	background-color: #FA8072;
+	color: #FFF;
+}
+
+/* 댓글 n 개 표기 부분 (+ 우측 역삼각형 버튼) 색상 변경 */
+#article-reply-area>.header h5, a#lastc
+{
+	color: #FF6800;
 }
 
 /* 댓글 창 외부 스타일 변경 */
@@ -424,24 +518,4 @@ footer
 {
 	background-color: #FFF;
 	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
-}
-
-/* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
-#article-info
-{
-	border-top: #FFF 5px solid; /* color - width - style 순서 */
-	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
-}
-
-/* 글 작성자 부분 상단 여백 증가 */
-#article-info>h2>#article-info-writer
-{
-	margin-top: 6px;
-}
-
-/* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */
-#article-content-wrapper>.header
-{
-	background: #C0FFF9;
-	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
 }

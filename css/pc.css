@@ -692,12 +692,17 @@ header #right-search-form>#right-search-btn
 	margin-right: 5px; /* 댓글 우측 마진 (게시글 부분 안으로 들어가게 하기 위해) */
 }
 
+/* 댓글 작성자 부분 설정 (베스트 댓글 제외) */
+#article-reply-area #reply-real-area .reply>.reply-header
+{
+	background-color: #FDDBFF;
+	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+}
+
 /* 댓글 창 내부 스타일 변경 (베스트 댓글 제외) */
-#article-reply-area #reply-real-area .reply>.reply-header, 
 #article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
 {
 	background-color: #FFF;
-	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
 }
 
 /* 대댓글 좌측 마진 설정 */

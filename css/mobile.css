@@ -501,8 +501,26 @@ footer
 	color: #FF6800;
 }
 
-/* 댓글 창 외부 스타일 변경 */
-#article-reply-area #reply-real-area .reply, #article-reply-area #reply-best-area .reply
+/* 베스트 댓글 창 외부 스타일 변경 */
+#article-reply-area #reply-best-area .reply
+{
+	background-color: #FFF; /* 배경 색 */
+	border-width: 2px;
+	border-color: #FF3E98;
+	margin-bottom: 10px;
+	border-style: solid;
+	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
+}
+
+/* 베스트 댓글 작성자 부분 배경 설정 */
+#article-reply-area #reply-best-area .reply > .reply-header
+{
+	background: #BBF6FF;
+	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+}
+
+/* 댓글 창 외부 스타일 변경 (베스트 댓글 제외) */
+#article-reply-area #reply-real-area .reply
 {
 	background-color: #FFF; /* 배경 색 */
 	border-width: 2px;
@@ -512,10 +530,15 @@ footer
 	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
 }
 
-/* 댓글 창 내부 스타일 변경 */
-#article-reply-area #reply-real-area .reply>.reply-header, #article-reply-area #reply-best-area .reply>.reply-header, 
+/* 댓글 작성자 부분 설정 (베스트 댓글 제외) */
+#article-reply-area #reply-real-area .reply>.reply-header
+{
+	background-color: #FDDBFF;
+	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+}
+
+/* 댓글 창 내부 색상 변경 */
 #article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
 {
 	background-color: #FFF;
-	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
 }

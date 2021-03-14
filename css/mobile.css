@@ -452,9 +452,9 @@ footer
 {
 	background: #D1FFFB;
 	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
-	border-top: #00B6FF 3px solid;
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
+	border-top: #00B6FF 2px solid;
+	border-left: #00B6FF 2px solid;
+	border-right: #00B6FF 2px solid;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -462,8 +462,8 @@ footer
 /* 글 외부 경계선 설정 (게시글 부분) */
 #article-content-wrapper #article-content
 {
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
+	border-left: #00B6FF 2px solid;
+	border-right: #00B6FF 2px solid;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -471,8 +471,8 @@ footer
 /* 글 외부 경계선 설정 (추천 부분) */
 #article-content-wrapper>.vote-area
 {
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
+	border-left: #00B6FF 2px solid;
+	border-right: #00B6FF 2px solid;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -481,9 +481,9 @@ footer
 #article-content-wrapper>.footer
 {
 	background: #D1FFFB;
-	border-left: #00B6FF 3px solid;
-	border-right: #00B6FF 3px solid;
-	border-bottom: #00B6FF 3px solid;
+	border-left: #00B6FF 2px solid;
+	border-right: #00B6FF 2px solid;
+	border-bottom: #00B6FF 2px solid;
 	margin-left: 5px;
 	margin-right: 5px;
 }

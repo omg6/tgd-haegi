@@ -1,13 +1,13 @@
 /* 해기님 트게더 (해게더) PC CSS */
 /* 1차 제작 : 미상 (~ 2021-03-13 적용) */
-/* 2차 제작 : 듀얼스크린 (TwitchTV 닉네임, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-14 */
+/* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
+/* 최종 수정 일자 : 2021-03-15 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
 */
 
-/* !! 적용 전 W3 CSS 검사 필요 !! */
+/* !! 실 적용 전 W3C CSS Validator 점검 필요 (css 제작자 기준) !! */
 
 
 /* 웹폰트 불러오기 (티머니 둥근바람) */
@@ -459,6 +459,29 @@ img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 	margin-bottom: 4px;
 }
 
+/* 인기 글 보기 버튼 설정 (소스 시작 모바일과 약간 다름) */
+#article-list #article-list-menu>.btn.best
+{
+	color: #FFF;
+	background: #6DADFF;
+	border-color: #7C7C7C;
+}
+
+/* 글 쓰기 버튼 설정 (소스 시작 모바일과 약간 다름) */
+#article-list #article-list-menu>.btn.write
+{
+	background: #FFABFC;
+	border-color: #7C7C7C;
+}
+
+/* 선택된 페이지 색상 변경 */
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
+ .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+{
+	background-color: #00C9FF;
+	border-color: #00C9FF;
+}
+
 /* 하단 검색창 설정 */
 #boardSearchForm .form-control
 {
@@ -573,14 +596,6 @@ header #right-search-form>#right-search-btn
 	width: 70px;
 	height: 70px;
 	background-size: contain;
-}
-
-/* 선택된 페이지 색상 변경 */
-.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
- .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
-{
-	background-color: #00C9FF;
-	border-color: #00C9FF;
 }
 
 
@@ -726,4 +741,39 @@ header #right-search-form>#right-search-btn
 #article-reply-area #reply-real-area .reply.d-1, #article-reply-area #reply-best-area .reply.d-1
 {
 	margin-left: 2.5em;
+}
+
+/* 댓글 작성 창 외부 경계 설정 (상단) */
+.fr-toolbar.fr-top
+{
+	border-top: 5px solid #FCCDFF;
+}
+
+/* 댓글 작성 창 외부 경계 설정 (상단 + 하단 좌,우,하단 경계) */
+.fr-toolbar.fr-top, .fr-box.fr-basic.fr-top .fr-wrapper
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	border-left: 2px solid #FCCDFF;
+	border-right: 2px solid #FCCDFF;
+	border-bottom: 2px solid #FCCDFF;
+}
+
+/* 댓글 쓰기 버튼 우측 들여쓰기 및 상단 여백 (댓글 작성 창 하단 부분) */
+#comment-write-form #comment-write-button-area
+{
+	margin-top: 10px;
+	margin-right: 6px;
+}
+
+/* 윗글, 아랫글 부분 간격 조절 (댓글 쓰기 버튼 하단 두줄 부분) */
+#article-neighbor-list
+{
+	padding: 0 1.6em;
+}
+
+/* 쓰기 버튼 위치 조절 (새 글 작성하기 페이지 내부 하단의 쓰기 버튼 - 경계에 치우쳐져 있던 문제 수정) */
+#article-write-button.btn.btn-primary.pull-right
+{
+	margin-right: 16px;
 }

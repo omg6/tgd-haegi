@@ -1,12 +1,12 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
-/* 제작 : 듀얼스크린 (TwitchTV 닉네임, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-14 */
+/* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
+/* 최종 수정 일자 : 2021-03-15 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
 */
 
-/* !! 적용 전 W3 CSS 검사 필요 !! */
+/* !! 실 적용 전 W3C CSS Validator 점검 필요 (css 제작자 기준) !! */
 
 
 /* 웹폰트 불러오기 (티머니 둥근바람) */
@@ -542,4 +542,18 @@ footer
 #article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
 {
 	background-color: #FFF;
+}
+
+/* 댓글 작성 창 외부 경계 설정 (상단) */
+.fr-toolbar.fr-top
+{
+	border-top: 5px solid #FCCDFF;
+}
+
+/* 댓글 작성 창 외부 경계 설정 (상단 + 하단 좌,우,하단 경계) */
+.fr-toolbar.fr-top, .fr-box.fr-basic.fr-top .fr-wrapper
+{
+	border-left: 2px solid #FCCDFF;
+	border-right: 2px solid #FCCDFF;
+	border-bottom: 2px solid #FCCDFF;
 }

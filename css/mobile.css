@@ -104,13 +104,11 @@ header>#header-search-bar #header-search-btn
 	background: #FFF8C8;
 	border-color: #BCA92C;
 	border-width: 2px;
-	height: 95px;
 }
 
 /* 프로필 이미지 크기 확장 */
 #board-info h1 > #board-info-profile-img
 {
-	margin-left: 3px;
 	margin-right: 5px;
 	width: 70px;
 	height: 70px;
@@ -124,7 +122,7 @@ header>#header-search-bar #header-search-btn
 /* 프로필 이미지 옆 스트리머명 글씨 크기 조절 */
 #board-info > h1
 {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 /* 라이브 문구 전 이미지 삽입 (미사용) */
@@ -159,7 +157,7 @@ header>#header-search-bar #header-search-btn
 #board-info #viewers
 {
 	color: #858281;
-	font-size: 16px;
+	font-size: 15px;
 	position: relative;
 	bottom: 5px
 }

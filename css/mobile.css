@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-15 */
+/* 최종 수정 일자 : 2021-03-16 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -42,15 +42,8 @@ header>#header-area>a>h1
 	width: 90px;
 }
 
-/* 좌측 메뉴 버튼 색상 변경 */
-header>#header-area>#header-bar-link
-{
-	display: inline-block;
-	color: #dbde00;
-}
-
-/* 좌측 메뉴 버튼 색상 변경 (좌측 네비게이션 영역 활성화 후) */
-nav#nav>#nav-upper>#header-close-bar-link
+/* 좌측 메뉴 버튼 색상 변경 (기본 및 네비게이션 활성화 후) */
+header>#header-area>#header-bar-link, nav#nav>#nav-upper>#header-close-bar-link
 {
 	display: inline-block;
 	color: #dbde00;
@@ -70,17 +63,8 @@ nav#nav
 	background-position: center center;
 }
 
-/* 검색 버튼 색상 변경 */
-header>#header-area>#header-search-link
-{
-	display: inline-block;
-	color: #dbde00;
-	font-size: 24px;
-	padding: 0 16px 8px;
-}
-
-/* 검색창 닫기 버튼 설정 변경 (검색창 활성화 후) */
-header>#header-search-bar #header-close-search-btn
+/* 검색 버튼 및 검색창 닫기 버튼 설정 변경 */
+header>#header-area>#header-search-link, header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
 	color: #dbde00;
@@ -117,28 +101,30 @@ header>#header-search-bar #header-search-btn
 /* 프로필 이미지 크기 확장 전 여백 공간 설정 */
 #board-info
 {
+	background: #FFF8C8;
 	border-color: #BCA92C;
 	border-width: 2px;
-	height: 70px;
+	height: 95px;
 }
-
-/* 프로필 이미지 옆 폰트 글씨 크기 조절 (미사용) */
-/*
-#board-info > h1
-{
-	font-size: 18px; default = 16px
-}*/
 
 /* 프로필 이미지 크기 확장 */
 #board-info h1 > #board-info-profile-img
 {
-	width: 50px;
-	height: 50px;
+	margin-left: 3px;
+	margin-right: 5px;
+	width: 70px;
+	height: 70px;
 	border-radius: 100px;
 	z-index: 1;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 0.15em;
 	border-color: #5AA1F5;
+}
+
+/* 프로필 이미지 옆 스트리머명 글씨 크기 조절 */
+#board-info > h1
+{
+	font-size: 24px;
 }
 
 /* 라이브 문구 전 이미지 삽입 (미사용) */
@@ -148,11 +134,12 @@ header>#header-search-bar #header-search-btn
 	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817723964205694976/2_edited.png);
 }*/
 
-/* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 */
+/* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 (여백 설정 포함) */
 #board-info h1 > a.badge.badge-live
 {
 	background: #FF00FF;
 	font-size: 0px;
+	margin-left: 5px;
 }
 
 /* 방송 진행 중 활성화되는 라이브 문구 이후 텍스트 삽입 */
@@ -168,20 +155,21 @@ header>#header-search-bar #header-search-btn
 	display: none;
 }
 
-/* 접속자 수 색깔 및 글자 크기 설정 */
-#board-info #viewers-area
+/* 접속자 수 색깔 및 글자 크기, 위치 설정 */
+#board-info #viewers
 {
-	color: #898685;
-	font-size: 12px;
+	color: #858281;
+	font-size: 16px;
+	position: relative;
+	bottom: 5px
 }
 
-/* 트게더 접속인원 아이콘 변경*/
+/* 트게더 접속인원 아이콘 변경 및 위치 조정 */
 #board-info #viewers-area .fa-user:before
 {
-	content: url(https://static-cdn.jtvnw.net/badges/v1/cb273ad9-4317-414c-bc32-69ce8e6d6ee7/1); /* 12M sub icon - 18x18 */
-	/* 15x15 - resize - 1 sub
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817727394525216778/3_resize.png);
-	*/
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/821030334802952212/2_resize.png); /* 12M sub icon - resize */
+	margin-left: 7px;
+	margin-right: 7px;
 }
 
 /* 트게더 접속인원 숫자 앞에 들어갈 문구 */
@@ -198,16 +186,11 @@ header>#header-search-bar #header-search-btn
 	cursor: text;
 }
 
-/* 상단 우측 즐겨찾기에 추가 버튼 색상 변경 (별 버튼) */
-#board-info>a.board-right-menu
+/* 상단 우측 즐겨찾기에 추가 및 드롭다운 버튼 색상 변경 및 위치 조절 (별, 역삼각형 버튼) */
+#board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
 	color: #00C9FF;
-}
-
-/* 상단 우측 드롭다운 버튼 색상 변경 (역삼각형 버튼) */
-.fa-caret-down:before
-{
-	color: #00C9FF;
+	margin-top: 1.8em;
 }
 
 /* 게시판 종류 (상단) 설정 */

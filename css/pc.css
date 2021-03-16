@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS */
 /* 1차 제작 : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-15 */
+/* 최종 수정 일자 : 2021-03-17 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
@@ -32,7 +32,7 @@ body
 /* 마우스 아이콘 출처 : https://www.flaticon.com/free-icon/sunflower_1466040 */
 html, body, .fr-popup.emoticons, .fr-top, select.form-control, input[type=checkbox], input[type=radio], .opt
 {
-	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820126663471398922/sunflower.png) 0 0, auto !important; /* img > cursor_sunflower */
+	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/821394714434994206/cursor_sunflower_edited.png) 0 0, auto !important; /* img > cursor_sunflower_edited */
 }
 
 /* 마우스 커서 설정 - 변경 */
@@ -289,15 +289,34 @@ span.a-badge i.fa.fa-star
 	background-color : #ededed;
 }
 
-
+/* 기존 프로필 이미지 가리기 */
 #board-info #board-info-profile-img
 {
-	width : 90px;
-	border : #000000 solid 2px;
-	border-radius : 0px;
-	position : absolute;
-	top : -10px;
-	z-index : 1;
+	display: none;
+}
+
+/* 새로운 프로필 이미지 크기 설정 및 클릭시 새로고침하도록 설정 */
+/* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
+#board-info h1>a::before
+{
+	content: '';
+	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) 0 0/91px 91px no-repeat; /* img_original > he0901_profile_210316_300x300 */
+	width: 95px;
+	height: 95px;
+	position: absolute;
+	margin-top: -29px; /* 프로필 이미지 위치 설정 (상단) */
+	top: 20px;
+	left: 38px;
+	z-index: 100; 
+	border: #bfd200 solid 2px;
+	border-radius: 100px;
+}
+
+/* 새로운 프로필 이미지에 마우스 올리면 이미지 커지도록 설정 */
+#board-info h1>a:hover::before
+{
+	transform: scale(1.10); /* 크기가 커짐 */
+	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
 }
 
 
@@ -316,13 +335,6 @@ span.a-badge i.fa.fa-star
 #main .menu-wrapper .spacer
 {
 	display: none;
-}
-
-
-#board-info #board-info-profile-img:hover
-{
-	transform: scale(1.10); /* 크기가 커짐 */
-	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
 }
 
 
@@ -548,16 +560,6 @@ header #right-search-form>#right-search-btn
 	background: transparent;
 	border: none;
 	font-size: 1.4em;
-}
-
-#board-info #board-info-profile-img
-{
-	width: 95px;
-	border-radius: 100px;
-	position: absolute;
-	top: -9px;
-	z-index: 1;
-	border: #bfd200 solid 2px;
 }
 
 .fr-command.fr-emoticon[data-param1=PorscheWIN] > img

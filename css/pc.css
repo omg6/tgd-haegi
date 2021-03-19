@@ -316,7 +316,7 @@ span.a-badge i.fa.fa-star
 #board-info h1>a::after
 {
 	content: '';
-	background: url(https://upload.tgd.kr/20200128/fc1b81d27e83fb3dc1c6a02eff959b77.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822484325416828928/fanart_by_shardion_original.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png */
 	width: 95px;
 	height: 95px;
 	position: absolute;

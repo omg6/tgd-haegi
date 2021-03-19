@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS */
 /* 1차 제작 : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-19 */
+/* 최종 수정 일자 : 2021-03-20 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
@@ -57,7 +57,7 @@ span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr
 /* 효과에 사용된 아이콘 출처 (꽃) : https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
 html
 {
-	background: url(https://i.ibb.co/pjtrrRq/data-image.jpg);
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822485636405395506/tgd_background_resize_1920x1226_2.jpg); /* img_pc > tgd_background_resize_1920x1226.jpg */
 	height: auto !important;
 }
 

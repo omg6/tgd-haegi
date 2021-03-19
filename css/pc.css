@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS */
 /* 1차 제작 : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-17 */
+/* 최종 수정 일자 : 2021-03-19 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
@@ -242,10 +242,10 @@ header #right-search-form > #right-search-btn:hover, header #right-search-form >
 	transition : 0.2s;
 }
 
-
+/* 좌측 트게더 전체 메뉴 간격 제거 */
 #main .menu-wrapper .spacer
 {
-	height : 0.15em;
+	display: none;
 }
 
 
@@ -295,7 +295,7 @@ span.a-badge i.fa.fa-star
 	display: none;
 }
 
-/* 새로운 프로필 이미지 크기 설정 및 클릭시 새로고침하도록 설정 */
+/* 프로필 이미지 크게 설정 */
 /* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
 #board-info h1>a::before
 {
@@ -305,36 +305,55 @@ span.a-badge i.fa.fa-star
 	height: 95px;
 	position: absolute;
 	margin-top: -29px; /* 프로필 이미지 위치 설정 (상단) */
-	top: 20px;
+	top: 19px;
 	left: 38px;
 	z-index: 100; 
-	border: #bfd200 solid 2px;
+	border: #FF5EFF solid 2px;
 	border-radius: 100px;
 }
 
-/* 새로운 프로필 이미지에 마우스 올리면 이미지 커지도록 설정 */
-#board-info h1>a:hover::before
+/* 프로필 이미지 크게 설정 (우측, 프로필 2 - 다른 이미지 적용) */
+#board-info h1>a::after
+{
+	content: '';
+	background: url(https://upload.tgd.kr/20200128/fc1b81d27e83fb3dc1c6a02eff959b77.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png */
+	width: 95px;
+	height: 95px;
+	position: absolute;
+	margin-top: -29px; /* 프로필 이미지 위치 설정 (상단) */
+	top: 19px;
+	left: 775px;
+	z-index: 100; 
+	border: #FF5EFF solid 2px;
+	border-radius: 100px;
+}
+
+/* 새로운 프로필 이미지에 마우스 올리면 이미지 커지도록 설정 (좌, 우측 동시 적용) */
+#board-info h1>a:hover::before, #board-info h1>a:hover::after
 {
 	transform: scale(1.10); /* 크기가 커짐 */
 	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
 }
 
 
+/* 닉네임, 트게더 링크 표기 부분 마진 설정 (프로필 사진 바로 옆 부분) */
+#board-info h1, #board-info #board-info-bottom
+{
+	margin-left: 110px;
+	margin-right: 110px;
+}
+
+/* 닉네임, 트게더 링크 사이 선 색상 설정 및 닉네임 색상 진하게 설정 */
 #board-info h1
 {
-	margin-left : 101px;
+	border-bottom: 2px solid #FFC9FF;
+	font-weight: bold;
 }
 
-
-#board-info #board-info-bottom
+/* 닉네임 표기 부분 좌측 마진 설정 (프로필 사진 바로 옆 부분) */
+#board-info h1>a
 {
-	margin-left : 101px;
-}
-
-
-#main .menu-wrapper .spacer
-{
-	display: none;
+	margin-left: 3px;
 }
 
 

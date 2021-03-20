@@ -26,6 +26,11 @@ body
 	font-family: 'TmoneyRoundWindRegular';
 }
 
+header
+{
+	padding: 0 0 .4em
+}
+
 
 /* 마우스 커서 설정 - 기본 */
 /* 출처 : https://tgd.kr/s/bellhidira/32073772 */
@@ -65,7 +70,7 @@ body
 {
 	background: transparent;
 	animation: sunflower_falls 20s linear infinite;	
-	background-image:url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
+	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
 }
 
 /* 해바라기 내려가는 키프레임 */
@@ -74,7 +79,7 @@ body
 	0% { background-position: 0px 0px; }
 	100% { background-position: 500px 1000px; }
 }
-
+/* 배경에 해바라기 내리는 효과 끝 */
 
 /* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 */
 #board-info h1 > a.badge.badge-live
@@ -84,16 +89,19 @@ body
 }
 
 /* 방송 진행 중 활성화되는 라이브 문구 이후 텍스트 삽입 */
-#board-info h1 > a.badge.badge-live::after
+#board-info h1 > a.badge.badge-live:after
 {
-	font-size: 13px;
+	position: static;
+	background: #FF00FF;
+	font-size: 12px;
 	content: "⊙ 방송중";
+	border: 0px;
 }
 
-
-header .row > div:nth-child(1) > a img
+/* 트게더 접속인원 부분 색상 설정 */
+#board-info #viewers-area
 {
-	opacity : 0;
+	color: #a99797;
 }
 
 /* 트게더 접속인원 아이콘 변경*/
@@ -102,7 +110,7 @@ header .row > div:nth-child(1) > a img
 	content: url(https://static-cdn.jtvnw.net/badges/v1/cb273ad9-4317-414c-bc32-69ce8e6d6ee7/1); /* 12M sub icon - 18x18 */
 }
 
-
+/* 트게더 접속인원 숫자 앞에 들어갈 문구 */
 #board-info #viewers-area #viewers:before
 {
 	content : "해 바라기 ";
@@ -110,7 +118,7 @@ header .row > div:nth-child(1) > a img
 	font-weight : bold;
 }
 
-
+/* 트게더 접속인원 숫자 뒤에 들어갈 문구 */
 #board-info #viewers-area #viewers:after
 {
 	content : " 명";
@@ -118,6 +126,10 @@ header .row > div:nth-child(1) > a img
 	font-weight : bold;
 }
 
+header .row > div:nth-child(1) > a img
+{
+	opacity : 0;
+}
 
 header .row > div:nth-child(1) > a
 {
@@ -127,33 +139,24 @@ header .row > div:nth-child(1) > a
 	background : url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png) no-repeat; /* img > hgd_logo_pc.png */
 }
 
-
 #main .menu-wrapper > .header
 {
 	background : #fdde00;
 	color : #fff;
 	padding : 0.45em 1.4em 0.45em 1em;
 	font-weight : bold;
+	border-radius : 15px 15px 0 0;
 }
-
 
 header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
 	border-radius : 15px;
 }
 
-
-#main .menu-wrapper > .header
-{
-	border-radius : 15px 15px 0 0;
-}
-
-
 #main .menu-wrapper a:nth-last-child(1)
 {
 	border-radius : 0 0 15px 15px;
 }
-
 
 header #header-bar > .row
 {
@@ -170,7 +173,6 @@ header #header-bar > .row
 	border : 2px solid #ec0000;
 	margin-bottom: 7px;
 }
-
 
 /* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
 small.favo i.fa.fa-heart
@@ -190,7 +192,6 @@ small.favo i.fa.fa-heart
 	100% { transform : scale(1); }
 }
 
-
 #article-list > .article-list-row > .item > .list-title > small.favo
 {
 	font-size : 11px;
@@ -205,7 +206,6 @@ small.favo i.fa.fa-heart
 	float : left;
 }
 
-
 #article-list > .article-list-row > .item > .list-header > span
 {
 	background-color : #03e200;
@@ -216,25 +216,16 @@ small.favo i.fa.fa-heart
 	border-radius : 10px;
 }
 
-
-header #right-search-form > input[type="text"]
+header #right-search-form > input[type="text"], header #right-search-form > #right-search-btn
 {
 	transition : 0.2s;
 }
-
 
 header #right-search-form > input[type="text"]:hover, header #right-search-form > input[type="text"]:focus
 {
 	transform : scale(1.05);
 	transition : 0.2s;
 }
-
-
-header #right-search-form > #right-search-btn
-{
-	transition : 0.2s;
-}
-
 
 header #right-search-form > #right-search-btn:hover, header #right-search-form > #right-search-btn:focus
 {
@@ -249,44 +240,18 @@ header #right-search-form > #right-search-btn:hover, header #right-search-form >
 }
 
 
-@keyframes binglebingle
+/* 별 회전 관련 키프레임 설정 */
+@keyframes spin
 {
-	from { transform : rotate(0deg); }
-	to { transform : rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
-
+/* 일정 추천 이상 받으면 표기되는 별 아이콘 PC처럼 돌아가게 (글 전체) */
 span.a-badge i.fa.fa-star
 {
-	animation : binglebingle 2s infinite;
+	animation : spin 2s infinite;
 	color: #FF0097;
-}
-
-
-#board-info #viewers-area
-{
-	color : #a99797;
-}
-
-
-#main .menu-wrapper
-{
-	border : #fbe674 solid 1px;
-	border-top : none !important ;
-}
-
-
-
-#main .menu-wrapper
-{
-	border : #f9e470 solid 1px;
-	border-top : none !important ;
-}
-
-
-#article-list > .article-list-row.notice
-{
-	background-color : #ededed;
 }
 
 /* 기존 프로필 이미지 가리기 */
@@ -297,14 +262,14 @@ span.a-badge i.fa.fa-star
 
 /* 프로필 이미지 크게 설정 */
 /* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
-#board-info h1>a::before
+#board-info h1>a:before
 {
 	content: '';
 	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) 0 0/91px 91px no-repeat; /* img_original > he0901_profile_210316_300x300 */
+	position: absolute;
 	width: 95px;
 	height: 95px;
-	position: absolute;
-	margin-top: -29px; /* 프로필 이미지 위치 설정 (상단) */
+	margin-top: -29px;
 	top: 19px;
 	left: 38px;
 	z-index: 100; 
@@ -312,15 +277,15 @@ span.a-badge i.fa.fa-star
 	border-radius: 100px;
 }
 
-/* 프로필 이미지 크게 설정 (우측, 프로필 2 - 다른 이미지 적용) */
-#board-info h1>a::after
+/* 기본 프로필 표기되는 부분의 상단 우측에 새로운 프로필 이미지 추가 (프로필 2 - 다른 이미지 적용) */
+#board-info h1>a:after
 {
 	content: '';
 	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822484325416828928/fanart_by_shardion_original.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png */
+	position: absolute;
 	width: 95px;
 	height: 95px;
-	position: absolute;
-	margin-top: -29px; /* 프로필 이미지 위치 설정 (상단) */
+	margin-top: -29px;
 	top: 19px;
 	left: 775px;
 	z-index: 100; 
@@ -328,8 +293,8 @@ span.a-badge i.fa.fa-star
 	border-radius: 100px;
 }
 
-/* 새로운 프로필 이미지에 마우스 올리면 이미지 커지도록 설정 (좌, 우측 동시 적용) */
-#board-info h1>a:hover::before, #board-info h1>a:hover::after
+/* 프로필 이미지에 마우스 올리면 커지도록 설정 (프로필 1,2 동시 적용) */
+#board-info h1>a:hover:before, #board-info h1>a:hover:after
 {
 	transform: scale(1.10); /* 크기가 커짐 */
 	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
@@ -356,14 +321,12 @@ span.a-badge i.fa.fa-star
 	margin-left: 3px;
 }
 
-
 #article-list>.article-list-row:hover
 {
 	transform: scale(1.02); /* 크기가 커짐 */
 	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
 	background-color: #ffead4;
 }
-
 
 #article-list #article-list-category > a
 {
@@ -372,12 +335,10 @@ span.a-badge i.fa.fa-star
 	transition-duration: .7s;
 }
 
-
 #article-list #article-list-category
 {
 	border-radius:8px;
 }
-
 
 header #header-bar
 {
@@ -387,7 +348,6 @@ header #header-bar
 	padding-left: 30px;
 }
 
-
 header #header-bar > .row
 {
 	padding-top: 0.3em;
@@ -396,27 +356,17 @@ header #header-bar > .row
 	background: #fff;
 }
 
-
-#main .menu-wrapper
-{
-	border: #304556 solid 1px;
-	border-top: none !important;
-}
-
-
 header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
 	border-radius: 15px;
 	border: 2px solid #FF0D00
 }
 
-
 /* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
 #article-list>.article-list-row>.item>.list-title>a:visited
 {
 	color: #AAAAAA !important;
 }
-
 
 #article-list > .article-list-row > .item > .list-header > span
 {
@@ -428,24 +378,11 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 	border-radius: 10px;
 }
 
-
-#article-list > .article-list-row.notice
-{
-	background-color: #FEC6B9;
-}
-
-
-header
-{
-	padding:0 0 .4em
-}
-
 /* 매니저 아이콘 가리기 (칼) */
 img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 {
 	display: none; 
 }
-
 
 /* 공지글 설정 */
 #article-list > .article-list-row.notice
@@ -543,14 +480,6 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
 	border-radius: 19px;
 	border: 9px double #fdde00;
-}
-
-#main .menu-wrapper > .header
-{
-	background: #fdde00;
-	color: #fff;
-	padding: 0.45em 1.4em 0.45em 1em;
-	font-weight: bold;
 }
 
 #article-list > .article-list-row > .item > .list-header > span

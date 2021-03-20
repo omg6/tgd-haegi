@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-16 */
+/* 최종 수정 일자 : 2021-03-20 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -33,10 +33,9 @@ header
 	border-bottom: 4px solid #BCA92C; /* 로고 배너 하단 구분선 색 */
 }
 
-/* 해게더 로고 삽입 */
+/* 해게더 로고 삽입 (PC 로고에서 해바라기 그림 제거) */
 header>#header-area>a>h1
 {
-	/* 해바라기 그림 제거된 로고 */
 	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat; /* img_mobile > tgd_logo_without_sunflower.png */
 	background-size: auto 32px;
 	width: 90px;
@@ -110,19 +109,17 @@ header>#header-search-bar #header-search-btn
 #board-info h1 > #board-info-profile-img
 {
 	margin-right: 5px;
-	width: 70px;
-	height: 70px;
+	width: 60px;
+	height: 60px;
 	border-radius: 100px;
 	z-index: 1;
-	border-style: solid;
-	border-width: 0.12em;
-	border-color: #5AA1F5;
+	border: #5AA1F5 solid 0.12em;
 }
 
 /* 프로필 이미지 옆 스트리머명 글씨 크기 조절 */
-#board-info > h1
+#board-info>h1
 {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 /* 라이브 문구 전 이미지 삽입 (미사용) */
@@ -132,18 +129,19 @@ header>#header-search-bar #header-search-btn
 	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817723964205694976/2_edited.png);
 }*/
 
-/* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 (여백 설정 포함) */
+/* 방송 진행 중 활성화되는 라이브 문구 배경 설정, 위치 조정 및 기존 문구 숨기기 (여백 설정 포함) */
 #board-info h1 > a.badge.badge-live
 {
 	background: #FF00FF;
 	font-size: 0px;
-	margin-left: 5px;
+	position: relative;
+	bottom: 1px;
 }
 
 /* 방송 진행 중 활성화되는 라이브 문구 이후 텍스트 삽입 */
 #board-info h1 > a.badge.badge-live::after
 {
-	font-size: 14px;
+	font-size: 13px;
 	content: "⊙ 방송중";
 }
 
@@ -157,9 +155,9 @@ header>#header-search-bar #header-search-btn
 #board-info #viewers
 {
 	color: #858281;
-	font-size: 15px;
+	font-size: 14px;
 	position: relative;
-	bottom: 5px
+	bottom: 5px;
 }
 
 /* 트게더 접속인원 아이콘 변경 및 위치 조정 */
@@ -188,17 +186,25 @@ header>#header-search-bar #header-search-btn
 #board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
 	color: #00C9FF;
-	margin-top: 1.6em;
 }
 
 /* 게시판 종류 (상단) 설정 */
 #article-list #article-list-category
 {
-	border-color: #ffd400;
+	border-color: #FFAE00;
 	border-style: double;
-	border-width: 8px;
+	border-width: 6px;
 	margin-top: 3px;
 	margin-bottom: 5px;
+	padding: 0.22em;
+	background-color: #FFD8EC;
+}
+
+/* 게시판 종류 글씨 크게 및 배경색 설정 */
+#article-list #article-list-category>a
+{
+	font-size: 14px;
+	background-color: #FFD8EC;
 }
 
 /* 공지 글 (상단) 설정 */
@@ -266,15 +272,6 @@ span.a-badge i.fa.fa-star
 	color: #FF0097;
 }
 
-/* 트게더 주인이 준 하트 설정 변경 */
-small.favo i.fa.fa-heart
-{
-	color: #FF6400;
-	/* 하트 다른 아이콘으로 대체 (미사용)
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png); img > icon_haegi_heart.png 
-	*/
-}
-
 /* 키프레임 설정 (하트 크기 커졌다 작아졌다) */
 /* 출처 : https://tgd.kr/c/css/19699825 글의 댓글 (Million_Air) */
 @keyframes heartbeat
@@ -287,10 +284,14 @@ small.favo i.fa.fa-heart
 	100% { transform : scale(1); }
 }
 
-/* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
+/* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 색상 변경 및 회전 키프레임 설정 */
 small.favo i.fa.fa-heart
 {
 	animation : heartbeat 2s infinite;
+	color: #FF6400;
+	/* 하트 다른 아이콘으로 대체 (미사용)
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817933930489577542/he0901heart_resize.png); img > icon_haegi_heart.png 
+	*/
 }
 
 /* 추천 수 배경 설정 (추천 없을 경우 하얀 배경으로 나오는 부분) */
@@ -413,6 +414,13 @@ footer
 .btn-outline-primary:hover
 {
 	background-color: #FF4795;
+}
+
+/* 글 작성자 프로필 이미지 경계 설정 */
+#article-info>.article-profile-img
+{
+	border: 1px solid #F37AFF;
+	border-radius: 0px;
 }
 
 /* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */

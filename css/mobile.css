@@ -229,6 +229,13 @@ header>#header-search-bar #header-search-btn
 	bottom: 41px;
 }
 
+/* 즐겨찾기 추가 버튼만 바텀 추가 설정 (위의 코드만으로는 작동되지 않음) */
+#board-info>a#addFavoriteBtn.board-right-menu
+{
+	position: relative;
+	bottom: 41px;
+}
+
 /* 위의 바텀 설정 후 네비게이션에서도 바텀이 적용되는 부분 수정 */
 nav#nav>#nav-upper-shortcut>.dropdown
 {

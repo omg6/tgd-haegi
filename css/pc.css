@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS */
 /* 1차 제작 : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-20 */
+/* 최종 수정 일자 : 2021-03-21 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
@@ -25,12 +25,6 @@ body
 {
 	font-family: 'TmoneyRoundWindRegular';
 }
-
-header
-{
-	padding: 0 0 .4em
-}
-
 
 /* 마우스 커서 설정 - 기본 */
 /* 출처 : https://tgd.kr/s/bellhidira/32073772 */
@@ -58,19 +52,11 @@ span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr
 
 /* 배경에 해바라기 내리는 효과 */
 /* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
-/* 효과에 사용된 아이콘 출처 (해바라기) : https://www.flaticon.com/free-icon/sunflower_3454257 (32x32) icon_sunflower.png */
-/* 효과에 사용된 아이콘 출처 (꽃) : https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
+/* 효과에 사용된 아이콘 출처 (해바라기, 꽃 순서) : https://www.flaticon.com/free-icon/sunflower_3454257 (32x32) icon_sunflower.png | https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
 html
 {
 	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822485636405395506/tgd_background_resize_1920x1226_2.jpg); /* img_pc > tgd_background_resize_1920x1226.jpg */
 	height: auto !important;
-}
-
-body
-{
-	background: transparent;
-	animation: sunflower_falls 20s linear infinite;	
-	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
 }
 
 /* 해바라기 내려가는 키프레임 */
@@ -79,7 +65,87 @@ body
 	0% { background-position: 0px 0px; }
 	100% { background-position: 500px 1000px; }
 }
+
+body
+{
+	background: transparent;
+	animation: sunflower_falls 20s linear infinite;	
+	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
+}
 /* 배경에 해바라기 내리는 효과 끝 */
+
+
+/* 기존 트게더 이미지 가리기 */
+header .row > div:nth-child(1) > a img
+{
+	display: none;
+}
+
+/* 해게더 로고 삽입 */
+header .row > div:nth-child(1) > a
+{
+	display : block;
+	width : 170px;
+	height : 67px;
+	background : url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png) no-repeat; /* img > hgd_logo_pc.png */
+}
+
+/* 각 항목 외부 경계 설정 (통합) */
+header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
+{
+	border-radius: 19px;
+	border: 9px double #fdde00;
+}
+
+/* 좌측 트게더 전체 메뉴 헤더 부분 설정 */
+#main .menu-wrapper > .header
+{
+	background: #fdde00;
+	color: #fff;
+	padding: 0.45em 1.4em 0.45em 1em;
+	font-weight: bold;
+	border-radius: 10px 10px 0 0;
+}
+
+/* 좌측 트게더 전체 메뉴 중간 간격 설정 */
+#main .menu-wrapper .spacer
+{
+	background: #fdde00;
+	height: 0.20em;
+}
+
+/* 보더 부분 높이 확장 (프로필, 닉네임, 트게더 링크 출력되는 부분) */
+#board-info
+{
+	height: 91px;
+}
+
+/* 트게더 접속인원 부분 색상 설정 */
+#board-info #viewers-area
+{
+	color: #a99797;
+	font-weight : bold;
+}
+
+/* 트게더 접속인원 아이콘 변경*/
+#board-info #viewers-area .fa-user:before
+{
+	content: url(https://static-cdn.jtvnw.net/badges/v1/cb273ad9-4317-414c-bc32-69ce8e6d6ee7/1); /* 12M sub icon - 18x18 */
+}
+
+/* 트게더 접속인원 숫자 앞에 들어갈 문구 */
+#board-info #viewers-area #viewers:before
+{
+	content : "해 바라기 ";
+	cursor : text;
+}
+
+/* 트게더 접속인원 숫자 뒤에 들어갈 문구 */
+#board-info #viewers-area #viewers:after
+{
+	content : " 명";
+	cursor : text;
+}
 
 /* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 */
 #board-info h1 > a.badge.badge-live
@@ -98,72 +164,9 @@ body
 	border: 0px;
 }
 
-/* 트게더 접속인원 부분 색상 설정 */
-#board-info #viewers-area
-{
-	color: #a99797;
-}
-
-/* 트게더 접속인원 아이콘 변경*/
-#board-info #viewers-area .fa-user:before
-{
-	content: url(https://static-cdn.jtvnw.net/badges/v1/cb273ad9-4317-414c-bc32-69ce8e6d6ee7/1); /* 12M sub icon - 18x18 */
-}
-
-/* 트게더 접속인원 숫자 앞에 들어갈 문구 */
-#board-info #viewers-area #viewers:before
-{
-	content : "해 바라기 ";
-	cursor : text;
-	font-weight : bold;
-}
-
-/* 트게더 접속인원 숫자 뒤에 들어갈 문구 */
-#board-info #viewers-area #viewers:after
-{
-	content : " 명";
-	cursor : text;
-	font-weight : bold;
-}
-
-header .row > div:nth-child(1) > a img
-{
-	opacity : 0;
-}
-
-header .row > div:nth-child(1) > a
-{
-	display : block;
-	width : 170px;
-	height : 67px;
-	background : url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png) no-repeat; /* img > hgd_logo_pc.png */
-}
-
-#main .menu-wrapper > .header
-{
-	background : #fdde00;
-	color : #fff;
-	padding : 0.45em 1.4em 0.45em 1em;
-	font-weight : bold;
-	border-radius : 15px 15px 0 0;
-}
-
-header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
-{
-	border-radius : 15px;
-}
-
 #main .menu-wrapper a:nth-last-child(1)
 {
 	border-radius : 0 0 15px 15px;
-}
-
-header #header-bar > .row
-{
-	padding-top : 0.3em;
-	padding-bottom : 0.3em;
-	background : #fff;
-	border: 10px double #fdde00;
 }
 
 /* 카테고리 부분 설정 (게시판 이름들 표기되는 공간) */
@@ -233,12 +236,6 @@ header #right-search-form > #right-search-btn:hover, header #right-search-form >
 	transition : 0.2s;
 }
 
-/* 좌측 트게더 전체 메뉴 간격 제거 */
-#main .menu-wrapper .spacer
-{
-	display: none;
-}
-
 
 /* 별 회전 관련 키프레임 설정 */
 @keyframes spin
@@ -260,9 +257,9 @@ span.a-badge i.fa.fa-star
 	display: none;
 }
 
-/* 프로필 이미지 크게 설정 */
+/* 프로필 이미지 크게 설정 (프로필 2 설정과 일부 내용 공유) */
 /* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
-#board-info h1>a:before
+#board-info h1>a:before, #board-info h1>a:after
 {
 	content: '';
 	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) 0 0/91px 91px no-repeat; /* img_original > he0901_profile_210316_300x300 */
@@ -270,27 +267,18 @@ span.a-badge i.fa.fa-star
 	width: 95px;
 	height: 95px;
 	margin-top: -29px;
-	top: 19px;
+	top: 43px;
 	left: 38px;
 	z-index: 100; 
 	border: #FF5EFF solid 2px;
 	border-radius: 100px;
 }
 
-/* 기본 프로필 표기되는 부분의 상단 우측에 새로운 프로필 이미지 추가 (프로필 2 - 다른 이미지 적용) */
+/* 프로필 이미지 기준 우측에도 새로운 프로필 이미지 추가 (프로필 2 - 다른 이미지 적용) */
 #board-info h1>a:after
 {
-	content: '';
 	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822484325416828928/fanart_by_shardion_original.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png */
-	position: absolute;
-	width: 95px;
-	height: 95px;
-	margin-top: -29px;
-	top: 19px;
 	left: 775px;
-	z-index: 100; 
-	border: #FF5EFF solid 2px;
-	border-radius: 100px;
 }
 
 /* 프로필 이미지에 마우스 올리면 커지도록 설정 (프로필 1,2 동시 적용) */
@@ -306,6 +294,19 @@ span.a-badge i.fa.fa-star
 {
 	margin-left: 110px;
 	margin-right: 110px;
+	padding-left: 4px;
+}
+
+/* 닉네임 하단의 트게더 관련 링크 표기 부분 상단 패딩 설정 */
+#board-info #board-info-bottom
+{
+	padding-top: 6px;
+}
+
+/* 트게더 관련 링크 출력 부분 색상 설정 */
+#board-info #board-info-bottom a
+{
+	color: #494949;
 }
 
 /* 닉네임, 트게더 링크 사이 선 색상 설정 및 닉네임 색상 진하게 설정 */
@@ -313,12 +314,8 @@ span.a-badge i.fa.fa-star
 {
 	border-bottom: 2px solid #FFC9FF;
 	font-weight: bold;
-}
-
-/* 닉네임 표기 부분 좌측 마진 설정 (프로필 사진 바로 옆 부분) */
-#board-info h1>a
-{
-	margin-left: 3px;
+	margin-top: 13px;
+	padding-bottom: 5px;
 }
 
 #article-list>.article-list-row:hover
@@ -346,20 +343,6 @@ header #header-bar
 	margin-bottom: 0.5em;
 	padding-right: 30px;
 	padding-left: 30px;
-}
-
-header #header-bar > .row
-{
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
-	border: 2px solid #304556;
-	background: #fff;
-}
-
-header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
-{
-	border-radius: 15px;
-	border: 2px solid #FF0D00
 }
 
 /* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
@@ -476,12 +459,6 @@ img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 	border: 10px double #ffd400;
 }
 
-header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
-{
-	border-radius: 19px;
-	border: 9px double #fdde00;
-}
-
 #article-list > .article-list-row > .item > .list-header > span
 {
 	background-color : #03e200;
@@ -579,11 +556,24 @@ header #right-search-form>#right-search-btn
 	background-color: #FF4795;
 }
 
-/* 글 작성자 프로필 이미지 경계 설정 */
+/* 게시물 제목 좌측 마진 설정 */
+#article-info>h2
+{
+	margin-left: 4px;
+}
+
+/* 글 작성자 부분 상단 여백 증가 */
+#article-info #article-info-writer
+{
+	margin-top: 5px;
+	margin-left: 6px;
+}
+
+/* 글 작성자 프로필 이미지 경계 설정 및 우측 마진 설정 */
 #article-info>.article-profile-img
 {
-	border: 3px solid #0036FF;
-	border-radius: 0px;
+	border: 2px solid #FF42E7;
+	margin-right: 3px;
 }
 
 /* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
@@ -591,12 +581,6 @@ header #right-search-form>#right-search-btn
 {
 	border-top: #FFF 5px solid; /* color - width - style 순서 */
 	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
-}
-
-/* 글 작성자 부분 상단 여백 증가 */
-#article-info #article-info-writer
-{
-	margin-top: 4px;
 }
 
 /* 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */

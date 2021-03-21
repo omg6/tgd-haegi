@@ -257,7 +257,7 @@ span.a-badge i.fa.fa-star
 	display: none;
 }
 
-/* 프로필 이미지 크게 설정 (프로필 2 설정과 일부 내용 공유) */
+/* 프로필 이미지 크게 설정 및 클릭시 개인 트게더 메인으로 가도록 설정 (프로필 2 설정과 일부 내용 공유) */
 /* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
 #board-info h1>a:before, #board-info h1>a:after
 {

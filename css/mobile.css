@@ -112,45 +112,59 @@ header>#header-search-bar #header-search-btn
 	font-size: 20px;
 	height: 41px;
 	border-bottom: 3px solid #FFC9FF;
-	width: 11em;
-	margin-left: 80px;
+	width: 100%;
+	padding-left: 25px;
 }
 
-/* 프로필 이미지 크기 확장 및 위치 조절 */
+/* 기존 프로필 이미지 가리기 */
 #board-info h1 > #board-info-profile-img
 {
-	margin-right: 5px;
+	display: none;
+}
+
+/* 프로필 이미지 크게 설정 및 클릭시 개인 트게더 메인으로 가도록 설정 */
+/* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
+#board-info h1>a:before
+{
+	content: '';
+	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) -3px 0px/59px 57px no-repeat; /* img_original > he0901_profile_210316_300x300 */
+	position: absolute;
 	width: 60px;
 	height: 60px;
+	top: 4px;
+	left: -75px;
+	z-index: 10;
+	border: 0.12em solid #5AA1F5;
 	border-radius: 100px;
-	z-index: 1;
-	border: #5AA1F5 solid 0.12em;
-	position: relative;
-	left: -80px;
+}
+
+#board-info h1>a:after
+{
+	margin-right: 30px;
 }
 
 /* 스트리머명 부분 위치 조절 */
 #board-info>h1>a
 {
 	position: relative;
-	bottom: 18px;
-	left: -75px;
+	bottom: 2px;
+	left: 60px;
 }
 
 /* 접속자 아이콘 및 인원 부분 위치 조절 */
 #board-info #viewers-area
 {
 	position: relative;
-	bottom: 24px;
-	left: -10px;
+	top: 36px;
+	left: -7px;
 }
 
-/* 라이브 문구 전 이미지 삽입 (미사용) */
-/* 
-#board-info h1 > a.badge.badge-live::before
+/* 라이브 문구 전 프로필 이미지 중복출력 방지 구문 (#board-info h1>a:before 관련) */
+/* ! 2021-03-21 기준, 방송중 버튼 활성화시 트게더 접속인원 부분이 왼쪽으로 치우쳐지는 문제가 있음. 추후 수정 또는 변경 예정 ! */
+#board-info h1 > a.badge.badge-live:before
 {
-	content: url(https://cdn.discordapp.com/attachments/817410187199512678/817723964205694976/2_edited.png);
-}*/
+	display: none;
+}
 
 /* 방송 진행 중 활성화되는 라이브 문구 배경 설정, 위치 조정 및 기존 문구 숨기기 (여백 설정 포함) */
 #board-info h1 > a.badge.badge-live
@@ -158,8 +172,9 @@ header>#header-search-bar #header-search-btn
 	background: #FF00FF;
 	font-size: 0px;
 	position: relative;
-	bottom: 20px;
-	left: -50px;
+	width: 67px;
+	height: 20px;
+	left: 65px;
 }
 
 /* 방송 진행 중 활성화되는 라이브 문구 이후 텍스트 삽입 */
@@ -211,6 +226,13 @@ header>#header-search-bar #header-search-btn
 #board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
 	color: #00C9FF;
+	bottom: 41px;
+}
+
+/* 위의 바텀 설정 후 네비게이션에서도 바텀이 적용되는 부분 수정 */
+nav#nav>#nav-upper-shortcut>.dropdown
+{
+	bottom: 0px;
 }
 
 /* 게시판 종류 (상단) 설정 */

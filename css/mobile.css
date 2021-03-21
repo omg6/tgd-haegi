@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-21 */
+/* 최종 수정 일자 : 2021-03-22 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -131,7 +131,7 @@ header>#header-search-bar #header-search-btn
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	top: 4px;
+	top: 3px;
 	left: -75px;
 	z-index: 10;
 	border: 0.12em solid #5AA1F5;
@@ -474,7 +474,6 @@ footer
 #article-info>.article-profile-img
 {
 	border: 1px solid #F37AFF;
-	border-radius: 0px;
 }
 
 /* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */

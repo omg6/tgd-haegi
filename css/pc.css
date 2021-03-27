@@ -1,21 +1,21 @@
-/* 해기님 트게더 (해게더) PC CSS */
-/* 1차 제작 : 미상 (~ 2021-03-13 적용) */
+/* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
+/* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-21 */
+/* 최종 수정 일자 : 2021-03-27 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
 */
 
-/* !! 실 적용 전 W3C CSS Validator 점검 필요 (css 제작자 기준) !! */
+/* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
-/* 웹폰트 불러오기 (티머니 둥근바람) */
-/* 출처 : https://noonnu.cc/font_page/459 */
+/* 웹폰트 불러오기 ( 넥슨 메이플스토리 | 출처 : https://noonnu.cc/font_page/428 ) */
+/* 폰트 후보 2 : 이사만루 Light ( https://noonnu.cc/font_page/462 ) */
 @font-face
 {
-	font-family: 'TmoneyRoundWindRegular';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+	font-family: 'MaplestoryOTFLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,7 +23,7 @@
 /* 폰트 내부에 설정 */
 body
 {
-	font-family: 'TmoneyRoundWindRegular';
+	font-family: 'MaplestoryOTFLight';
 }
 
 /* 마우스 커서 설정 - 기본 */
@@ -52,10 +52,12 @@ span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr
 
 /* 배경에 해바라기 내리는 효과 */
 /* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
+/* 배경화면 출처 : https://www.freepik.com/free-vector/hand-drawn-spring-wallpaper_12151052.htm */
 /* 효과에 사용된 아이콘 출처 (해바라기, 꽃 순서) : https://www.flaticon.com/free-icon/sunflower_3454257 (32x32) icon_sunflower.png | https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
 html
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822485636405395506/tgd_background_resize_1920x1226_2.jpg); /* img_pc > tgd_background_resize_1920x1226.jpg */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825362665274474526/hand-drawn-spring-wallpaper.png); /* img_pc > tgd_background_spring.png (5208x3471) */
+	background-size: cover; /* 배경화면 화면에 꽉 차게 설정 */
 	height: auto !important;
 }
 
@@ -94,13 +96,13 @@ header .row > div:nth-child(1) > a
 header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
 	border-radius: 19px;
-	border: 9px double #fdde00;
+	border: 9px double #FF86BA;
 }
 
 /* 좌측 트게더 전체 메뉴 헤더 부분 설정 */
 #main .menu-wrapper > .header
 {
-	background: #fdde00;
+	background: #FF86BA;
 	color: #fff;
 	padding: 0.45em 1.4em 0.45em 1em;
 	font-weight: bold;
@@ -110,7 +112,7 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 /* 좌측 트게더 전체 메뉴 중간 간격 설정 */
 #main .menu-wrapper .spacer
 {
-	background: #fdde00;
+	background: #FF86BA;
 	height: 0.20em;
 }
 
@@ -172,9 +174,17 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 /* 카테고리 부분 설정 (게시판 이름들 표기되는 공간) */
 #article-list #article-list-category
 {
-	background : #ff9898;
-	border : 2px solid #ec0000;
+	background: #fff0;
+	border: 10px double #8EC6FF;
 	margin-bottom: 7px;
+	border-radius: 8px;
+}
+
+#article-list #article-list-category > a
+{
+	margin-top: 0px;
+	background: #ffffff;
+	transition-duration: .7s;
 }
 
 /* 스트리머가 추천한 글의 제목 우측에 표기되는 하트 키프레임 설정 */
@@ -270,7 +280,7 @@ span.a-badge i.fa.fa-star
 	top: 43px;
 	left: 38px;
 	z-index: 100; 
-	border: #FF5EFF solid 2px;
+	border: #009BFF solid 2px;
 	border-radius: 100px;
 }
 
@@ -312,7 +322,7 @@ span.a-badge i.fa.fa-star
 /* 닉네임, 트게더 링크 사이 선 색상 설정 및 닉네임 색상 진하게 설정 */
 #board-info h1
 {
-	border-bottom: 2px solid #FFC9FF;
+	border-bottom: 2px solid #94D5FF;
 	font-weight: bold;
 	margin-top: 13px;
 	padding-bottom: 5px;
@@ -323,18 +333,6 @@ span.a-badge i.fa.fa-star
 	transform: scale(1.02); /* 크기가 커짐 */
 	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
 	background-color: #ffead4;
-}
-
-#article-list #article-list-category > a
-{
-	margin-top: 0px;
-	background: #ffffff;
-	transition-duration: .7s;
-}
-
-#article-list #article-list-category
-{
-	border-radius:8px;
 }
 
 header #header-bar
@@ -453,12 +451,6 @@ img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 	border-color: #2e6da4;
 }
 
-#article-list #article-list-category
-{
-	background: #fff0;
-	border: 10px double #ffd400;
-}
-
 #article-list > .article-list-row > .item > .list-header > span
 {
 	background-color : #03e200;
@@ -469,19 +461,21 @@ img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 	border-radius : 10px;
 }
 
+/* 상단 우측의 트게더 검색 창 설정 */
 header #right-search-form>input[type=text]
 {
 	position: relative;
-	border: 3px solid #dbde00;
+	border: 3px solid #FF9BC6;
 	background: #fff;
 	font-size: 1.1em;
 	padding: 0.3em 0.5em;
 	border-radius: 100px;
 }
 
+/* 상단 우측의 검색 버튼 설정 (트게더 검색 옆) */
 header #right-search-form>#right-search-btn
 {
-	color: #dbde00;
+	color: #FF9BC6;
 	background: transparent;
 	border: none;
 	font-size: 1.4em;
@@ -637,7 +631,7 @@ header #right-search-form>#right-search-btn
 {
 	background-color: #FFF; /* 배경 색 */
 	border-width: 0.26em;
-	border-color: #FF3E98;
+	border-color: #6500D8;
 	margin-bottom: 10px;
 	border-style: solid;
 	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
@@ -649,7 +643,7 @@ header #right-search-form>#right-search-btn
 #article-reply-area #reply-best-area .reply > .reply-header
 {
 	background: #D3FFFB;
-	border-bottom-color: #FF3E98; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+	border-bottom-color: #6500D8; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
 	border-bottom-width: 0.21em;
 }
 
@@ -658,7 +652,7 @@ header #right-search-form>#right-search-btn
 {
 	background-color: #FFF; /* 배경 색 */
 	border-width: 3px;
-	border-color: #F983FF;
+	border-color: #00CFD9;
 	margin-bottom: 10px;
 	border-style: solid;
 	margin-top: 10px; /* 댓글 시작 전 상단 마진 */
@@ -670,7 +664,7 @@ header #right-search-form>#right-search-btn
 #article-reply-area #reply-real-area .reply>.reply-header
 {
 	background-color: #FDDBFF;
-	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
+	border-bottom-color: #00CFD9; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
 	border-bottom-width: 2px;
 }
 
@@ -719,4 +713,10 @@ header #right-search-form>#right-search-btn
 #article-write-button.btn.btn-primary.pull-right
 {
 	margin-right: 16px;
+}
+
+/* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
+footer:after
+{
+	content: "Background Designed by Freepik";
 }

@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
 /* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-27 */
+/* 최종 수정 일자 : 2021-03-28 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
@@ -89,7 +89,7 @@ header .row > div:nth-child(1) > a
 	display : block;
 	width : 170px;
 	height : 67px;
-	background : url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png) no-repeat; /* img > hgd_logo_pc.png */
+	background : url(https://cdn.discordapp.com/attachments/817410187199512678/825567294498668604/tgd_logo_spring.png) no-repeat; /* img > tgd_logo_spring.png */
 }
 
 /* 각 항목 외부 경계 설정 (통합) */
@@ -125,7 +125,7 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 /* 트게더 접속인원 부분 색상 설정 */
 #board-info #viewers-area
 {
-	color: #a99797;
+	color: #FF41E2;
 	font-weight : bold;
 }
 
@@ -147,6 +147,12 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
 	content : " 명";
 	cursor : text;
+}
+
+/* 방송중일 경우에는 프로필 이미지의 링크가 트게더가 아닌 방송 화면으로 전환되는 오류를 발생하기 위해 방송 뱃지 이전의 요소를 제거하는 부분 (2021-03-28) */
+#board-info h1 > a.badge.badge-live:before
+{
+	display: none;
 }
 
 /* 방송 진행 중 활성화되는 라이브 문구 배경 설정 및 기존 문구 숨기기 */
@@ -505,7 +511,7 @@ header #right-search-form>#right-search-btn
 /* 위로가기 버튼 가리기 (기존) */
 #movetotop img
 {
-	display:none
+	display: none
 }
 
 /* 위로가기 버튼 수정 */

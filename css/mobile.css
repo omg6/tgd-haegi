@@ -155,7 +155,7 @@ header>#header-search-bar #header-search-btn
 #board-info #viewers-area
 {
 	position: relative;
-	top: 36px;
+	top: 38px;
 	left: -7px;
 }
 
@@ -417,6 +417,12 @@ span.input-group-btn
 footer
 {
 	background: #D0EA59;
+}
+
+/* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
+footer:after
+{
+	content: "Background Designed by Freepik";
 }
 
 /* 버튼류 전역 설정 */

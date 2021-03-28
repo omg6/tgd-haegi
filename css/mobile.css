@@ -1,20 +1,20 @@
-/* 해기님 트게더 (해게더) 모바일 CSS */
+/* 해기님 트게더 (해게더) 모바일 CSS [봄 스킨 | 적용 일자 : 2021-03-28 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-22 */
+/* 최종 수정 일자 : 2021-03-28 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
 */
 
-/* !! 실 적용 전 W3C CSS Validator 점검 필요 (css 제작자 기준) !! */
+/* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
 /* 웹폰트 불러오기 (티머니 둥근바람) */
 /* 출처 : https://noonnu.cc/font_page/459 */
 @font-face
 {
-	font-family: 'TmoneyRoundWindRegular';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+	font-family: 'MaplestoryOTFLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -22,21 +22,21 @@
 /* 폰트 내부에 적용 */
 body
 {
-	font-family: 'TmoneyRoundWindRegular';
+	font-family: 'MaplestoryOTFLight';
 }
 
 
 /* 트게더 로고 배너 부분 */
 header
 {
-	background: #F7F5E8 !important; /* 로고 배너 배경 색 */
-	border-bottom: 4px solid #BCA92C; /* 로고 배너 하단 구분선 색 */
+	background: #BCFFFB !important; /* 로고 배너 배경 색 */
+	border-bottom: 4px solid #FFABCF; /* 로고 배너 하단 구분선 색 */
 }
 
 /* 해게더 로고 삽입 (PC 로고에서 해바라기 그림 제거) */
 header>#header-area>a>h1
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/817413426954764328/tgd-haegi-logo.png) no-repeat; /* img_mobile > tgd_logo_without_sunflower.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825571340751863808/tgd_logo_spring_without_sunflower.png) no-repeat; /* img_mobile > tgd_logo_spring_without_sunflower.png */
 	background-size: auto 32px;
 	width: 90px;
 }
@@ -45,7 +45,7 @@ header>#header-area>a>h1
 header>#header-area>#header-bar-link, nav#nav>#nav-upper>#header-close-bar-link
 {
 	display: inline-block;
-	color: #dbde00;
+	color: #FFABCF;
 }
 
 /* 트게더 전체 메뉴 영역 색상 변경 (좌측 네비게이션 영역 활성화 후) */
@@ -57,7 +57,7 @@ nav#nav>.nav-header
 /* 배경 색상 변경 및 로고 추가 (좌측 네비게이션 영역 활성화 후) */
 nav#nav
 {
-	background: url(https://i.ibb.co/wwXRhZR/697959b9c11122dd23873245db23ee0d.png), #FFF8C8;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825567294498668604/tgd_logo_spring.png), #BCFFFB;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -66,7 +66,7 @@ nav#nav
 header>#header-area>#header-search-link, header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
-	color: #dbde00;
+	color: #FFABCF;
 	font-size: 24px;
 	padding: 0 16px 8px;
 }
@@ -75,7 +75,7 @@ header>#header-area>#header-search-link, header>#header-search-bar #header-close
 header > #header-search-bar #header-search-input
 {
 	position: relative;
-	border: 3px solid #dbde00;
+	border: 3px solid #FFABCF;
 	background: #fff;
 	font-size: 1.1em;
 	padding: 0.2em 0.5em;
@@ -86,7 +86,7 @@ header > #header-search-bar #header-search-input
 header>#header-search-bar #header-search-btn
 {
 	display: inline-block;
-	color: #dbde00;
+	color: #FFABCF;
 	font-size: 24px;
 	padding: 0 16px 8px;
 }
@@ -100,8 +100,8 @@ header>#header-search-bar #header-search-btn
 /* 프로필 이미지 크기 확장 전 여백 공간 설정 */
 #board-info
 {
-	background: #FFF8C8;
-	border-color: #BCA92C;
+	background: #BCFFFB;
+	border-color: #FF1E7F;
 	border-width: 2px;
 	height: 82px;
 }
@@ -111,7 +111,7 @@ header>#header-search-bar #header-search-btn
 {
 	font-size: 20px;
 	height: 41px;
-	border-bottom: 3px solid #FFC9FF;
+	border-bottom: 3px solid #FF98FF;
 	width: 100%;
 	padding-left: 25px;
 }
@@ -131,7 +131,7 @@ header>#header-search-bar #header-search-btn
 	position: absolute;
 	width: 60px;
 	height: 60px;
-	top: 2px;
+	/* (탑 속성 제거) top: 2px; */
 	left: -75px;
 	z-index: 10;
 	border: 0.12em solid #5AA1F5;
@@ -225,7 +225,7 @@ header>#header-search-bar #header-search-btn
 /* 상단 우측 즐겨찾기에 추가 및 드롭다운 버튼 색상 변경 및 위치 조절 (별, 역삼각형 버튼) */
 #board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
-	color: #00C9FF;
+	color: #FC37FF;
 	bottom: 41px;
 }
 
@@ -242,31 +242,36 @@ nav#nav>#nav-upper-shortcut>.dropdown
 	bottom: 0px;
 }
 
+/* 글목록 부분 배경 설정 */
+#article-list
+{
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825362665274474526/hand-drawn-spring-wallpaper.png);
+	background-size: cover;
+}
+
 /* 게시판 종류 (상단) 설정 */
 #article-list #article-list-category
 {
-	border-color: #FFAE00;
-	border-style: double;
-	border-width: 6px;
+	background-color: transparent;
+	border: 6px double black;
 	margin-top: 3px;
 	margin-bottom: 5px;
 	padding: 0.22em;
-	background-color: #FFD8EC;
 }
 
 /* 게시판 종류 글씨 크게 및 배경색 설정 */
 #article-list #article-list-category>a
 {
 	font-size: 14px;
-	background-color: #FFD8EC;
+	background-color: transparent;
 }
 
 /* 공지 글 (상단) 설정 */
 #article-list>.article-list-row.notice
 {
-	background-color: #FEC6B9; /* 배경 색 */
+	background-color: #FFB7A8; /* 배경 색 */
 	border-width: 3px;
-	border-color: #FF80C0;
+	border-color: #FF4C4C;
 	margin-bottom: 5px;
 	border-style: solid;
 }
@@ -274,9 +279,9 @@ nav#nav>#nav-upper-shortcut>.dropdown
 /* 인기 글 (상단) 설정 */
 #article-list>.article-list-row.hot
 {
-	background-color: #FFF298; /* 배경 색 */
+	background-color: #FFE0D9; /* 배경 색 */
 	border-width: 3px;
-	border-color: #DEC300;
+	border-color: #FF7EB5;
 	margin-bottom: 5px;
 	border-style: solid;
 }
@@ -298,9 +303,9 @@ nav#nav>#nav-upper-shortcut>.dropdown
 /* 일반 글 설정 */
 #article-list>.article-list-row
 {
-	background-color: #FFFCE8; /* 배경 색 */
+	background-color: transparent; /* 배경 색 투명으로 설정 */
 	border-width: 2px;
-	border-color: #FFE94F;
+	border-color: #FFABCF;
 	margin-bottom: 5px;
 	border-style: solid;
 }
@@ -348,10 +353,11 @@ small.favo i.fa.fa-heart
 	*/
 }
 
-/* 추천 수 배경 설정 (추천 없을 경우 하얀 배경으로 나오는 부분) */
+/* 추천 수 배경 설정 (추천 없을 경우 배경 및 글자 색상 아예 사라지도록) */
 #article-list>.article-list-row>.item>.list-header.v0>span
 {
-	background: #FFFCE8;
+	background: transparent;
+	color: transparent;
 }
 
 /* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
@@ -386,7 +392,13 @@ small.favo i.fa.fa-heart
 /* 하단 제목+내용 버튼 및 검색 버튼 부분 설정 (배경) */
 span.input-group-btn
 {
-	background: #FFF8C8;
+	background: transparent;
+}
+
+/* 하단 버튼류 배경 투명 설정 */
+#boardSearchForm
+{
+	background: transparent;
 }
 
 /* 하단 검색창 설정 */
@@ -398,13 +410,13 @@ span.input-group-btn
 /* 하단 배경 설정 (인기글, 글쓰기 부분) */
 #article-list-menu, .pagination-area
 {
-	background: #FFF8C8;
+	background: transparent;
 }
 
 /* 푸터 (하단) 설정 */
 footer
 {
-	background: #FFF8C8;
+	background: #D0EA59;
 }
 
 /* 버튼류 전역 설정 */
@@ -420,6 +432,12 @@ footer
 	color: #fff;
 	background-color: #00bb3a;
 	border-color: #2e6da4;
+}
+
+/* 하단 검색창 버튼 별도 보더 경계 설정 (둥글게) */
+button.btn.square.btn-default
+{
+	border-radius: 50px;
 }
 
 /* 위로가기 버튼 가리기 (기존) */

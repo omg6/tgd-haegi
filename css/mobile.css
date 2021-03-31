@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS [봄 스킨 | 적용 일자 : 2021-03-28 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-28 */
+/* 최종 수정 일자 : 2021-04-01 */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -9,8 +9,7 @@
 /* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
-/* 웹폰트 불러오기 (티머니 둥근바람) */
-/* 출처 : https://noonnu.cc/font_page/459 */
+/* 웹폰트 불러오기 ( 넥슨 메이플스토리 | 출처 : https://noonnu.cc/font_page/428 ) */
 @font-face
 {
 	font-family: 'MaplestoryOTFLight';
@@ -240,6 +239,42 @@ header>#header-search-bar #header-search-btn
 nav#nav>#nav-upper-shortcut>.dropdown
 {
 	bottom: 0px;
+}
+
+/* 위의 .dropdown 클래스 설정 후 좌측 네비바 내부의 쪽지, 프로필 아이콘 버튼도 같이 올라가버리는 문제 수정 (2021-04-01) */
+div#noteDropdownContainer, div#userDropdownContainer
+{
+	bottom: 0px;
+	font-size: 24px;
+}
+
+/* 좌측 네비게이션 바 상단 경계 및 패딩 설정 (2021-04-01) */
+nav#nav>#nav-upper-shortcut
+{
+	border-top: 4px solid #FFABCF;
+	padding-top: 5px;
+}
+
+/* 좌측 네비게이션 바 쪽지 아이콘 크기 설정 (2021-04-01) */
+i.fa.fa-envelope-o
+{
+	font-size: 29px;
+}
+
+/* 좌측 네비게이션 바 프로필 이미지 부분 설정 (2021-04-01) */
+nav#nav>#nav-upper #userDropdownContainer
+{
+	margin-right: 10px;
+	margin-top: 0px;
+}
+
+/* 좌측 네비게이션 바 프로필 이미지 상세 설정 (2021-04-01) */
+nav#nav>#nav-upper #userDropdown img.profile-img
+{
+	width: 35px;
+	height: 35px;
+	border: 1px solid #F37AFF;
+	border-radius: 4px;
 }
 
 /* 글목록 부분 배경 설정 */

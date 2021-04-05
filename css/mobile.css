@@ -1,6 +1,9 @@
 /* 해기님 트게더 (해게더) 모바일 CSS [봄 스킨 | 적용 일자 : 2021-03-28 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-04-01 */
+/* 최종 수정 일자 : 2021-04-05 */
+
+/* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
+/* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
 
 /* 적용 방법 : 아래 한 줄의 코드를 모바일 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/mobile.css");
@@ -273,7 +276,7 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 {
 	width: 35px;
 	height: 35px;
-	border: 1px solid #F37AFF;
+	border: 2px solid #F37AFF;
 	border-radius: 4px;
 }
 
@@ -314,11 +317,9 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 /* 인기 글 (상단) 설정 */
 #article-list>.article-list-row.hot
 {
-	background-color: #FFE0D9; /* 배경 색 */
-	border-width: 3px;
-	border-color: #FF7EB5;
 	margin-bottom: 5px;
-	border-style: solid;
+	background-color: #fff298; /* 배경 색 */
+	border: 3px solid #FF7EB5;
 }
 
 /* 공지 글 문단의 "공지" 문구 아이콘으로 변경 */
@@ -398,7 +399,7 @@ small.favo i.fa.fa-heart
 /* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
 #article-list>.article-list-row>.item>a.list-title:visited
 {
-	color: #AAAAAA !important;
+	color: #979797 !important;
 }
 
 /* 선택된 페이지 색상 변경 */
@@ -451,7 +452,7 @@ span.input-group-btn
 /* 푸터 (하단) 설정 */
 footer
 {
-	background: #D0EA59;
+	background: #bcd452;
 }
 
 /* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
@@ -532,7 +533,7 @@ button.btn.square.btn-default
 /* 글 작성자 프로필 이미지 경계 설정 */
 #article-info>.article-profile-img
 {
-	border: 1px solid #F37AFF;
+	border: 2px solid #F37AFF;
 }
 
 /* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
@@ -657,4 +658,27 @@ button.btn.square.btn-default
 	border-left: 2px solid #FCCDFF;
 	border-right: 2px solid #FCCDFF;
 	border-bottom: 2px solid #FCCDFF;
+}
+
+/* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
+.dropdown-menu
+{
+	border: 3px solid #F663FF;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png), #FFFED6;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 130px;
+}
+
+/* 드롭다운 메뉴 내부 글자 관련 설정 (2021-04-05) */
+.dropdown-menu>li>a
+{
+	font-size: 18px;
+	line-height: 2;
+}
+
+/* 드롭다운 메뉴 내부 선택시 투명도 설정 (2021-04-05) */
+.dropdown-menu>li>a:hover
+{
+	opacity: 70%;
 }

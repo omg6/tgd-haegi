@@ -1,7 +1,10 @@
 /* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
 /* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-03-28 */
+/* 최종 수정 일자 : 2021-04-05 */
+
+/* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
+/* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
 
 /* 적용 방법 : 아래 한 줄의 코드를 데스크톱 뷰 CSS 칸에 입력
 @import url("https://omg6.github.io/tgd-haegi/css/pc.css");
@@ -457,6 +460,12 @@ img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 	border-color: #2e6da4;
 }
 
+/* 하단 검색창 버튼 별도 보더 경계 설정 (둥글게) */
+button.btn.square.btn-default
+{
+	border-radius: 50px;
+}
+
 #article-list > .article-list-row > .item > .list-header > span
 {
 	background-color : #03e200;
@@ -725,4 +734,26 @@ header #right-search-form>#right-search-btn
 footer:after
 {
 	content: "Background Designed by Freepik";
+}
+
+/* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
+.dropdown-menu
+{
+	border: 3px solid #F663FF;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png), #FFFED6;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 130px;
+}
+
+/* 드롭다운 메뉴 내부 글자 관련 설정 (2021-04-05) */
+.dropdown-menu>li>a
+{
+	line-height: 1.8;
+}
+
+/* 드롭다운 메뉴 내부 선택시 투명도 설정 (2021-04-05) */
+.dropdown-menu>li>a:hover
+{
+	opacity: 70%;
 }

@@ -76,12 +76,9 @@ header>#header-area>#header-search-link, header>#header-search-bar #header-close
 /* 검색창 설정 변경 (검색 버튼 클릭 후 상단에 표기되는 검색창) */
 header > #header-search-bar #header-search-input
 {
-	position: relative;
 	border: 3px solid #FFABCF;
-	background: #fff;
-	font-size: 1.1em;
-	padding: 0.2em 0.5em;
 	border-radius: 15px;
+	height: 37px; /* 하단 부분 선과 겹치는 문제 수정 */
 }
 
 /* 검색 버튼 색상 변경 (검색창 활성화 후) */

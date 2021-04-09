@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
 /* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-04-05 */
+/* 최종 수정 일자 : 2021-04-10 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -98,8 +98,8 @@ header .row > div:nth-child(1) > a
 /* 각 항목 외부 경계 설정 (통합) */
 header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
-	border-radius: 19px;
 	border: 9px double #FF86BA;
+	border-radius: 19px;
 }
 
 /* 좌측 트게더 전체 메뉴 헤더 부분 설정 */
@@ -342,14 +342,6 @@ span.a-badge i.fa.fa-star
 	transform: scale(1.02); /* 크기가 커짐 */
 	transition: .20s; /* 0.2초에 걸쳐서 부드럽게 애니메이션이 진행 */
 	background-color: #ffead4;
-}
-
-header #header-bar
-{
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-	padding-right: 30px;
-	padding-left: 30px;
 }
 
 /* 읽은 글 색상 설정 (모바일과 PC는 소스가 약간 다름) */
@@ -756,4 +748,21 @@ footer:after
 .dropdown-menu>li>a:hover
 {
 	opacity: 70%;
+}
+
+/* 해게더 자체 광고바 추가 (2021-04-10) */
+header #header-bar:after
+{
+	position: relative;
+	left: -15px; /* 좌측 길이 조절용 */
+	width: 103%;
+	margin-top: 20px; /* 상단 마진 */
+	padding: 6px; /* 내부 간격 */
+	color: blue;
+	font-weight: bold;
+	background: white;
+	border: 9px double #ffb300;
+	border-radius: 19px;
+	text-align: center;
+	content: "※ HCK (롤 시참 대회) 진행 예정　|　일시 : 4월 11일(일) 오전 0시 ~　|　자세한 내용은 공지사항 확인 ※";
 }

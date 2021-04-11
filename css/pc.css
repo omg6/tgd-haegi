@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
 /* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-04-10 */
+/* 최종 수정 일자 : 2021-04-11 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -758,11 +758,18 @@ header #header-bar:after
 	width: 103%;
 	margin-top: 20px; /* 상단 마진 */
 	padding: 6px; /* 내부 간격 */
+	text-align: center;
+	background: #ffffffd4;
+	border-radius: 19px;
+	/* 일반내용 게시용 */
+	color: black;
+	border: 9px double #FF86BA;
+	/* 중요내용 게시용 (테두리 및 색상 강조 등) */
+	/*
 	color: blue;
 	font-weight: bold;
-	background: white;
 	border: 9px double #ffb300;
-	border-radius: 19px;
-	text-align: center;
-	content: "※ HCK (롤 시참 대회) 진행 예정　|　일시 : 4월 11일(일) 0시 ~　|　자세한 내용 및 참가신청자는 공지사항 확인 ※";
+	*/
+	content: "\1F498  " "방송일정 : 매일 오후 10시 또는 트게더 공지　|　정기 휴방일 : 목, 일" "  \1F498";
+	/* 유니코드 출처 : https://unicode-table.com/kr/1F498/ */
 }

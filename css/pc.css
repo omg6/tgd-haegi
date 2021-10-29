@@ -1,7 +1,7 @@
 /* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
 /* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
 /* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-04-11 */
+/* 최종 수정 일자 : 2021-10-29 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -278,10 +278,13 @@ span.a-badge i.fa.fa-star
 
 /* 프로필 이미지 크게 설정 및 클릭시 개인 트게더 메인으로 가도록 설정 (프로필 2 설정과 일부 내용 공유) */
 /* 출처 : https://tgd.kr/c/css/39686721 (댓글) */
-#board-info h1>a:before, #board-info h1>a:after
+/* 하단의 프로필 2 다른 이미지 적용을 원할 경우 하단의 소스 활용 */
+/* #board-info h1>a:before, #board-info h1>a:after */
+#board-info h1>a:before
 {
 	content: '';
-	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) 0 0/91px 91px no-repeat; /* img_original > he0901_profile_210316_300x300 */
+	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/4db4a8d6-3b61-4e47-8f5a-92d6154869b3-profile_image-300x300.png) 0 0/92px 92px no-repeat; /* img_original > he0901_profile_211029_300x300 */
+	/* (Outdated) background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) 0 0/91px 91px no-repeat; /* img_original > he0901_profile_210316_300x300 */
 	position: absolute;
 	width: 95px;
 	height: 95px;
@@ -294,11 +297,14 @@ span.a-badge i.fa.fa-star
 }
 
 /* 프로필 이미지 기준 우측에도 새로운 프로필 이미지 추가 (프로필 2 - 다른 이미지 적용) */
+/* 2021-10-29 임시 제거 */
+/*
 #board-info h1>a:after
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822484325416828928/fanart_by_shardion_original.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/822484325416828928/fanart_by_shardion_original.png) -20px -20px/140px 140px no-repeat; /* img_pc > fanart_by_shardion_original.png
 	left: 775px;
 }
+*/
 
 /* 프로필 이미지에 마우스 올리면 커지도록 설정 (프로필 1,2 동시 적용) */
 #board-info h1>a:hover:before, #board-info h1>a:hover:after
@@ -312,7 +318,9 @@ span.a-badge i.fa.fa-star
 #board-info h1, #board-info #board-info-bottom
 {
 	margin-left: 110px;
-	margin-right: 110px;
+	margin-right: 7px;
+	/* 프로필 2 적용시 하단의 크기 활용할 것 (2021-10-29 프로필 2 임시 제거 관련) */
+	/* margin-right: 110px; */
 	padding-left: 4px;
 }
 

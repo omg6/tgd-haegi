@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS [봄 스킨 | 적용 일자 : 2021-03-28 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-10-29 */
+/* 최종 수정 일자 : 2021-10-30 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -126,7 +126,10 @@ header>#header-search-bar #header-search-btn
 #board-info h1>a:before
 {
 	content: '';
-	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/4db4a8d6-3b61-4e47-8f5a-92d6154869b3-profile_image-300x300.png) -0.5px 0px/59px 59px no-repeat; /* img_original > he0901_profile_211029_300x300 */
+	background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/958f2503-bd4a-467b-8368-db91dcd07749-profile_image-300x300.png) no-repeat; /* img_original > he0901_profile_211029_300x300 */
+	background-size: 80px;
+	background-position: right;
+	/* (Outdated) background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/4db4a8d6-3b61-4e47-8f5a-92d6154869b3-profile_image-300x300.png) -0.5px 0px/59px 59px no-repeat; /* img_original > he0901_profile_211029_300x300 */
 	/* (Outdated) background: url(https://static-cdn.jtvnw.net/jtv_user_pictures/293de023-1cae-45b9-8d3a-58766642ca7c-profile_image-300x300.png) -3px 0px/59px 57px no-repeat; /* img_original > he0901_profile_210316_300x300 */
 	position: absolute;
 	width: 60px;

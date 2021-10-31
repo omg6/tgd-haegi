@@ -1,7 +1,6 @@
-/* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
-/* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
-/* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-10-30 */
+/* 해기님 트게더 (해게더) PC CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
+/* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
+/* 최종 수정 일자 : 2021-10-31 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -13,12 +12,12 @@
 /* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
-/* 웹폰트 불러오기 ( 넥슨 메이플스토리 | 출처 : https://noonnu.cc/font_page/428 ) */
-/* 폰트 후보 2 : 이사만루 Light ( https://noonnu.cc/font_page/462 ) */
+/* 웹폰트 불러오기 ( 이사만루 Light | 출처 : https://noonnu.cc/font_page/462 ) */
+/* 후보 2 : https://noonnu.cc/font_page/676 (원스토어 모바일POP체, 다 좋은데 좀 두꺼움...) */
 @font-face
 {
-	font-family: 'MaplestoryOTFLight';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+	font-family: 'GongGothicLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -26,7 +25,7 @@
 /* 폰트 내부에 설정 */
 body
 {
-	font-family: 'MaplestoryOTFLight';
+	font-family: 'GongGothicLight';
 }
 
 /* 마우스 커서 설정 - 기본 */
@@ -53,19 +52,20 @@ span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr
 }
 /* 마우스 커서 설정 끝 */
 
-/* 배경에 해바라기 내리는 효과 */
+/* 배경에 눈 내리는 효과 */
 /* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
-/* 배경화면 출처 : https://www.freepik.com/free-vector/hand-drawn-spring-wallpaper_12151052.htm */
-/* 효과에 사용된 아이콘 출처 (해바라기, 꽃 순서) : https://www.flaticon.com/free-icon/sunflower_3454257 (32x32) icon_sunflower.png | https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
+/* 배경화면 출처 : https://www.freepik.com/free-vector/flat-design-winter-landscape-concept_6073476.htm */
+/* 효과에 사용된 아이콘 출처 (눈) : https://www.flaticon.com/free-icon/snowflake_3915582 */
 html
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825362665274474526/hand-drawn-spring-wallpaper.png); /* img_pc > tgd_background_spring.png (5208x3471) */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903672686985748530/tgd_background_winter_cut__no_moon.png); /* img_pc > tgd_background_winter_cut__no_moon.png (3094x3040) */
 	background-size: cover; /* 배경화면 화면에 꽉 차게 설정 */
 	height: auto !important;
 }
 
-/* 해바라기 내려가는 키프레임 */
-@keyframes sunflower_falls
+/* 눈 내려가는 키프레임 */
+/* 해당 키프레임 적용시 Edge 환경에서 CPU 점유율이 급상승하는 문제가 있음...! 제거해야 저사양 친화적인 페이지가 될 것으로 추정됨. */
+@keyframes snow_falls
 {
 	0% { background-position: 0px 0px; }
 	100% { background-position: 500px 1000px; }
@@ -74,10 +74,10 @@ html
 body
 {
 	background: transparent;
-	animation: sunflower_falls 20s linear infinite;	
-	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
+	animation: snow_falls 20s linear infinite;	
+	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/903677254519881798/bg_effect_snow.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
 }
-/* 배경에 해바라기 내리는 효과 끝 */
+/* 배경에 눈 내리는 효과 끝 */
 
 
 /* 기존 트게더 이미지 가리기 */
@@ -92,20 +92,20 @@ header .row > div:nth-child(1) > a
 	display : block;
 	width : 170px;
 	height : 67px;
-	background : url(https://cdn.discordapp.com/attachments/817410187199512678/825567294498668604/tgd_logo_spring.png) no-repeat; /* img > tgd_logo_spring.png */
+	background : url(https://cdn.discordapp.com/attachments/817410187199512678/903688868736405504/tgd_logo_winter.png) no-repeat; /* img > tgd_logo_winter.png */
 }
 
 /* 각 항목 외부 경계 설정 (통합) */
 header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
-	border: 9px double #FF86BA;
+	border: 9px double #15D500;
 	border-radius: 19px;
 }
 
 /* 좌측 트게더 전체 메뉴 헤더 부분 설정 */
 #main .menu-wrapper > .header
 {
-	background: #FF86BA;
+	background: #15D500;
 	color: #fff;
 	padding: 0.45em 1.4em 0.45em 1em;
 	font-weight: bold;
@@ -115,7 +115,7 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 /* 좌측 트게더 전체 메뉴 중간 간격 설정 */
 #main .menu-wrapper .spacer
 {
-	background: #FF86BA;
+	background: #15D500;
 	height: 0.20em;
 }
 
@@ -226,16 +226,6 @@ small.favo i.fa.fa-heart
 	border-radius : 0px;
 	top : 3px;
 	float : left;
-}
-
-#article-list > .article-list-row > .item > .list-header > span
-{
-	background-color : #03e200;
-	color : #fff;
-	font-weight : bold;
-	padding : 1px 5px;
-	font-size : 12px;
-	border-radius : 10px;
 }
 
 header #right-search-form > input[type="text"], header #right-search-form > #right-search-btn
@@ -361,16 +351,6 @@ span.a-badge i.fa.fa-star
 	color: #AAAAAA !important;
 }
 
-#article-list > .article-list-row > .item > .list-header > span
-{
-	background-color: #FF0D00;
-	color: #fff;
-	font-weight: bold;
-	padding: 1px 5px;
-	font-size: 12px;
-	border-radius: 10px;
-}
-
 /* 매니저 아이콘 가리기 (칼) */
 img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 {
@@ -469,9 +449,10 @@ button.btn.square.btn-default
 	border-radius: 50px;
 }
 
+/* 글 목록 내 좌측 추천수 관련 */
 #article-list > .article-list-row > .item > .list-header > span
 {
-	background-color : #03e200;
+	background-color : #FF86BA;
 	color : #fff;
 	font-weight : bold;
 	padding : 1px 5px;
@@ -483,7 +464,7 @@ button.btn.square.btn-default
 header #right-search-form>input[type=text]
 {
 	position: relative;
-	border: 3px solid #FF9BC6;
+	border: 3px solid #19ff00;
 	background: #fff;
 	font-size: 1.1em;
 	padding: 0.3em 0.5em;
@@ -493,7 +474,7 @@ header #right-search-form>input[type=text]
 /* 상단 우측의 검색 버튼 설정 (트게더 검색 옆) */
 header #right-search-form>#right-search-btn
 {
-	color: #FF9BC6;
+	color: #19ff00;
 	background: transparent;
 	border: none;
 	font-size: 1.4em;
@@ -613,10 +594,10 @@ header #right-search-form>#right-search-btn
 }
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
-/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/flowers_1169089 (투명도 조절은 자체적으로 수행) */
+/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/winter_2768265 (투명도 조절은 자체적으로 수행) */
 #article-content-wrapper #article-content
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png);
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); /* img > post_bg_winter_opaticy_40per.png */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15em;
@@ -736,14 +717,14 @@ header #right-search-form>#right-search-btn
 /* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
 footer:after
 {
-	content: "Background Designed by Freepik";
+	content: "Background, Icon Designed by Freepik";
 }
 
 /* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
 .dropdown-menu
 {
 	border: 3px solid #F663FF;
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png), #FFFED6;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png), #FFFFFF;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 130px;
@@ -758,7 +739,7 @@ footer:after
 /* 드롭다운 메뉴 내부 선택시 투명도 설정 (2021-04-05) */
 .dropdown-menu>li>a:hover
 {
-	opacity: 70%;
+	opacity: 80%;
 }
 
 /* 해게더 자체 광고바 추가 (2021-04-10) */
@@ -770,11 +751,11 @@ header #header-bar:after
 	margin-top: 20px; /* 상단 마진 */
 	padding: 6px; /* 내부 간격 */
 	text-align: center;
-	background: #ffffffd4;
+	background: #ffffffa6;
 	border-radius: 19px;
 	/* 일반내용 게시용 */
-	color: black;
-	border: 9px double #FF86BA;
+	color: #1000ff;
+	border: 9px double #15D500;
 	/* 중요내용 게시용 (테두리 및 색상 강조 등) */
 	/*
 	color: blue;

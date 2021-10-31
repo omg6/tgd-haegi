@@ -1,6 +1,6 @@
-/* 해기님 트게더 (해게더) 모바일 CSS [봄 스킨 | 적용 일자 : 2021-03-28 이후] */
+/* 해기님 트게더 (해게더) 모바일 CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-10-30 */
+/* 최종 수정 일자 : 2021-10-31 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -12,11 +12,11 @@
 /* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
-/* 웹폰트 불러오기 ( 넥슨 메이플스토리 | 출처 : https://noonnu.cc/font_page/428 ) */
+/* 웹폰트 불러오기 ( 이사만루 Light | 출처 : https://noonnu.cc/font_page/462 ) */
 @font-face
 {
-	font-family: 'MaplestoryOTFLight';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
+	font-family: 'GongGothicLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,21 +24,21 @@
 /* 폰트 내부에 적용 */
 body
 {
-	font-family: 'MaplestoryOTFLight';
+	font-family: 'GongGothicLight';
 }
 
 
 /* 트게더 로고 배너 부분 */
 header
 {
-	background: #BCFFFB !important; /* 로고 배너 배경 색 */
-	border-bottom: 4px solid #FFABCF; /* 로고 배너 하단 구분선 색 */
+	background: #c5d0e6 !important; /* 로고 배너 배경 색 */
+	border-bottom: 4px solid #15D500; /* 로고 배너 하단 구분선 색 */
 }
 
 /* 해게더 로고 삽입 (PC 로고에서 해바라기 그림 제거) */
 header>#header-area>a>h1
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825571340751863808/tgd_logo_spring_without_sunflower.png) no-repeat; /* img_mobile > tgd_logo_spring_without_sunflower.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903903585048354856/tgd_logo_winter_without_sunflower.png) no-repeat; /* img_mobile > tgd_logo_winter_without_sunflower.png */
 	background-size: auto 32px;
 	width: 90px;
 }
@@ -47,7 +47,7 @@ header>#header-area>a>h1
 header>#header-area>#header-bar-link, nav#nav>#nav-upper>#header-close-bar-link
 {
 	display: inline-block;
-	color: #FFABCF;
+	color: #15D500;
 }
 
 /* 트게더 전체 메뉴 영역 색상 변경 (좌측 네비게이션 영역 활성화 후) */
@@ -59,7 +59,7 @@ nav#nav>.nav-header
 /* 배경 색상 변경 및 로고 추가 (좌측 네비게이션 영역 활성화 후) */
 nav#nav
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825567294498668604/tgd_logo_spring.png), #BCFFFB;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903903585048354856/tgd_logo_winter_without_sunflower.png), #c5d0e6;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -68,7 +68,7 @@ nav#nav
 header>#header-area>#header-search-link, header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
-	color: #FFABCF;
+	color: #15D500;
 	font-size: 24px;
 	padding: 0 16px 8px;
 }
@@ -76,7 +76,7 @@ header>#header-area>#header-search-link, header>#header-search-bar #header-close
 /* 검색창 설정 변경 (검색 버튼 클릭 후 상단에 표기되는 검색창) */
 header > #header-search-bar #header-search-input
 {
-	border: 3px solid #FFABCF;
+	border: 3px solid #15D500;
 	border-radius: 15px;
 	height: 37px; /* 하단 부분 선과 겹치는 문제 수정 */
 }
@@ -85,7 +85,7 @@ header > #header-search-bar #header-search-input
 header>#header-search-bar #header-search-btn
 {
 	display: inline-block;
-	color: #FFABCF;
+	color: #15D500;
 	font-size: 24px;
 	padding: 0 16px 8px;
 }
@@ -99,8 +99,8 @@ header>#header-search-bar #header-search-btn
 /* 프로필 이미지 크기 확장 전 여백 공간 설정 */
 #board-info
 {
-	background: #BCFFFB;
-	border-color: #FF1E7F;
+	background: #c5d0e6;
+	border-color: #1b5de1;
 	border-width: 2px;
 	height: 82px;
 }
@@ -110,7 +110,7 @@ header>#header-search-bar #header-search-btn
 {
 	font-size: 20px;
 	height: 41px;
-	border-bottom: 3px solid #FF98FF;
+	border-bottom: 3px solid #e19f10;
 	width: 100%;
 	padding-left: 25px;
 }
@@ -228,7 +228,7 @@ header>#header-search-bar #header-search-btn
 /* 상단 우측 즐겨찾기에 추가 및 드롭다운 버튼 색상 변경 및 위치 조절 (별, 역삼각형 버튼) */
 #board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
-	color: #FC37FF;
+	color: #e19f10;
 	bottom: 41px;
 }
 
@@ -255,7 +255,7 @@ div#noteDropdownContainer, div#userDropdownContainer
 /* 좌측 네비게이션 바 상단 경계 및 패딩 설정 (2021-04-01) */
 nav#nav>#nav-upper-shortcut
 {
-	border-top: 4px solid #FFABCF;
+	border-top: 4px solid #15D500;
 	padding-top: 5px;
 }
 
@@ -282,9 +282,11 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 }
 
 /* 글목록 부분 배경 설정 */
+/* 배경화면 출처 : https://www.freepik.com/free-vector/unfocused-winter-landscape-with-snowflakes_6029361.htm */
+/* (참고) PC 버전과 모바일 버전의 배경화면이 다름 */
 #article-list
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825362665274474526/hand-drawn-spring-wallpaper.png);
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904241619153354753/unfocused-winter-landscape-with-snowflakes.jpg); /* img_mobile > tgd_background_winter_mobile.jpg */
 	background-size: cover;
 }
 
@@ -342,7 +344,7 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 {
 	background-color: transparent; /* 배경 색 투명으로 설정 */
 	border-width: 2px;
-	border-color: #FFABCF;
+	border-color: #15D500;
 	margin-bottom: 5px;
 	border-style: solid;
 }
@@ -350,7 +352,7 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 /* 추천 수 배경 설정 (제목 옆) */
 #article-list>.article-list-row>.item>.list-header>span
 {
-	background-color: #03e200;
+	background-color: #FF86BA;
 }
 
 /* 별 회전 관련 키프레임 설정 */
@@ -453,7 +455,7 @@ span.input-group-btn
 /* 푸터 (하단) 설정 */
 footer
 {
-	background: #bcd452;
+	background: #cfcfcf;
 }
 
 /* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
@@ -572,10 +574,10 @@ button.btn.square.btn-default
 }
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
-/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/flowers_1169089 (투명도 조절은 자체적으로 수행) */
+/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/winter_2768265 (투명도 조절은 자체적으로 수행) */
 #article-content-wrapper #article-content
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png);
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); /* img > post_bg_winter_opaticy_40per.png */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15em;
@@ -664,8 +666,8 @@ button.btn.square.btn-default
 /* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
 .dropdown-menu
 {
-	border: 3px solid #F663FF;
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png), #FFFED6;
+	border: 3px solid #e19f10;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png), #FFFFFF;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 130px;

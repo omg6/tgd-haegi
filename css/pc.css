@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) PC CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-10-31 */
+/* 최종 수정 일자 : 2021-12-04 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -28,29 +28,38 @@ body
 	font-family: 'GongGothicLight';
 }
 
+
+/* 해기님 요청에 의해 마우스 커서 설정 취소 (2021-12-04)
+   일부 환경에서 마우스 커서가 보이지 않는 것으로 추정됨 (Mac 환경 추정) */
+/* 마우스 커서 설정 시작 */
 /* 마우스 커서 설정 - 기본 */
 /* 출처 : https://tgd.kr/s/bellhidira/32073772 */
 /* 마우스 아이콘 출처 : https://www.flaticon.com/free-icon/sunflower_1466040 */
+/*
 html, body, .fr-popup.emoticons, .fr-top, select.form-control, input[type=checkbox], input[type=radio], .opt
 {
-	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/821394714434994206/cursor_sunflower_edited.png) 0 0, auto !important; /* img > cursor_sunflower_edited */
+	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/821394714434994206/cursor_sunflower_edited.png) 0 0, auto !important;
 }
+*/
 
 /* 마우스 커서 설정 - 변경 */
 /* 마우스 아이콘 출처 : https://www.flaticon.com/free-icon/sunflower_1035922 */
+/*
 #right-search-form>#right-search-btn, #board-info #board-info-bottom #addFavoriteBtn,
 #article-list #article-option-area>#article-option-area-toggle-btn, #article-list>.article-list-row>.item>.list-title>.list-writer>span,
 .reply > .reply-header > .reply-writer.logged, .reply-menu, .btn, .fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn,
 .fr-view img, .pull-left, a
 {
-	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820127336925495316/sunflower_2.png) 0 0, auto !important; /* img > cursor_sunflower_2 */
+	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820127336925495316/sunflower_2.png) 0 0, auto !important;
 }
 
 span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr-basic.fr-element, input[type='text']
 {
 	cursor: url(https://cdn.discordapp.com/attachments/817410187199512678/820127336925495316/sunflower_2.png) 0 0, auto !important;
 }
+*/
 /* 마우스 커서 설정 끝 */
+
 
 /* 배경에 눈 내리는 효과 */
 /* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */

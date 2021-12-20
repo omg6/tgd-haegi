@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) PC CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-12-04 */
+/* 최종 수정 일자 : 2021-12-21 (트게더 다크모드 추가에 따른 대응 등) */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -61,19 +61,21 @@ span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr
 /* 마우스 커서 설정 끝 */
 
 
-/* 배경에 눈 내리는 효과 */
-/* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
+/* 배경화면 설정 */
 /* 배경화면 출처 : https://www.freepik.com/free-vector/flat-design-winter-landscape-concept_6073476.htm */
-/* 효과에 사용된 아이콘 출처 (눈) : https://www.flaticon.com/free-icon/snowflake_3915582 */
-html
+body /* 아래의 효과 사용할 경우 body -> html 로 바꿔야 함. */
 {
 	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903672686985748530/tgd_background_winter_cut__no_moon.png); /* img_pc > tgd_background_winter_cut__no_moon.png (3094x3040) */
 	background-size: cover; /* 배경화면 화면에 꽉 차게 설정 */
 	height: auto !important;
 }
 
+/* 배경에 눈 내리는 효과 */
+/* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
+/* 효과에 사용된 아이콘 출처 (눈) : https://www.flaticon.com/free-icon/snowflake_3915582 */
 /* 눈 내려가는 키프레임 */
-/* 해당 키프레임 적용시 Edge 환경에서 CPU 점유율이 급상승하는 문제가 있음...! 제거해야 저사양 친화적인 페이지가 될 것으로 추정됨. */
+/* 임시 비활성화 (렉 완화 및 다크모드 등으로 인해, 2021-12-20)
+/* 해당 키프레임 적용시 Edge 환경에서 CPU 점유율이 급상승하는 문제가 있음...! 제거해야 저사양 친화적인 페이지가 될 것으로 추정됨.
 @keyframes snow_falls
 {
 	0% { background-position: 0px 0px; }
@@ -84,8 +86,9 @@ body
 {
 	background: transparent;
 	animation: snow_falls 20s linear infinite;	
-	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/903677254519881798/bg_effect_snow.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
+	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/903677254519881798/bg_effect_snow.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입
 }
+*/
 /* 배경에 눈 내리는 효과 끝 */
 
 
@@ -604,13 +607,15 @@ header #right-search-form>#right-search-btn
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
 /* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/winter_2768265 (투명도 조절은 자체적으로 수행) */
+/* 임시 비활성화 (다크모드 적용시 일부 구간 안 보임, 2021-12-19)
 #article-content-wrapper #article-content
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); /* img > post_bg_winter_opaticy_40per.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); img > post_bg_winter_opaticy_40per.png
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15em;
 }
+*/
 
 /* 글 하단 부분 색상 조절 (목록, 신고, 스크랩, 수정, 삭제 위치한 버튼 라인) */
 #article-content-wrapper>.footer
@@ -658,7 +663,7 @@ header #right-search-form>#right-search-btn
 /* 댓글 창 외부 스타일 변경 (베스트 댓글 제외) */
 #article-reply-area #reply-real-area .reply
 {
-	background-color: #FFF; /* 배경 색 */
+	/* background-color: #FFF;  --> 배경 색 제거함 (다크모드 변경시에도 배경이 적용되는 문제가 있으므로, 2021-12-19) */
 	border-width: 3px;
 	border-color: #00CFD9;
 	margin-bottom: 10px;
@@ -677,10 +682,13 @@ header #right-search-form>#right-search-btn
 }
 
 /* 댓글 창 내부 스타일 변경 (베스트 댓글 제외) */
+/* 해당 부분은 다크모드 적용시에도 하얀 색상이 적용되는 문제가 있어 비활성화함 (2021-12-19) */
+/*
 #article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
 {
 	background-color: #FFF;
 }
+*/
 
 /* 대댓글 좌측 마진 설정 */
 #article-reply-area #reply-real-area .reply.d-1, #article-reply-area #reply-best-area .reply.d-1
@@ -688,20 +696,27 @@ header #right-search-form>#right-search-btn
 	margin-left: 2.5em;
 }
 
-/* 댓글 작성 창 외부 경계 설정 (상단) */
+/* 게시물 작성 및 댓글 작성 창 외부 경계 설정 (상단) */
 .fr-toolbar.fr-top
 {
 	border-top: 5px solid #FCCDFF;
 }
 
-/* 댓글 작성 창 외부 경계 설정 (상단 + 하단 좌,우,하단 경계) */
-.fr-toolbar.fr-top, .fr-box.fr-basic.fr-top .fr-wrapper
+/* 게시물 작성 및 댓글 작성 창 외부 경계 설정 (상단 + 하단 좌,우,하단 경계) */
+.fr-toolbar.fr-top, /* 마진은 댓글 작성 창 부분만 설정하기 위함 */
+.fr-box.fr-basic.fr-top .fr-wrapper
 {
-	margin-left: 5px;
-	margin-right: 5px;
 	border-left: 2px solid #FCCDFF;
 	border-right: 2px solid #FCCDFF;
 	border-bottom: 2px solid #FCCDFF;
+}
+
+/* 게시물 내부 댓글 작성 창 마진 변경 */
+#comment-write-form-area .fr-toolbar.fr-top,
+#comment-write-form-area .fr-box.fr-basic.fr-top .fr-wrapper
+{	
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 /* 댓글 쓰기 버튼 우측 들여쓰기 및 상단 여백 (댓글 작성 창 하단 부분) */
@@ -717,16 +732,10 @@ header #right-search-form>#right-search-btn
 	padding: 0 1.6em;
 }
 
-/* 쓰기 버튼 위치 조절 (새 글 작성하기 페이지 내부 하단의 쓰기 버튼 - 경계에 치우쳐져 있던 문제 수정) */
-#article-write-button.btn.btn-primary.pull-right
-{
-	margin-right: 16px;
-}
-
 /* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
 footer:after
 {
-	content: "Background, Icon Designed by Freepik";
+	content: "Background Designed by Freepik";
 }
 
 /* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
@@ -773,4 +782,188 @@ header #header-bar:after
 	*/
 	content: "\1F498  " "방송일정 : 매일 오후 10시 또는 트게더 공지　|　정기 휴방일 : 목, 일" "  \1F498";
 	/* 유니코드 출처 : https://unicode-table.com/kr/1F498/ */
+}
+
+
+/* 트게더 다크모드 추가에 따른 다크모드 관련 변경사항 (2021-12-19 ~) */
+/* 메인 페이지 부분 */
+/* 다크모드 전용 폰트 설정 (가독성 향상을 위함) */
+/* 폰트 출처: https://noonnu.cc/font_page/367 (Gmarket Sans L) */
+@font-face
+{
+	font-family: 'GmarketSansLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html.darkmode body
+{
+	font-family: 'GmarketSansLight';
+}
+
+/* 다크모드 적용 시 검색창 및 검색 버튼 색상 변경 */
+html.darkmode header #right-search-form>input[type=text]
+{
+	border: 3px solid #a1f59c;
+}
+
+html.darkmode header #right-search-form>#right-search-btn
+{
+	color: #a1f59c;
+}
+
+/* 다크모드 적용 시 해게더 자체 광고바 일부 설정 변경 */
+html.darkmode header #header-bar:after
+{
+	background: transparent;
+	border: 9px double #a0a0a0; /* #808080 = gray, #a0a0a0 = gray 에서 25% 밝게 */
+	color: #ffff40;
+}
+
+/* 다크모드 적용 시 경계 설정 변경 */
+html.darkmode header #header-bar > .row,
+html.darkmode #main .menu-wrapper,
+html.darkmode #main #main-content > div.frame
+{
+	border: 9px double #a0a0a0 !important; /* 트게더 사이트에서 프레임 경계 상단을 !important 로 강제 설정함에 따라 !important 로 강제 재설정 수행 */
+}
+
+/* 다크모드 적용 시 좌측 트게더 전체 메뉴 버튼 부분 색상 변경 */
+html.darkmode #main .menu-wrapper>.header
+{
+	background: #a1f59c;
+	color: #121212;
+}
+
+/* 다크모드 적용 시 메인 프로필 이미지 색상 연하게 */
+html.darkmode #board-info h1>a:before
+{
+	border: 2px solid #5fc0ff;
+}
+
+/* 다크모드 적용 시 공지 글 문단의 "공지" 문구 아이콘 하얀색으로 변경 */
+html.darkmode #article-list>.article-list-row.notice>.item>.list-header>strong
+{
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/922350320418451456/icon_notice_white_for_darkmode.png); /* img > icon_notice_white_for_darkmode.png */
+}
+
+/* 다크모드 적용 시 공지글 부분 변경 */
+html.darkmode #article-list > .article-list-row.notice
+{
+	border: 2px solid #FFAED7; /* 기존 공지글 보다 경계 굵기 얇고 색상 연하게 */
+	margin-top: 5px;
+}
+
+/* 다크모드 적용 시 인기글 부분 변경 */
+html.darkmode #article-list>.article-list-row.hot
+{
+	border: 2px solid #dec300; /* 기존 공지글 보다 경계 굵기 얇고 색상 연하게 */
+	margin-top: 4px;
+}
+
+
+/* 글 내부 이후 부분 */
+/* 다크모드 적용 시 닉네임 하단바 부분 색상 변경 */
+html.darkmode #board-info h1
+{
+	border-bottom: 2px solid #a0a0a0;
+}
+
+/* 다크모드 적용 시 게시판 목록 부분 변경 */
+html.darkmode #article-list #article-list-category
+{
+	border: 9px double #c8c8c8;
+}
+
+/* 다크모드 적용 시 글 내부 중 게시물 작성자 프로필 이미지 경계 색상 연하게 변경  */
+html.darkmode #article-info>.article-profile-img
+{
+	border: 2px solid #F779E7;
+}
+
+/* 다크모드 적용 시 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 경계 색상 변경 */
+html.darkmode #article-info
+{
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+/* 다크모드 적용 시 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절 */
+html.darkmode #article-content-wrapper>.header
+{
+	border-top: 4px solid #a0a0a0;
+	border-left: 4px solid #a0a0a0;
+	border-right: 4px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
+}
+
+/* 다크모드 적용 시 게시글 외부 경계선 설정 (+추천 부분) */
+html.darkmode #article-content-wrapper #article-content,
+html.darkmode #article-content-wrapper>.vote-area
+{
+	border-left: 4px solid #a0a0a0;
+	border-right: 4px solid #a0a0a0;
+}
+
+/* 다크모드 적용 시 목록, 추천 버튼 부분 경계 색상 변경 */
+html.darkmode #article-content-wrapper>.footer
+{
+	border-top: 1px solid #a0a0a0;
+	border-left: 4px solid #a0a0a0;
+	border-right: 4px solid #a0a0a0;
+	border-bottom: 4px solid #a0a0a0;
+}
+
+/* 다크모드 적용 시 신고 버튼 배경 기본값으로 변경 (투명) */
+html.darkmode .btn-outline-danger
+{
+	background: transparent;
+}
+
+/* 다크모드 적용 시 게시글 바로 아래의 댓글 n개 부분 색상 변경 */
+html.darkmode #article-reply-area>.header h5,
+html.darkmode a#lastc
+{
+	color: #9cd8f5;
+}
+
+/* 다크모드 적용 시 댓글 작성자 닉네임, 닉네임 옆 좋아요, 대댓글, 신고, # 부분 색상 변경 */
+html.darkmode #article-reply-area #reply-real-area .reply>.reply-header>.reply-writer.logged,
+html.darkmode #article-reply-area #reply-best-area .reply>.reply-header>.reply-writer.logged,
+html.darkmode #article-reply-area #reply-real-area .reply>.reply-header>.reply-menu a,
+html.darkmode #article-reply-area #reply-best-area .reply>.reply-header>.reply-menu a
+{
+	color: #a1f59c;
+}
+
+/* 다크모드 적용 시 게시물 작성 및 댓글 작성 창 외부 경계 변경 (상단) */
+html.darkmode .fr-toolbar.fr-top
+{
+	border-top: 5px solid #FCCDFF !important;
+	border-left: 2px solid #FCCDFF !important;
+	border-right: 2px solid #FCCDFF !important;
+	border-bottom: 1px solid #FCCDFF !important;
+}
+
+/* 다크모드 적용 시 게시물 작성 및 댓글 작성 창 외부 경계 변경 (하단 좌,우,하단 경계) */
+html.darkmode .fr-box.fr-basic.fr-top .fr-wrapper
+{	
+	border-left: 2px solid #FCCDFF;
+	border-right: 2px solid #FCCDFF;
+	border-bottom: 2px solid #FCCDFF;
+}
+
+/* 다크모드 적용 시 게시물 내부 댓글 작성 창 크기 변경 */
+html.darkmode #comment-write-form-area .fr-box.fr-basic.fr-top .fr-wrapper
+{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* 다크모드 적용 시 배경 출처 제거 */
+html.darkmode footer:after
+{
+	display: none;
 }

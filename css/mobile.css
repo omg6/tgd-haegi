@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) 모바일 CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-10-31 */
+/* 최종 수정 일자 : 2021-12-22 (트게더 다크모드 대응 등) */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -59,7 +59,7 @@ nav#nav>.nav-header
 /* 배경 색상 변경 및 로고 추가 (좌측 네비게이션 영역 활성화 후) */
 nav#nav
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903903585048354856/tgd_logo_winter_without_sunflower.png), #c5d0e6;
+	background: /* 로고 임시 비활성화 - url(https://cdn.discordapp.com/attachments/817410187199512678/903903585048354856/tgd_logo_winter_without_sunflower.png), */ #c5d0e6;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -228,7 +228,7 @@ header>#header-search-bar #header-search-btn
 /* 상단 우측 즐겨찾기에 추가 및 드롭다운 버튼 색상 변경 및 위치 조절 (별, 역삼각형 버튼) */
 #board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
-	color: #e19f10;
+	color: #e19f10 !important;
 	bottom: 41px;
 }
 
@@ -542,8 +542,8 @@ button.btn.square.btn-default
 /* 글 내부 제목 ~ 닉네임 부분 위아래 여백 늘리기 */
 #article-info
 {
-	border-top: #FFF 5px solid; /* color - width - style 순서 */
-	border-bottom: #FFF 5px solid; /* color - width - style 순서 */
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
 }
 
 /* 글 작성자 부분 상단 여백 증가 */
@@ -575,13 +575,15 @@ button.btn.square.btn-default
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
 /* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/winter_2768265 (투명도 조절은 자체적으로 수행) */
+/* 임시 제거 (다크모드 적용시 정상 표기되지 않음, 2021-12-22)
 #article-content-wrapper #article-content
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); /* img > post_bg_winter_opaticy_40per.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); /* img > post_bg_winter_opaticy_40per.png
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15em;
 }
+*/
 
 /* 글 외부 경계선 및 배경 설정 (목록, 신고 버튼 부분) */
 #article-content-wrapper>.footer
@@ -628,7 +630,6 @@ button.btn.square.btn-default
 /* 댓글 창 외부 스타일 변경 (베스트 댓글 제외) */
 #article-reply-area #reply-real-area .reply
 {
-	background-color: #FFF; /* 배경 색 */
 	border-width: 2px;
 	border-color: #F983FF;
 	margin-bottom: 10px;
@@ -641,12 +642,6 @@ button.btn.square.btn-default
 {
 	background-color: #FDDBFF;
 	border-bottom-color: #F983FF; /* 사용자 정보 ~ 댓글 사이 선 색상 설정 */
-}
-
-/* 댓글 창 내부 색상 변경 */
-#article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
-{
-	background-color: #FFF;
 }
 
 /* 댓글 작성 창 외부 경계 설정 (상단) */
@@ -684,4 +679,178 @@ button.btn.square.btn-default
 .dropdown-menu>li>a:hover
 {
 	opacity: 70%;
+}
+
+/* 트게더 다크모드 추가에 따른 다크모드 관련 변경사항 (2021-12-21 ~) */
+/* 메인 페이지 부분 */
+/* 다크모드 적용 시 트게더 로고 밝게해주는 필터 제거 (해당 값 적용시 지나치게 밝음) + 로고 변경 (흰색 어둡게 설정된 로고) */
+html.darkmode header>#header-area>a>h1
+{
+	filter: none !important; /* 기존 트게더 설정 오버라이드 */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/922873003900035172/tgd_logo_winter_without_sunflower_darkmode.png) no-repeat; /* img_mobile > tgd_logo_winter_without_sunflower_darkmode.png */
+	background-size: auto 32px;
+	width: 90px;
+}
+
+/* 다크모드 적용 시 상단바 배경 및 밑줄 색상 변경 */
+html.darkmode header
+{
+	background: #363636 !important; /* 기존 트게더 설정 오버라이드 */
+	border-bottom: 4px solid #52E342 !important;
+}
+
+/* 다크모드 적용 시 좌측 메뉴 버튼 색상 변경 (기본 및 네비게이션 활성화 후) + 검색 버튼 및 검색창 닫기 버튼 색상 변경 (연하게) */
+html.darkmode header>#header-area>#header-search-link,
+html.darkmode header>#header-search-bar #header-close-search-btn,
+html.darkmode header>#header-area>#header-bar-link,
+html.darkmode nav#nav>#nav-upper>#header-close-bar-link
+{
+	display: inline-block;
+	color: #52E342 !important; /* 기존 트게더 설정 오버라이드 */
+}
+
+/* 다크모드 적용 시 검색창 경계 변경 */
+html.darkmode header>#header-search-bar #header-search-input
+{
+	border: 3px solid #52E342 !important; /* 기존 트게더 설정 오버라이드 */
+}
+
+/* 다크모드 적용 시 검색 버튼 및 검색창 닫기 버튼 크기 조절 */
+html.darkmode header>#header-area>#header-search-link,
+html.darkmode header>#header-search-bar #header-close-search-btn
+{
+	font-size: 24px;
+	padding: 0 16px 8px;
+}
+
+/* 다크모드 적용 시 좌측 네비게이션 바 상단 경계 및 패딩 변경 */
+nav#nav>#nav-upper-shortcut
+{
+	border-top: 4px solid #52E342;
+	padding-top: 5px;
+}
+
+/* 다크모드 적용 시 좌측 네비게이션 바 즐겨찾기, 트게더 전체 메뉴 부분 색상 변경 */
+html.darkmode nav#nav>.nav-header
+{
+	background: #d39687;
+}
+
+/* 다크모드 적용 시 닉네임 아래에 표기되는 줄 색상 변경 */
+html.darkmode #board-info h1
+{
+	border-bottom: 3px solid #a0a0a0;
+}
+
+/* 다크모드 적용 시 접속 인원 아래에 표기되는 줄 색상 변경 */
+html.darkmode #board-info
+{
+	border-bottom: 3px solid #52E342 !important;
+}
+
+/* 다크모드 적용 시 배경 제거 */
+html.darkmode #article-list
+{
+	background: transparent;
+}
+
+/* 다크모드 적용 시 게시판 종류 (상단) 변경 */
+html.darkmode #article-list #article-list-category
+{
+	margin-top: 3px;
+	margin-bottom: 5px;
+	border: 6px double #a0a0a0;
+	padding: 0.22em;
+}
+
+/* 다크모드 적용 시 공지 글 (상단) 경계 변경 */
+html.darkmode #article-list>.article-list-row.notice
+{
+	border: 3px solid #ff8888;
+}
+
+/* 다크모드 적용 시 인기 글 (상단) 경계 변경 */
+html.darkmode #article-list>.article-list-row.hot
+{
+	border: 3px solid #f19abf;
+}
+
+/* 다크모드 적용 시 일반 글 경계 변경 */
+html.darkmode #article-list>.article-list-row
+{
+	border: 2px solid #7bc174;
+}
+
+/* 다크모드 적용 시 공지 글 문단의 "공지" 문구 아이콘 하얀색으로 변경 */
+html.darkmode #article-list>.article-list-row.notice>.item>.list-header>strong
+{
+	content: url(https://cdn.discordapp.com/attachments/817410187199512678/922872964683292772/icon_notice_white_for_darkmode.png); /* img > icon_notice_white_for_darkmode.png */
+}
+
+/* 게시물 내부 부분 */
+/* 다크모드 적용 시 인포 부분 경계 투명 설정 */
+html.darkmode.mb #article-info
+{
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+}
+
+/* 다크모드 적용 시 게시물 옆의 하얀 배경 제거 */
+html.darkmode #article-content-wrapper
+{
+	background: transparent;
+}
+
+/* 다크모드 적용 시 글 작성 시간, 댓글, 추천수, 조회수 뜨는 부분 색상 조절 및 간격 조절, 글 외부 경계선 변경 */
+html.darkmode #article-content-wrapper>.header
+{
+	padding: 0.6em 1.0em; /* 시간 ~ 조회수 부분 좌우 간격 약간 조정 */
+	border: 2px solid #a0a0a0;
+	border-bottom-width: 1px;
+}
+
+/* 다크모드 적용 시 글 외부 경계선 변경 (게시글 + 추천 부분) */
+html.darkmode #article-content-wrapper #article-content,
+html.darkmode #article-content-wrapper>.vote-area,
+html.darkmode #article-content-wrapper>.footer
+{
+	border-left: 2px solid #a0a0a0 !important;
+	border-right: 2px solid #a0a0a0 !important;
+}
+
+/* 다크모드 적용 시 추천 부분 하단 경계선 변경 */
+html.darkmode #article-content-wrapper>.footer
+{
+	border-top: 1px solid #a0a0a0;
+	border-bottom: 2px solid #a0a0a0;
+}
+
+/* 다크모드 적용 시 신고 버튼 배경 기본값으로 변경 (투명) */
+html.darkmode .btn-outline-danger
+{
+	background: transparent;
+}
+
+/* 다크모드 적용 시 게시물 작성 및 댓글 작성 창 외부 경계 변경 (상단) */
+html.darkmode .fr-toolbar.fr-top
+{
+	border-top: 5px solid #FCCDFF !important;
+	border-left: 2px solid #FCCDFF !important;
+	border-right: 2px solid #FCCDFF !important;
+	border-bottom: 1px solid #FCCDFF !important;
+}
+
+/* 다크모드 적용 시 게시물 작성 및 댓글 작성 창 외부 경계 변경 (하단 좌,우,하단 경계) */
+html.darkmode .fr-box.fr-basic.fr-top .fr-wrapper
+{	
+	border-left: 2px solid #FCCDFF;
+	border-right: 2px solid #FCCDFF;
+	border-bottom: 2px solid #FCCDFF;
+}
+
+/* 페이지 하단 부분 (푸터) */
+/* 다크모드 적용 시 배경 출처 제거 */
+html.darkmode footer:after
+{
+	display: none;
 }

@@ -1,6 +1,6 @@
 /* 해기님 트게더 (해게더) PC CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
-/* 최종 수정 일자 : 2021-12-22 (트게더 다크모드 추가에 따른 대응 등) */
+/* 최종 수정 일자 : 2021-12-22 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
 /* !!! 출처가 표기된 일부 소스는 해당 출처를 통해 직접 확인해주시고, 문의사항 발생시 상단의 이메일로 연락 바랍니다. !!! */
@@ -196,7 +196,7 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 #article-list #article-list-category
 {
 	background: #fff0;
-	border: 10px double #8EC6FF;
+	border: 10px double #8EC6FF !important; /* 카테고리 옆으로 빠질 경우 상단 경계 고정 (can-float) */
 	margin-bottom: 7px;
 	border-radius: 8px;
 }
@@ -873,7 +873,7 @@ html.darkmode #board-info h1
 /* 다크모드 적용 시 게시판 목록 부분 변경 */
 html.darkmode #article-list #article-list-category
 {
-	border: 9px double #c8c8c8;
+	border: 9px double #c8c8c8 !important; /* 카테고리 옆으로 빠질 경우 상단 경계 고정 (can-float) */
 }
 
 /* 다크모드 적용 시 글 내부 중 게시물 작성자 프로필 이미지 경계 색상 연하게 변경  */

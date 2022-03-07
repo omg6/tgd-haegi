@@ -1,4 +1,4 @@
-/* 해기님 트게더 (해게더) 모바일 CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
+/* 해기님 트게더 (해게더) 모바일 CSS [봄 스킨 | 적용 일자 : 2021-03-28 이후] */
 /* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
 /* 최종 수정 일자 : 2021-12-22 (트게더 다크모드 대응 등) */
 
@@ -12,11 +12,11 @@
 /* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
-/* 웹폰트 불러오기 ( 이사만루 Light | 출처 : https://noonnu.cc/font_page/462 ) */
+/* 웹폰트 불러오기 ( 넥슨 메이플스토리 | 출처 : https://noonnu.cc/font_page/428 ) */
 @font-face
 {
-	font-family: 'GongGothicLight';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+	font-family: 'MaplestoryOTFLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,21 +24,21 @@
 /* 폰트 내부에 적용 */
 body
 {
-	font-family: 'GongGothicLight';
+	font-family: 'MaplestoryOTFLight';
 }
 
 
 /* 트게더 로고 배너 부분 */
 header
 {
-	background: #c5d0e6 !important; /* 로고 배너 배경 색 */
-	border-bottom: 4px solid #15D500; /* 로고 배너 하단 구분선 색 */
+	background: #BCFFFB !important; /* 로고 배너 배경 색 */
+	border-bottom: 4px solid #FFABCF; /* 로고 배너 하단 구분선 색 */
 }
 
 /* 해게더 로고 삽입 (PC 로고에서 해바라기 그림 제거) */
 header>#header-area>a>h1
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903903585048354856/tgd_logo_winter_without_sunflower.png) no-repeat; /* img_mobile > tgd_logo_winter_without_sunflower.png */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825571340751863808/tgd_logo_spring_without_sunflower.png) no-repeat; /* img_mobile > tgd_logo_spring_without_sunflower.png */
 	background-size: auto 32px;
 	width: 90px;
 }
@@ -47,7 +47,7 @@ header>#header-area>a>h1
 header>#header-area>#header-bar-link, nav#nav>#nav-upper>#header-close-bar-link
 {
 	display: inline-block;
-	color: #15D500;
+	color: #FFABCF;
 }
 
 /* 트게더 전체 메뉴 영역 색상 변경 (좌측 네비게이션 영역 활성화 후) */
@@ -59,7 +59,7 @@ nav#nav>.nav-header
 /* 배경 색상 변경 및 로고 추가 (좌측 네비게이션 영역 활성화 후) */
 nav#nav
 {
-	background: /* 로고 임시 비활성화 - url(https://cdn.discordapp.com/attachments/817410187199512678/903903585048354856/tgd_logo_winter_without_sunflower.png), */ #c5d0e6;
+	background: /* 로고 임시 비활성화 - url(https://cdn.discordapp.com/attachments/817410187199512678/825567294498668604/tgd_logo_spring.png), */ #BCFFFB;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -68,7 +68,7 @@ nav#nav
 header>#header-area>#header-search-link, header>#header-search-bar #header-close-search-btn
 {
 	display: inline-block;
-	color: #15D500;
+	color: #FFABCF;
 	font-size: 24px;
 	padding: 0 16px 8px;
 }
@@ -76,7 +76,7 @@ header>#header-area>#header-search-link, header>#header-search-bar #header-close
 /* 검색창 설정 변경 (검색 버튼 클릭 후 상단에 표기되는 검색창) */
 header > #header-search-bar #header-search-input
 {
-	border: 3px solid #15D500;
+	border: 3px solid #FFABCF;
 	border-radius: 15px;
 	height: 37px; /* 하단 부분 선과 겹치는 문제 수정 */
 }
@@ -85,7 +85,7 @@ header > #header-search-bar #header-search-input
 header>#header-search-bar #header-search-btn
 {
 	display: inline-block;
-	color: #15D500;
+	color: #FFABCF;
 	font-size: 24px;
 	padding: 0 16px 8px;
 }
@@ -99,8 +99,8 @@ header>#header-search-bar #header-search-btn
 /* 프로필 이미지 크기 확장 전 여백 공간 설정 */
 #board-info
 {
-	background: #c5d0e6;
-	border-color: #1b5de1;
+	background: #BCFFFB;
+	border-color: #FF1E7F;
 	border-width: 2px;
 	height: 82px;
 }
@@ -110,7 +110,7 @@ header>#header-search-bar #header-search-btn
 {
 	font-size: 20px;
 	height: 41px;
-	border-bottom: 3px solid #e19f10;
+	border-bottom: 3px solid #FF98FF;
 	width: 100%;
 	padding-left: 25px;
 }
@@ -228,7 +228,7 @@ header>#header-search-bar #header-search-btn
 /* 상단 우측 즐겨찾기에 추가 및 드롭다운 버튼 색상 변경 및 위치 조절 (별, 역삼각형 버튼) */
 #board-info>a.board-right-menu, .dropdown, .fa-caret-down:before
 {
-	color: #e19f10 !important;
+	color: #FC37FF !important;
 	bottom: 41px;
 }
 
@@ -255,7 +255,7 @@ div#noteDropdownContainer, div#userDropdownContainer
 /* 좌측 네비게이션 바 상단 경계 및 패딩 설정 (2021-04-01) */
 nav#nav>#nav-upper-shortcut
 {
-	border-top: 4px solid #15D500;
+	border-top: 4px solid #FFABCF;
 	padding-top: 5px;
 }
 
@@ -282,11 +282,9 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 }
 
 /* 글목록 부분 배경 설정 */
-/* 배경화면 출처 : https://www.freepik.com/free-vector/unfocused-winter-landscape-with-snowflakes_6029361.htm */
-/* (참고) PC 버전과 모바일 버전의 배경화면이 다름 */
 #article-list
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904241619153354753/unfocused-winter-landscape-with-snowflakes.jpg); /* img_mobile > tgd_background_winter_mobile.jpg */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825362665274474526/hand-drawn-spring-wallpaper.png);
 	background-size: cover;
 }
 
@@ -344,7 +342,7 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 {
 	background-color: transparent; /* 배경 색 투명으로 설정 */
 	border-width: 2px;
-	border-color: #15D500;
+	border-color: #FFABCF;
 	margin-bottom: 5px;
 	border-style: solid;
 }
@@ -352,7 +350,7 @@ nav#nav>#nav-upper #userDropdown img.profile-img
 /* 추천 수 배경 설정 (제목 옆) */
 #article-list>.article-list-row>.item>.list-header>span
 {
-	background-color: #FF86BA;
+	background-color: #03e200;
 }
 
 /* 별 회전 관련 키프레임 설정 */
@@ -455,7 +453,7 @@ span.input-group-btn
 /* 푸터 (하단) 설정 */
 footer
 {
-	background: #cfcfcf;
+	background: #bcd452;
 }
 
 /* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
@@ -574,11 +572,11 @@ button.btn.square.btn-default
 }
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
-/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/winter_2768265 (투명도 조절은 자체적으로 수행) */
+/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/flowers_1169089 (투명도 조절은 자체적으로 수행) */
 /* 임시 제거 (다크모드 적용시 정상 표기되지 않음, 2021-12-22)
 #article-content-wrapper #article-content
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); /* img > post_bg_winter_opaticy_40per.png
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15em;
@@ -661,8 +659,8 @@ button.btn.square.btn-default
 /* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
 .dropdown-menu
 {
-	border: 3px solid #e19f10;
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png), #FFFFFF;
+	border: 3px solid #F663FF;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png), #FFFED6;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 130px;
@@ -681,22 +679,19 @@ button.btn.square.btn-default
 	opacity: 70%;
 }
 
-/* 트게더 다크모드 추가에 따른 다크모드 관련 변경사항 (2021-12-21 ~) */
+/* 트게더 다크모드 추가에 따른 다크모드 관련 변경사항 (2021-12-22 ~) */
 /* 메인 페이지 부분 */
-/* 다크모드 적용 시 트게더 로고 밝게해주는 필터 제거 (해당 값 적용시 지나치게 밝음) + 로고 변경 (흰색 어둡게 설정된 로고) */
+/* 다크모드 적용 시 트게더 로고 밝게해주는 필터 제거 (해당 값 적용시 지나치게 밝음) */
 html.darkmode header>#header-area>a>h1
 {
 	filter: none !important; /* 기존 트게더 설정 오버라이드 */
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/922873003900035172/tgd_logo_winter_without_sunflower_darkmode.png) no-repeat; /* img_mobile > tgd_logo_winter_without_sunflower_darkmode.png */
-	background-size: auto 32px;
-	width: 90px;
 }
 
 /* 다크모드 적용 시 상단바 배경 및 밑줄 색상 변경 */
 html.darkmode header
 {
 	background: #363636 !important; /* 기존 트게더 설정 오버라이드 */
-	border-bottom: 4px solid #52E342 !important;
+	border-bottom: 4px solid #FFABCF !important;
 }
 
 /* 다크모드 적용 시 좌측 메뉴 버튼 색상 변경 (기본 및 네비게이션 활성화 후) + 검색 버튼 및 검색창 닫기 버튼 색상 변경 (연하게) */
@@ -706,13 +701,13 @@ html.darkmode header>#header-area>#header-bar-link,
 html.darkmode nav#nav>#nav-upper>#header-close-bar-link
 {
 	display: inline-block;
-	color: #52E342 !important; /* 기존 트게더 설정 오버라이드 */
+	color: #FFABCF !important; /* 기존 트게더 설정 오버라이드 */
 }
 
 /* 다크모드 적용 시 검색창 경계 변경 */
 html.darkmode header>#header-search-bar #header-search-input
 {
-	border: 3px solid #52E342 !important; /* 기존 트게더 설정 오버라이드 */
+	border: 3px solid #FFABCF !important; /* 기존 트게더 설정 오버라이드 */
 }
 
 /* 다크모드 적용 시 검색 버튼 및 검색창 닫기 버튼 크기 조절 */
@@ -726,7 +721,7 @@ html.darkmode header>#header-search-bar #header-close-search-btn
 /* 다크모드 적용 시 좌측 네비게이션 바 상단 경계 및 패딩 변경 */
 nav#nav>#nav-upper-shortcut
 {
-	border-top: 4px solid #52E342;
+	border-top: 4px solid #FFABCF;
 	padding-top: 5px;
 }
 
@@ -745,7 +740,7 @@ html.darkmode #board-info h1
 /* 다크모드 적용 시 접속 인원 아래에 표기되는 줄 색상 변경 */
 html.darkmode #board-info
 {
-	border-bottom: 3px solid #52E342 !important;
+	border-bottom: 3px solid #FFABCF !important;
 }
 
 /* 다크모드 적용 시 배경 제거 */
@@ -778,7 +773,7 @@ html.darkmode #article-list>.article-list-row.hot
 /* 다크모드 적용 시 일반 글 경계 변경 */
 html.darkmode #article-list>.article-list-row
 {
-	border: 2px solid #7bc174;
+	border: 2px solid #dbcf5d;
 }
 
 /* 다크모드 적용 시 공지 글 문단의 "공지" 문구 아이콘 하얀색으로 변경 */

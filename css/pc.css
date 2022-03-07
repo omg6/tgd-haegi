@@ -1,5 +1,6 @@
-/* 해기님 트게더 (해게더) PC CSS [겨울 스킨 | 적용 일자 : 2021-10-31 이후] */
-/* 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
+/* 해기님 트게더 (해게더) PC CSS [봄 스킨 | 적용 일자 : 2021-03-27 이후] */
+/* 1차 제작 (기본) : 미상 (~ 2021-03-13 적용) */
+/* 2차 제작 : omg7_ (TwitchTV ID, email : ohmygirl7@naver.com) */
 /* 최종 수정 일자 : 2021-12-22 */
 
 /* !!! 해당 코드 일체 또는 일부의 무단 복제, 스크랩 등은 불가능합니다. !!! */
@@ -12,12 +13,12 @@
 /* !! 실 적용 전 W3C CSS Validator 점검 필요 (제작자 기준) !! */
 
 
-/* 웹폰트 불러오기 ( 이사만루 Light | 출처 : https://noonnu.cc/font_page/462 ) */
-/* 후보 2 : https://noonnu.cc/font_page/676 (원스토어 모바일POP체, 다 좋은데 좀 두꺼움...) */
+/* 웹폰트 불러오기 ( 넥슨 메이플스토리 | 출처 : https://noonnu.cc/font_page/428 ) */
+/* 폰트 후보 2 : 이사만루 Light ( https://noonnu.cc/font_page/462 ) */
 @font-face
 {
-	font-family: 'GongGothicLight';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+	font-family: 'MaplestoryOTFLight';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,13 +26,12 @@
 /* 폰트 내부에 설정 */
 body
 {
-	font-family: 'GongGothicLight';
+	font-family: 'MaplestoryOTFLight';
 }
 
 
 /* 해기님 요청에 의해 마우스 커서 설정 취소 (2021-12-04)
    일부 환경에서 마우스 커서가 보이지 않는 것으로 추정됨 (Mac 환경 추정) */
-/* 마우스 커서 설정 시작 */
 /* 마우스 커서 설정 - 기본 */
 /* 출처 : https://tgd.kr/s/bellhidira/32073772 */
 /* 마우스 아이콘 출처 : https://www.flaticon.com/free-icon/sunflower_1466040 */
@@ -61,22 +61,19 @@ span#viewers, #article-list #boardSearchForm .form-control, .fr-view, .fr-box.fr
 /* 마우스 커서 설정 끝 */
 
 
-/* 배경화면 설정 */
-/* 배경화면 출처 : https://www.freepik.com/free-vector/flat-design-winter-landscape-concept_6073476.htm */
-body /* 아래의 효과 사용할 경우 body -> html 로 바꿔야 함. */
+/* 배경에 해바라기 내리는 효과 */
+/* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
+/* 배경화면 출처 : https://www.freepik.com/free-vector/hand-drawn-spring-wallpaper_12151052.htm */
+/* 효과에 사용된 아이콘 출처 (해바라기, 꽃 순서) : https://www.flaticon.com/free-icon/sunflower_3454257 (32x32) icon_sunflower.png | https://www.flaticon.com/free-icon/flower_753305 (32x32) icon_flower.png */
+html
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/903672686985748530/tgd_background_winter_cut__no_moon.png); /* img_pc > tgd_background_winter_cut__no_moon.png (3094x3040) */
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/825362665274474526/hand-drawn-spring-wallpaper.png); /* img_pc > tgd_background_spring.png (5208x3471) */
 	background-size: cover; /* 배경화면 화면에 꽉 차게 설정 */
 	height: auto !important;
 }
 
-/* 배경에 눈 내리는 효과 */
-/* 출처 : https://tgd.kr/c/css/18728438 (일부 참고) */
-/* 효과에 사용된 아이콘 출처 (눈) : https://www.flaticon.com/free-icon/snowflake_3915582 */
-/* 눈 내려가는 키프레임 */
-/* 임시 비활성화 (렉 완화 및 다크모드 등으로 인해, 2021-12-20)
-/* 해당 키프레임 적용시 Edge 환경에서 CPU 점유율이 급상승하는 문제가 있음...! 제거해야 저사양 친화적인 페이지가 될 것으로 추정됨.
-@keyframes snow_falls
+/* 해바라기 내려가는 키프레임 */
+@keyframes sunflower_falls
 {
 	0% { background-position: 0px 0px; }
 	100% { background-position: 500px 1000px; }
@@ -85,11 +82,10 @@ body /* 아래의 효과 사용할 경우 body -> html 로 바꿔야 함. */
 body
 {
 	background: transparent;
-	animation: snow_falls 20s linear infinite;	
-	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/903677254519881798/bg_effect_snow.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입
+	animation: sunflower_falls 20s linear infinite;	
+	background-image: url('https://cdn.discordapp.com/attachments/817410187199512678/820489938428362762/bg_effect_flowers.png'); /* 백그라운드 이미지로 미리 설정한 이미지 삽입 */
 }
-*/
-/* 배경에 눈 내리는 효과 끝 */
+/* 배경에 해바라기 내리는 효과 끝 */
 
 
 /* 기존 트게더 이미지 가리기 */
@@ -104,20 +100,20 @@ header .row > div:nth-child(1) > a
 	display : block;
 	width : 170px;
 	height : 67px;
-	background : url(https://cdn.discordapp.com/attachments/817410187199512678/903688868736405504/tgd_logo_winter.png) no-repeat; /* img > tgd_logo_winter.png */
+	background : url(https://cdn.discordapp.com/attachments/817410187199512678/825567294498668604/tgd_logo_spring.png) no-repeat; /* img > tgd_logo_spring.png */
 }
 
 /* 각 항목 외부 경계 설정 (통합) */
 header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 {
-	border: 9px double #15D500;
+	border: 9px double #FF86BA;
 	border-radius: 19px;
 }
 
 /* 좌측 트게더 전체 메뉴 헤더 부분 설정 */
 #main .menu-wrapper > .header
 {
-	background: #15D500;
+	background: #FF86BA;
 	color: #fff;
 	padding: 0.45em 1.4em 0.45em 1em;
 	font-weight: bold;
@@ -127,7 +123,7 @@ header #header-bar > .row, #main .menu-wrapper, #main #main-content > div.frame
 /* 좌측 트게더 전체 메뉴 중간 간격 설정 */
 #main .menu-wrapper .spacer
 {
-	background: #15D500;
+	background: #FF86BA;
 	height: 0.20em;
 }
 
@@ -238,6 +234,16 @@ small.favo i.fa.fa-heart
 	border-radius : 0px;
 	top : 3px;
 	float : left;
+}
+
+#article-list > .article-list-row > .item > .list-header > span
+{
+	background-color : #03e200;
+	color : #fff;
+	font-weight : bold;
+	padding : 1px 5px;
+	font-size : 12px;
+	border-radius : 10px;
 }
 
 header #right-search-form > input[type="text"], header #right-search-form > #right-search-btn
@@ -363,6 +369,16 @@ span.a-badge i.fa.fa-star
 	color: #AAAAAA !important;
 }
 
+#article-list > .article-list-row > .item > .list-header > span
+{
+	background-color: #FF0D00;
+	color: #fff;
+	font-weight: bold;
+	padding: 1px 5px;
+	font-size: 12px;
+	border-radius: 10px;
+}
+
 /* 매니저 아이콘 가리기 (칼) */
 img[src="https://static-cdn.jtvnw.net/chat-badges/mod.png"]
 {
@@ -461,10 +477,9 @@ button.btn.square.btn-default
 	border-radius: 50px;
 }
 
-/* 글 목록 내 좌측 추천수 관련 */
 #article-list > .article-list-row > .item > .list-header > span
 {
-	background-color : #FF86BA;
+	background-color : #03e200;
 	color : #fff;
 	font-weight : bold;
 	padding : 1px 5px;
@@ -476,7 +491,7 @@ button.btn.square.btn-default
 header #right-search-form>input[type=text]
 {
 	position: relative;
-	border: 3px solid #19ff00;
+	border: 3px solid #FF9BC6;
 	background: #fff;
 	font-size: 1.1em;
 	padding: 0.3em 0.5em;
@@ -486,7 +501,7 @@ header #right-search-form>input[type=text]
 /* 상단 우측의 검색 버튼 설정 (트게더 검색 옆) */
 header #right-search-form>#right-search-btn
 {
-	color: #19ff00;
+	color: #FF9BC6;
 	background: transparent;
 	border: none;
 	font-size: 1.4em;
@@ -606,11 +621,11 @@ header #right-search-form>#right-search-btn
 }
 
 /* 게시글 내부 배경이미지 설정 (중앙 부분에 표기 - 추후 이미지 또는 위치 등 변경 예정) */
-/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/winter_2768265 (투명도 조절은 자체적으로 수행) */
-/* 임시 비활성화 (다크모드 적용시 일부 구간 안 보임, 2021-12-19)
+/* 사용된 아이콘 출처 : https://www.flaticon.com/free-icon/flowers_1169089 (투명도 조절은 자체적으로 수행) */
+/* 임시 비활성화 (다크모드 적용시 일부 구간 안 보임, 2021-12-21)
 #article-content-wrapper #article-content
 {
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png); img > post_bg_winter_opaticy_40per.png
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 15em;
@@ -663,7 +678,7 @@ header #right-search-form>#right-search-btn
 /* 댓글 창 외부 스타일 변경 (베스트 댓글 제외) */
 #article-reply-area #reply-real-area .reply
 {
-	/* background-color: #FFF;  --> 배경 색 제거함 (다크모드 변경시에도 배경이 적용되는 문제가 있으므로, 2021-12-19) */
+	/* background-color: #FFF;  --> 배경 색 제거함 (다크모드 변경시에도 배경이 적용되는 문제가 있으므로, 2021-12-21) */
 	border-width: 3px;
 	border-color: #00CFD9;
 	margin-bottom: 10px;
@@ -682,8 +697,7 @@ header #right-search-form>#right-search-btn
 }
 
 /* 댓글 창 내부 스타일 변경 (베스트 댓글 제외) */
-/* 해당 부분은 다크모드 적용시에도 하얀 색상이 적용되는 문제가 있어 비활성화함 (2021-12-19) */
-/*
+/* 해당 부분은 다크모드 적용시에도 하얀 색상이 적용되는 문제가 있어 비활성화함 (2021-12-21)
 #article-reply-area #reply-real-area .reply>.reply-content, #article-reply-area #reply-best-area .reply>.reply-content
 {
 	background-color: #FFF;
@@ -735,14 +749,14 @@ header #right-search-form>#right-search-btn
 /* 메인으로 사용한 배경의 출처 남기기 (Freepik 라이센스 규칙) */
 footer:after
 {
-	content: "Background Designed by Freepik";
+	content: "Background, Icon Designed by Freepik";
 }
 
 /* 드롭다운 메뉴 내부 설정 (아래화살표, 프로필 등 클릭시 표기되는 작은 창) (2021-04-05) */
 .dropdown-menu
 {
 	border: 3px solid #F663FF;
-	background: url(https://cdn.discordapp.com/attachments/817410187199512678/904239621309874236/post_bg_winter_opacity_40per.png), #FFFFFF;
+	background: url(https://cdn.discordapp.com/attachments/817410187199512678/820644518377685059/post_bg_flower_opacity_30per.png), #FFFED6;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 130px;
@@ -757,7 +771,7 @@ footer:after
 /* 드롭다운 메뉴 내부 선택시 투명도 설정 (2021-04-05) */
 .dropdown-menu>li>a:hover
 {
-	opacity: 80%;
+	opacity: 70%;
 }
 
 /* 해게더 자체 광고바 추가 (2021-04-10) */
@@ -769,11 +783,11 @@ header #header-bar:after
 	margin-top: 20px; /* 상단 마진 */
 	padding: 6px; /* 내부 간격 */
 	text-align: center;
-	background: #ffffffa6;
+	background: #ffffffd4;
 	border-radius: 19px;
 	/* 일반내용 게시용 */
-	color: #1000ff;
-	border: 9px double #15D500;
+	color: black;
+	border: 9px double #FF86BA;
 	/* 중요내용 게시용 (테두리 및 색상 강조 등) */
 	/*
 	color: blue;
@@ -785,7 +799,7 @@ header #header-bar:after
 }
 
 
-/* 트게더 다크모드 추가에 따른 다크모드 관련 변경사항 (2021-12-19 ~) */
+/* 트게더 다크모드 추가에 따른 다크모드 관련 변경사항 (2021-12-21 ~) */
 /* 메인 페이지 부분 */
 /* 다크모드 전용 폰트 설정 (가독성 향상을 위함) */
 /* 폰트 출처: https://noonnu.cc/font_page/367 (Gmarket Sans L) */
@@ -805,12 +819,12 @@ html.darkmode body
 /* 다크모드 적용 시 검색창 및 검색 버튼 색상 변경 */
 html.darkmode header #right-search-form>input[type=text]
 {
-	border: 3px solid #a1f59c;
+	border: 3px solid #ffc0db;
 }
 
 html.darkmode header #right-search-form>#right-search-btn
 {
-	color: #a1f59c;
+	color: #ffc0db;
 }
 
 /* 다크모드 적용 시 해게더 자체 광고바 일부 설정 변경 */
@@ -832,7 +846,7 @@ html.darkmode #main #main-content > div.frame
 /* 다크모드 적용 시 좌측 트게더 전체 메뉴 버튼 부분 색상 변경 */
 html.darkmode #main .menu-wrapper>.header
 {
-	background: #a1f59c;
+	background: #ffc0db;
 	color: #121212;
 }
 
@@ -935,7 +949,7 @@ html.darkmode #article-reply-area #reply-best-area .reply>.reply-header>.reply-w
 html.darkmode #article-reply-area #reply-real-area .reply>.reply-header>.reply-menu a,
 html.darkmode #article-reply-area #reply-best-area .reply>.reply-header>.reply-menu a
 {
-	color: #a1f59c;
+	color: #ffc0db;
 }
 
 /* 다크모드 적용 시 게시물 작성 및 댓글 작성 창 외부 경계 변경 (상단) */
